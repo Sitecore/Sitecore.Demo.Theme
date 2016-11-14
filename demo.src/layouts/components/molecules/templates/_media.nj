@@ -1,0 +1,57 @@
+{% import "layouts/components/molecules/templates/_media-parts.nj" as parts %}
+{% import "layouts/components/atoms/templates/_image.nj" as image %}
+
+
+{% macro template(maintag = 'div', media, caller = false, class, right, left = true) %}
+  {% if right %}
+    {% set left = false %}
+  {% endif %}
+  <{{maintag}} class="media {{class}}">
+    {% if left %}
+      {% call parts.mediaPart('left') %}
+        {% if media %}
+          {{media}}
+        {% else %}
+          {{image.template(responsive=false)}}
+        {% endif %}
+      {% endcall %}
+    {% endif %}
+    {% call parts.mediaPart('body') %}
+      {% if caller %}
+        {{caller()}}
+      {% else %}
+        <h4 class="media-title">Default media title</h4>
+        <p>Default media tagline, this is because it is the default without a caller, and that's why it's shown.</p>
+      {% endif %}
+    {% endcall %}
+    {% if right %}
+      {% call parts.mediaPart('right') %}
+        {% if media %}
+          {{media}}
+        {% else %}
+          {{image.template(responsive=false)}}
+        {% endif %}
+      {% endcall %}
+    {% endif %}
+  </{{maintag}}>
+{% endmacro %}
+
+{% macro event(maintag = 'div', class, right = true) %}
+  <{{maintag}} class="media {{class}}">
+    {% call parts.mediaPart('left', class = 'hidden-xs') %}
+      {{ image.template(width=100, height=100, class = 'media-object') }}
+    {% endcall %}
+    {% call parts.mediaPart('body') %}
+      <h4 class="media-heading">Dungeons and dragons in the dark woods</h4>
+      <p>
+        Times Square, in the forest, London
+      </p>
+    {% endcall %}
+    {% if right %}
+      {% call parts.mediaPart('right') %}
+        <time class="text-nowrap"><span class="glyphicon glyphicon-calendar"></span> <strong>SAT 11 AUG</strong></time>
+        <time class="text-nowrap"><span class="glyphicon glyphicon-time"></span> <strong>11:00 PM</strong></time>
+      {% endcall %}
+    {% endif %}
+  </{{maintag}}>
+{% endmacro %}

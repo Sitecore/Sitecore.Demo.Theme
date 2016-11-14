@@ -1,0 +1,22 @@
+{% macro list(type='ul', itemtype='li', grouped, caller = false, class, itemclass, item = 'Default list item', itemcount = 5) %}
+  <{{type}} class="{% if grouped %}list-group{% endif %} {{class}}">
+    {% for i in range(0, itemcount) %}
+      <li class="{% if grouped %}list-group-item{% endif %} {{itemclass}}">
+        {% if caller %}
+          {{caller()}}
+        {% else %}
+          {{item}}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </{{type}}>
+{% endmacro %}
+
+{% macro descriptive(horizontal = false, itemname = 'Default item name', itemdesc = 'Default item description', itemcount = 8, class) %}
+<dl class="{% if horizontal %}dl-horizontal{% endif %} {{class}}">
+  {% for i in range(0, itemcount) %}
+    <dt>{{itemname}}</dt>
+    <dd>{{itemdesc}}</dt>
+  {% endfor %}
+</dl>
+{% endmacro %}

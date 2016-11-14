@@ -1,0 +1,27 @@
+{% import "layouts/components/atoms/templates/_icon.nj" as icon %}
+
+{% macro image(tag='div', gallery='page') %}
+  <{{tag}} class="thumbnail mosaic mosaic-circle mosaic-overlay-show lightbox-item lightbox-image">
+    <div class="mosaic-overlay mosaic-overlay-no-pointer">
+      {{icon.template(icon = 'picture', size = 'lg')}}
+    </div>
+    <div class="mosaic-backdrop">
+      <a href="http://placehold.it/1200x700" data-type="image" data-title='this is the title for the image' data-footer="This is a text for the footer&lt;br&gt;Which includes a line break." data-toggle="lightbox" data-gallery="{{gallery}}">
+        <img src="http://placehold.it/300x300">
+      </a>
+    </div>
+  </{{tag}}>
+{% endmacro %}
+
+{% macro video(tag='div', gallery='page', type='youtube', link='https://www.youtube.com/watch?v=fYA9hYWTe2c') %}
+  <{{tag}} class="thumbnail mosaic mosaic-circle mosaic-overlay-show lightbox-item lightbox-video">
+    <div class="mosaic-overlay mosaic-overlay-no-pointer">
+      {{icon.template(icon = 'film', size = 'lg')}}
+    </div>
+    <div class="mosaic-backdrop">
+      <a href="{{link}}" data-type="{{type}}" data-title='this is the title for the video' data-footer="This is a text for the footer&lt;br&gt;Which includes a line break." data-toggle="lightbox" data-gallery="{{gallery}}">
+        <img src="http://placehold.it/300x300">
+      </a>
+    </div>
+  </{{tag}}>
+{% endmacro %}

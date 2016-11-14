@@ -1,0 +1,16 @@
+{% import "layouts/components/atoms/templates/_image.nj" as image %}
+
+<div class="row">
+  <div class="col-md-3">
+    {{image.template(width=250, height=250)}}
+  </div>
+  <div class="col-md-3">
+    {{image.template(width=250, height=250, type='rounded')}}
+  </div>
+  <div class="col-md-3">
+    {{image.template(width=250, height=250, type='circle')}}
+  </div>
+  <div class="col-md-3">
+    {{image.template(width=250, height=250, type='thumbnail')}}
+  </div>
+</div>

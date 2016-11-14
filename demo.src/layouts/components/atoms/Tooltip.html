@@ -1,0 +1,16 @@
+{% import "layouts/components/atoms/templates/_tooltip.nj" as tooltip %}
+
+<div class="row">
+  <div class="col-md-3">
+    {{tooltip.template()}}
+  </div>
+  <div class="col-md-3">
+    {{tooltip.template(placement='top')}}
+  </div>
+  <div class="col-md-3">
+    {{tooltip.template(placement='bottom')}}
+  </div>
+  <div class="col-md-3">
+    {{tooltip.template(placement='right')}}
+  </div>
+</div>

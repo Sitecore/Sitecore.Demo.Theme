@@ -1,0 +1,60 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/atoms/templates/_table.nj" as table %}
+{% import "layouts/components/atoms/templates/_image.nj" as image %}
+
+{% set pageHeaderTop = true %} 
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.section(class="bg-media bg-media-overlay-dark", backgroundImageUrl='url(\'http://lorempixel.com/g/1000/800/\')') %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-md-offset-0 col-xs-8 col-xs-offset-2">
+          {{image.template(src='http://lorempixel.com/g/300/300', class='center-block', responsive=true, type='circle')}}
+        </div>
+      </div>
+      <h1 class="text-center">Joe Tribiani <br/><small>UX/UI design with a sense for passionated design</small></h1>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 col-sm-offset-3 col-sm-6 col-xs-8 col-xs-offset-2">
+          <button type="button" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-plus"></span> Add as friend</button>
+        </div>
+      </div>
+      <div class="row m-t-1">
+        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+          <big>Friends: <span class="label label-info">1400</span></big>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+          <big>Posts: <span class="label label-warning">200</span></big>
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <h3>Information</h3>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          {{table.template(type='bordered')}}
+        </div>
+        <div class="col-md-4">
+          {{table.template(type='bordered')}}
+        </div>
+        <div class="col-md-4">
+          {{table.template(type='bordered')}}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

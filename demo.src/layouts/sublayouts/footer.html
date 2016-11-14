@@ -1,0 +1,38 @@
+{% import "layouts/components/atoms/templates/_well.nj" as well %}
+{% import "layouts/components/atoms/templates/_nav.nj" as nav %}
+{% import "layouts/components/molecules/templates/_well-teaser.nj" as wellTeaser %}
+{% import "layouts/components/organisms/templates/_contact-info.nj" as contactInfo %}
+{% import "layouts/components/organisms/templates/_media-list.nj" as mediaList %}
+
+<footer class="bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-4 col-xs-12">
+        {{nav.nav('nav-stacked')}}
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-12">
+        {{mediaList.teaser()}}
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-12">
+        {{wellTeaser.teaser()}}
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-12">
+        {{contactInfo.template()}}
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{nav.footerBottom()}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <small>This is the legal footer</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,31 @@
+{% import "layouts/components/atoms/templates/_nav.nj" as nav %}
+
+{% macro navigation(class) %}
+  <ul class="nav nav-tabs {{class}}" role="tablist">
+    {{caller()}}
+  </ul>
+{% endmacro %}
+
+{% macro content(class) %}
+<div class="tab-content">
+  {{caller()}}
+</div>
+{% endmacro %}
+
+{% macro item(id, class) %}
+  <div role="tabpanel" class="tab-pane {{class}}" id="{{id}}">
+    {{caller()}}
+  </div>
+{% endmacro %}
+
+{% macro navitem(target, text = 'Default text here', caller, class) %}
+  <li role="presentation" class="{{class}}">
+    <a href="#{{target}}" aria-controls="home" role="tab" data-toggle="tab">
+      {% if caller %}
+        {{caller()}}
+      {% else %}
+        {{text}}
+      {% endif %}
+    </a>
+  </li>
+{% endmacro %}

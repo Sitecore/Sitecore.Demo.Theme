@@ -1,0 +1,18 @@
+{% from "layouts/components/atoms/templates/_blockquote.nj" import template as blockquote %}
+
+<div class="row">
+  <div class="col-md-4">
+    <figure>
+      {{ blockquote('blockquote-center') }}
+      <figcaption>
+        This is something tangentially related to the quote, but not the actual author of the quote. Per example, this part of the figure states that the quote is centered.
+      </figcaption>
+    </figure>
+  </div>
+  <div class="col-md-4">
+    {{ blockquote() }}
+  </div>
+  <div class="col-md-4">
+    {{ blockquote('blockquote-reverse') }}
+  </div>
+</div>

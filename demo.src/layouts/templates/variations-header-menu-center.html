@@ -1,0 +1,18 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header.html" %}
+
+{% call layout.main() -%}
+  {{ doc.pageheader('Centered Menu', 'This header has the menu in the center.') }}
+  
+  {% include "layouts/sublayouts/default-content.html" %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

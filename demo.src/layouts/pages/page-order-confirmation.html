@@ -1,0 +1,51 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% import "layouts/components/atoms/templates/_headline.nj" as headline %}
+{% import "layouts/components/atoms/templates/_button.nj" as button %}
+{% import "layouts/components/atoms/templates/_table.nj" as table %}
+{% import "layouts/components/atoms/templates/_icon.nj" as icon %}
+{% import "layouts/components/atoms/templates/_well.nj" as well %}
+{% from "layouts/components/atoms/templates/_labels-badges.nj" import label as label %}
+{% import "layouts/components/organisms/templates/_page-header.nj" as pageheader %}
+
+{% set pageHeaderTop = true %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader() %}
+    {{pageheader.pagetitle(title='Order confirmation', lead=false)}}
+    {{pageheader.process()}}
+  {% endcall%}
+  {% call layout.section() %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {% call headline.template(class='text-center', tag='h2') %}
+            {{label(text=icon.template(icon='ok'), type='success')}}Order confirmed
+          {% endcall%}
+          <p class="lead text-center">
+            Congratulations, your purchase on <strong>$444</strong> has gone through! You have gotten a confirmation email on <strong>john.doe@help.me</strong>. You can review your order below
+          </p>
+          {{table.template('striped')}}
+          <div class="text-center well bg-primary">
+            <p>Recommend product to friends:</p>
+            {{button.social(type='facebook')}} {{button.social(type='twitter')}} {{button.social(type='google-plus')}}
+          </div>
+          <div class="text-center">
+            {{button.template(text='Back to site', type='success', class='btn-lg')}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

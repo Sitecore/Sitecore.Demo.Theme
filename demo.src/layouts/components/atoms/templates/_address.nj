@@ -1,0 +1,28 @@
+{% macro variant1() %}
+<address>
+  <strong>Sitecore Corporation</strong><br>
+  Vester Farimagsgade 3,5<br>
+  1606 Copenhagen V<br>
+  Denmark<br>
+  <abbr title="Phone">P:</abbr> +45 7022 4606
+</address>
+
+<address>
+  <strong>Email</strong><br>
+  <a href="mailto:#">sales@sitecore.net</a>
+</address>
+{% endmacro %}
+
+{% macro variant2() %}
+<address>
+  <strong>Sitecore Corporation</strong><br>
+  Vester Farimagsgade 3,5<br>
+  1606 Copenhagen V<br>
+  Denmark
+</address>
+
+<address>
+  <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:#">sales@sitecore.net</a><br/>
+  <span class="glyphicon glyphicon-phone"></span> <a href="tel:#">+45 7022 4606</a>
+</address>
+{% endmacro %}

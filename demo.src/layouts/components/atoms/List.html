@@ -1,0 +1,14 @@
+{% import "layouts/components/atoms/templates/_list.nj" as list %}
+
+<div class="row">
+  <div class="col-md-6">
+    {{list.list()}}
+    {{list.list(type='ol')}}
+    {{list.list(class='list-unstyled')}}
+    {{list.list(class='list-inline')}}
+  </div>
+  <div class="col-md-6">
+    {{list.descriptive()}}
+    {{list.descriptive(horizontal=true)}}
+  </div>
+</div>

@@ -1,0 +1,26 @@
+
+{% import "layouts/components/atoms/templates/_list.nj" as list %}
+{% import "layouts/components/molecules/templates/_advanced-thumbnail.nj" as thumbnail %}
+{% import "layouts/components/organisms/templates/_mega-dropdown.nj" as megadropdown %}
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="navbar">
+      <ul class="nav navbar-nav">
+        {% call megadropdown.template(maintag='li', menutag='div') %}
+          <div class="row">
+            <div class="col-md-4">
+              {{list.list()}}
+            </div>
+            <div class="col-md-4">
+              {{list.list()}}
+            </div>
+            <div class="col-md-4">
+              {{thumbnail.template()}}
+            </div>
+          </div>
+        {% endcall %}
+      </ul>
+    </div>
+  </div>
+</div>

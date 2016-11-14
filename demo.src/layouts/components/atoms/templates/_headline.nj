@@ -1,0 +1,11 @@
+{% macro template(text='Default title', tag='h1', class, headingClass) %}
+  <div class="headline {{class}}">
+    <{{tag}} class="{{headingClass}}">
+      {% if caller %}
+        {{caller()}}
+      {% else %}
+        {{text}}
+      {% endif %}
+    </{{tag}}>
+  </div>
+{% endmacro %}

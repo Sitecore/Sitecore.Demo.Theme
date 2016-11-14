@@ -1,0 +1,27 @@
+{% macro template(type, progress = '60', min = '0', max = '100', showProgress, striped, active, class) %}
+  <div class="progress">
+    <div class="progress-bar {% if active%}active{% endif %} {% if type %}progress-bar-{{type}}{% endif %} {% if striped %}progress-bar-striped{% endif %} {{class}}" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style="width: {{progress}}%;">
+      {% if showProgress %}
+        {{progress}}%
+      {% else %}
+        <span class="sr-only">{{progress}}% complete</span>
+      {% endif %}
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro container() %}
+  <div class="progress">
+    {{caller()}}
+  </div>
+{% endmacro %}
+
+{% macro bar(type, progress = '60', min = '0', max = '100', showProgress, striped, class) %}
+  <div class="progress-bar {% if type %}progress-bar-{{type}}{% endif %} {% if striped %}progress-bar-striped{% endif %} {{class}}" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style="width: {{progress}}%;">
+    {% if showProgress %}
+      {{progress}}%
+    {% else %}
+      <span class="sr-only">{{progress}}% complete</span>
+    {% endif %}
+  </div>
+{% endmacro %}

@@ -1,0 +1,25 @@
+{% import "layouts/components/molecules/templates/_jumbotron.nj" as jumbotron %}
+
+<div class="row">
+  <div class="col-md-12">
+    {{jumbotron.header(title='Hello, Habitat!', subTitle='This is a simple jumbotron-style component for a page header.', linkText='Learn more', backgroundImageUrl='url(\'images/lion.jpg\')')}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    {{jumbotron.template(title='Hello, Habitat!', subTitle='This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.', titletag='h3', linkText='Learn more')}}
+  </div>
+  <div class="col-md-8">
+    {{jumbotron.template(title='Hello, Habitat!', subTitle='This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.', linkbtntype='default', titletag='h3', linkText='Learn more')}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    {{jumbotron.template(title='Hello, Habitat!', subTitle='This is a hero unit which points to a particular type of content, a whitepaper.', titletag='h3', label='Whitepaper', linkText='Download now')}}
+  </div>
+  <div class="col-md-6">
+    {{jumbotron.template(title='Hello, Habitat!', lead='This is a simple hero unit, with a very important message - a lead.', titletag='h3', linkbtntype='info', linkText='Learn more')}}
+  </div>
+</div>

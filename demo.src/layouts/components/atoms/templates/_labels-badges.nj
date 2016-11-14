@@ -1,0 +1,7 @@
+{% macro badge(text, class) %}
+  <span class="badge {{class}}">{{text}}</span>
+{% endmacro %}
+
+{% macro label(type = 'default', text = 'Label', class) %}
+  <span class="label {% if type %}label-{{type}}{% endif %} {{class}}">{{text}}</span>
+{% endmacro %}

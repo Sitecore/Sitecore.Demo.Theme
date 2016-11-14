@@ -1,0 +1,44 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/atoms/templates/_video.nj" as video %}
+{% import "layouts/components/atoms/templates/_headline.nj" as headline %}
+
+{% block content %}
+
+{% macro atoms(components) %}
+  {% for component in components %}
+    <div class="container">
+      <!-- {{component.name}} -->
+      <div class="row m-b-1">
+        {% include component.path + "/" + component.name + ".html" %}
+      </div>
+    </div>
+  {% endfor %}
+{% endmacro %}
+
+{% call layout.section() -%}
+  {{ atoms(componentsToLoad[componentType]) }}
+{%- endcall %}
+{% call layout.section('bg-dark') -%}
+  {{ atoms(componentsToLoad[componentType]) }}
+{%- endcall %}
+{% call layout.section('bg-white') -%}
+  {{ atoms(componentsToLoad[componentType]) }}
+{%- endcall %}
+{% call layout.section('bg-primary') -%}
+  {{ atoms(componentsToLoad[componentType]) }}
+{%- endcall %}
+{% call layout.section('bg-secondary') -%}
+  {{ atoms(componentsToLoad[componentType]) }}
+{%- endcall %}
+{% call layout.section('bg-media', 'url(\'http://lorempixel.com/g/1000/800/\')') -%}
+  {{ atoms(componentsToLoad[componentType]) }}
+{%- endcall %}
+{% call layout.section('bg-media bg-parallax', 'url(\'http://lorempixel.com/g/1000/800/\')') -%}
+  {{ atoms(componentsToLoad[componentType]) }}
+{%- endcall %}
+{% call layout.section('bg-media', 'url(\'http://lorempixel.com/g/1000/800/\')') -%}
+  {{video.pure(attrs='autoplay muted', class='video-bg')}}
+  {{ atoms(componentsToLoad[componentType]) }}
+{%- endcall %}
+{% endblock %}

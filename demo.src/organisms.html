@@ -1,0 +1,18 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% extends "layouts/default.html" %}
+
+{% set curPage = "organisms" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header.html" %}
+
+{{ doc.pageheader('Organisms', 'Below is a list of all organisms') }}
+
+{% call layout.main() -%}
+  {% include "layouts/sublayouts/components.html" %}
+{%- endcall %}
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% macro template(maintag = 'div', toggletag='button', toggleclass='btn btn-default') %}
+
+<{{maintag}} class="dropdown">
+  <{{toggletag}} class="{{toggleclass}} dropdown-toggle" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown w/ Form
+    <span class="caret"></span>
+  </{{toggletag}}>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Check me out
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" readonly>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputFile">File input</label>
+        <input type="file" id="exampleInputFile">
+        <p class="help-block">Example block-level help text here.</p>
+      </div>
+      <textarea class="form-control" rows="3"></textarea>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</{{maintag}}>
+
+{% endmacro %}

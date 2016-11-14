@@ -1,0 +1,61 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% import "layouts/components/molecules/templates/_jumbotron.nj" as jumbotron %}
+{% import "layouts/components/atoms/templates/_video.nj" as video %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header.html" %}
+
+{% call layout.main() -%}
+  {{ doc.pageheader('Sections', 'The page content can be contructed of sections spanning the full width of the page.') }}
+
+  {% call layout.section() -%}
+    <div class="container">
+      {{jumbotron.template(subTitle='This is the standard default section')}}
+    </div>
+  {%- endcall %}
+  {% call layout.section('bg-dark') -%}
+    <div class="container">
+      {{jumbotron.template(subTitle='This is a dark section')}}
+    </div>
+  {%- endcall %}
+  {% call layout.section('bg-white') -%}
+    <div class="container">
+      {{jumbotron.template(subTitle='This is a white section')}}
+    </div>
+  {%- endcall %}
+  {% call layout.section('bg-primary') -%}
+    <div class="container">
+      {{jumbotron.template(subTitle='This is a theme coloured section')}}
+    </div>
+  {%- endcall %}
+  {% call layout.section('bg-secondary') -%}
+    <div class="container">
+      {{jumbotron.template(subTitle='This is a secondary coloured section')}}
+    </div>
+  {%- endcall %}
+  {% call layout.section('bg-media', 'url(\'http://lorempixel.com/g/1000/800/\')') -%}
+    <div class="container">
+      {{jumbotron.template(subTitle='This is a section with a background image')}}
+    </div>
+  {%- endcall %}
+  {% call layout.section('bg-media bg-parallax', 'url(\'http://lorempixel.com/g/1000/800/\')') -%}
+    <div class="container">
+      {{jumbotron.template(subTitle='This is a section with a background image - with parallax effect')}}
+    </div>
+  {%- endcall %}
+  {% call layout.section('bg-media', 'url(\'http://lorempixel.com/g/1000/800/\')') -%}
+    {{video.pure(attrs='autoplay muted', class='video-bg')}}
+    <div class="container">
+      {{jumbotron.template(subTitle='This is a section with a background video')}}
+    </div>
+  {%- endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

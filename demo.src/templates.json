@@ -1,0 +1,52 @@
+{
+  "page-layout": {
+    "layout": [
+      { "name": "fluid" },
+      { "name": "fixed" },
+      { "name": "fixed-with-background" }
+    ],
+    "off-canvas-sidebar": [
+      { "name": "left" },
+      { "name": "both" }
+    ],
+    "header": [
+      { "name": "fixed" },
+      { "name": "static" },
+      { "name": "header-top" }
+    ],
+    "footer": [
+      { "name": "footer"},
+      { "name": "simple-footer" }
+    ]
+  },
+  "content": {
+    "content-area": [
+      { "name": "sections"},
+      { "name": "sidebar-left" },
+      { "name": "sidebar-right" },
+      { "name": "sidebar-both" },
+      { "name": "placeholders" }
+    ],
+    "components": [
+      { "name": "atoms"},
+      { "name": "molecules" },
+      { "name": "organisms" }
+    ]
+  },
+  "variations": {
+    "header": [
+      { "name": "menu-left"},
+      { "name": "menu-center"},
+      { "name": "menu-right"},
+      { "name": "no-menu"}
+    ],
+    "header-colour": [
+      { "name": "default"},
+      { "name": "white"},
+      { "name": "primary"},
+      { "name": "secondary"},
+      { "name": "transparent"},
+      { "name": "transparent-with-fixed-header"}
+    ]
+  }
+}

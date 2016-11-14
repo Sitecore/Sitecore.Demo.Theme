@@ -1,0 +1,23 @@
+{% macro main() %}
+<main role="main">
+  {{caller()}}
+</main>
+{% endmacro %}
+
+{% macro section(class, backgroundImageUrl, type='full') %}
+{% if backgroundImageUrl %}
+  {% set style = 'background-image: ' + backgroundImageUrl + ';' %}
+{% endif %}
+<section class="section section-{{type}} {{class}}" style="{{style}}">
+  {{caller()}}
+</section>
+{% endmacro %}
+
+{% macro pageHeader(class='', backgroundImageUrl) %}
+  {% if backgroundImageUrl %}
+    {% set style = 'background-image: ' + backgroundImageUrl + ';' %}
+  {% endif %}
+  <header class="page-header {{class}}" style="{{style}}">
+    {{caller()}}
+  </header>
+{% endmacro %}

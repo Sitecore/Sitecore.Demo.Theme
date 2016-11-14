@@ -1,0 +1,16 @@
+{% import "layouts/components/atoms/templates/_image.nj" as image %}
+{% import "layouts/components/molecules/templates/_carousel.nj" as carousel %}
+
+<div class="row">
+  <div class="col-md-12">
+    {{ carousel.template(item=image.template(width=2000,height=600), itemcount=4) }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    {{ carousel.template(item=image.template(width=600,height=600), itemcount=4) }}
+  </div>
+  <div class="col-md-9">
+    {{ carousel.template(item=image.template(width=2000,height=600), itemcount=4) }}
+  </div>
+</div>

@@ -1,0 +1,16 @@
+{% import "layouts/components/atoms/templates/_popover.nj" as popover %}
+
+<div class="row">
+  <div class="col-md-3">
+    {{popover.template(text='Popover left')}}
+  </div>
+  <div class="col-md-3">
+    {{popover.template(placement='top', text='Popover top')}}
+  </div>
+  <div class="col-md-3">
+    {{popover.template(placement='bottom', text='Popover bottom')}}
+  </div>
+  <div class="col-md-3">
+    {{popover.template(placement='right', text='Popover right')}}
+  </div>
+</div>

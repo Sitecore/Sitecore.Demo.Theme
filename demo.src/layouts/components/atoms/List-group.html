@@ -1,0 +1,10 @@
+{% import "layouts/components/atoms/templates/_list.nj" as list %}
+
+<div class="row">
+  <div class="col-md-6">
+    {{list.list(grouped=true)}}
+  </div>
+  <div class="col-md-6">
+    {{list.list(type='div', itemtype='a', grouped=true)}}
+  </div>
+</div>

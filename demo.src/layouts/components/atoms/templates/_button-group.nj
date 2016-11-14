@@ -1,0 +1,11 @@
+{% macro group(justified=false, size='md', vertical=false) %}
+<div class="btn-group btn-group-{{size}} {% if justified%}btn-group-justified{% endif %} {% if vertical %}btn-group-vertical{% endif %}" role="group">
+{{caller()}}
+</div>
+{% endmacro %}
+
+{% macro toolbar() %}
+<div class="btn-toolbar" role="toolbar">
+{{caller()}}
+</div>
+{% endmacro %}

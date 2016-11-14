@@ -1,0 +1,33 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/organisms/templates/_page-header.nj" as pageheader %}
+
+{% import "layouts/components/atoms/templates/_panel.nj" as panel %}
+{% import "layouts/components/organisms/templates/_accordion.nj" as accordion %}
+
+{% set pageHeaderTop = true %} 
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader() -%}
+    {{pageheader.pagetitle(title='Frequently asked questions', lead=false)}}
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{accordion.template()}}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

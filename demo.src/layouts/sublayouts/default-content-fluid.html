@@ -1,0 +1,18 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% call layout.section() -%}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+      </div>
+      <div class="col-md-4">
+        {% include "layouts/components/molecules/templates/_advanced-thumbnail-2.html" %}
+      </div>
+      <div class="col-md-4">
+        {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+      </div>
+    </div>
+  </div>
+{%- endcall %}

@@ -1,0 +1,9 @@
+{% import "layouts/components/organisms/templates/_grid-filter.nj" as gridFilter %}
+
+{% set selectors = ["developer", "designer", "sales"] %}
+
+<div class="row">
+  <div class="col-md-12">
+    {{gridFilter.template('#peopleGrid', selectors)}}
+  </div>
+</div>

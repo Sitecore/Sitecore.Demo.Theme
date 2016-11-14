@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html dir="ltr" class="no-js" lang="">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SitecoreHabitatTheme</title>
+<link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="styles/vendor.css">
+<link rel="stylesheet" href="styles/default.css">
+<link rel="stylesheet" href="styles/niteflight.css">
+<link rel="stylesheet" href="styles/dayfrost.css" disabled="disabled">
+<link rel="stylesheet" href="styles/white-wonder.css" disabled="disabled">
+<script src="scripts/vendor/modernizr.js"></script>
+</head>
+<body class="" style="">
+<div id="main-container">
+<header class="header-fixed">
+<nav class="navbar navbar-default navbar-mega navbar-fixed-top" id="mainNavbar">
+<div class="container">
+<div class="navbar-left">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#siteNavbar" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand has-tagline" href="/index.html">
+<!--[if lt IE 9]>
+<span class="logo">
+  <img class="logo-image" src="images/logo_white.png" width="200"/>
+</span>
+<![endif]-->
+<!--[if gt IE 8]> <!-- -->
+<span class="logo">
+<svg id="habitat_logo" data-name="habitat_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 91.86"><defs><style>.cls-1{fill:#231f20;}</style></defs><title>habitat_logo</title><path class="cls-1" d="M32.26,190a14.06,14.06,0,0,0-.62-4.37H25v-5.24H47.23v80.26a10.49,10.49,0,0,0,.75,4.37h6.49v5.24H25v-5.24h6.62a14.06,14.06,0,0,0,.62-4.37V190Zm53.3,70.65a14.06,14.06,0,0,0,.62,4.37h6.62v5.24H63.33v-5.24h6.49a10.51,10.51,0,0,0,.75-4.37V228.86c0-8.24-3.87-10.73-8.36-10.73a19.32,19.32,0,0,0-6.49,1.25v-4.49a19.84,19.84,0,0,1,13.73-5c11,0,16.1,7.11,16.1,17.47v33.33Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M128.48,242.59h-4.24c-6,0-7.86,3.12-7.86,8.49v6.24c0,4.74,2.12,6.87,6.62,6.87a21.44,21.44,0,0,0,5.49-.75v4.24c-2.87,2.25-7.86,3.37-12,3.37-10.36,0-15.1-7-15.1-15.23v-3c0-10,5.62-15.23,18.72-15.23h8.36v5Zm-16.72-16.73h-5.37V210.63h22.09v5.24h-15a18.92,18.92,0,0,0-1.12,4.37Zm40.19,32.45c0,3.37.62,6.24,4.12,6.24,3.74,0,4.62-3.12,4.62-7.36v-5.12h4.74v5.49c0,8.49-4.49,13.48-14.1,13.48-11.48,0-14.35-7.36-14.35-14.1V210.63c11.11,0,15,6,15,11.23v36.45Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M174,190a10.49,10.49,0,0,0-.75-4.37h-5.37v-5.24H189v82.75L178.9,271H174V190ZM208,271a24.08,24.08,0,0,1-10.48-2.25v-4.87a14.58,14.58,0,0,0,5,1c12.86,0,13.36-12.73,13.36-24.71S215.35,216,203,216a16.84,16.84,0,0,0-5.49,1v-4.87a25,25,0,0,1,10.86-2.25c15.85,0,23.59,13,23.59,29.58C231.95,256.57,223.71,271,208,271Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M250.41,220.24a10.49,10.49,0,0,0-.75-4.37h-6.49v-5.24h22.22v50.05a10.5,10.5,0,0,0,.75,4.37h6.49v5.24H243.17v-5.24h6.49a10.49,10.49,0,0,0,.75-4.37V220.24Zm7.24-41.06a10.07,10.07,0,0,1,10.11,10.11A10.11,10.11,0,1,1,257.65,179.18Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M285,194.16L299.84,188v22.59h13.86v5.24H299.84v42.06c0,3.49,1,6.24,4.87,6.24s5.49-2.62,5.49-7.11v-2.87h4.74v3c0,8.49-4.87,13.48-14.48,13.48-11.48,0-15.48-7.36-15.48-14.1V215.88h-8v-5.24h8V194.16Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M348.88,242.59h-4.24c-6,0-7.86,3.12-7.86,8.49v6.24c0,4.74,2.12,6.87,6.62,6.87a21.44,21.44,0,0,0,5.49-.75v4.24C346,269.92,341,271,336.9,271c-10.36,0-15.1-7-15.1-15.23v-3c0-10,5.62-15.23,18.72-15.23h8.36v5Zm-16.73-16.73h-5.37V210.63h22.09v5.24h-15a18.82,18.82,0,0,0-1.12,4.37Zm40.19,32.45c0,3.37.62,6.24,4.12,6.24,3.74,0,4.62-3.12,4.62-7.36v-5.12h4.74v5.49c0,8.49-4.49,13.48-14.1,13.48-11.48,0-14.35-7.36-14.35-14.1V210.63c11.11,0,15,6,15,11.23v36.45Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M395.06,194.16L409.91,188v22.59h13.86v5.24H409.91v42.06c0,3.49,1,6.24,4.87,6.24s5.49-2.62,5.49-7.11v-2.87H425v3c0,8.49-4.87,13.48-14.48,13.48-11.48,0-15.48-7.36-15.48-14.1V215.88h-8v-5.24h8V194.16Z" transform="translate(-25.02 -179.18)"/></svg>
+<small class="tagline">Sitecore Experience Example</small>
+</span>
+<!-- <![endif]-->
+</a>
+</div>
+<div class="navbar-center">
+<div class="collapse navbar-collapse" id="siteNavbar">
+<ul class="nav navbar-nav">
+<li class="dropdown mega-dropdown">
+<a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Components<span class="caret"></span></a>
+<div class="dropdown-menu mega-dropdown-menu">
+<div class="row">
+<div class="col-md-4 col-sm-6 col-xs-12">
+<ul class="list-unstyled">
+<li class="dropdown-header">
+Atoms
+</li>
+<li>
+<a href="atoms.html#Address">Address</a>
+</li>
+<li>
+<a href="atoms.html#Blockgrid">Blockgrid</a>
+</li>
+<li>
+<a href="atoms.html#Breadcrumb">Breadcrumb</a>
+</li>
+<li>
+<a href="atoms.html#Button">Button</a>
+</li>
+<li>
+<a href="atoms.html#Social-button">Social button</a>
+</li>
+<li>
+<a href="atoms.html#Button-group">Button group</a>
+</li>
+<li>
+<a href="atoms.html#Dropdown">Dropdown</a>
+</li>
+<li>
+<a href="atoms.html#Navigation">Navigation</a>
+</li>
+<li>
+<a href="atoms.html#Pagination">Pagination</a>
+</li>
+<li>
+<a href="atoms.html#Panel">Panel</a>
+</li>
+<li>
+<a href="atoms.html#Well">Well</a>
+</li>
+<li>
+<a href="atoms.html#Blockquote">Blockquote</a>
+</li>
+<li>
+<a href="atoms.html#Table">Table</a>
+</li>
+<li>
+<a href="atoms.html#Form-elements">Form elements</a>
+</li>
+<li>
+<a href="atoms.html#Progress-bar">Progress bar</a>
+</li>
+<li>
+<a href="atoms.html#Typography">Typography</a>
+</li>
+<li>
+<a href="atoms.html#Headline">Headline</a>
+</li>
+<li>
+<a href="atoms.html#Address">Address</a>
+</li>
+<li>
+<a href="atoms.html#Labels-and-badges">Labels and badges</a>
+</li>
+<li>
+<a href="atoms.html#Tooltip">Tooltip</a>
+</li>
+<li>
+<a href="atoms.html#Popover">Popover</a>
+</li>
+<li>
+<a href="atoms.html#Counter">Counter</a>
+</li>
+<li>
+<a href="atoms.html#Alert">Alert</a>
+</li>
+<li>
+<a href="atoms.html#List">List</a>
+</li>
+<li>
+<a href="atoms.html#List-group">List group</a>
+</li>
+<li>
+<a href="atoms.html#Image">Image</a>
+</li>
+<li>
+<a href="atoms.html#Simple-thumbnail">Simple thumbnail</a>
+</li>
+<li>
+<a href="atoms.html#Video">Video</a>
+</li>
+<li>
+<a href="atoms.html#Divider">Divider</a>
+</li>
+<li>
+<a href="atoms.html#Well">Well</a>
+</li>
+<li class="divider"></li>
+</ul>
+</div>
+<div class="col-md-4 col-sm-6 col-xs-12">
+<ul class="list-unstyled">
+<li class="dropdown-header">
+Molecules
+</li>
+<li>
+<a href="molecules.html#Media">Media</a>
+</li>
+<li>
+<a href="molecules.html#Collapse">Collapse</a>
+</li>
+<li>
+<a href="molecules.html#Section-Header">Section Header</a>
+</li>
+<li>
+<a href="molecules.html#Sidebar-navigation-static">Sidebar navigation static</a>
+</li>
+<li>
+<a href="molecules.html#Sidebar-navigation-dynamic">Sidebar navigation dynamic</a>
+</li>
+<li>
+<a href="molecules.html#Pricing-table">Pricing table</a>
+</li>
+<li>
+<a href="molecules.html#Jumbotron">Jumbotron</a>
+</li>
+<li>
+<a href="molecules.html#Advanced-thumbnail">Advanced thumbnail</a>
+</li>
+<li>
+<a href="molecules.html#Modal">Modal</a>
+</li>
+<li>
+<a href="molecules.html#Carousel">Carousel</a>
+</li>
+<li>
+<a href="molecules.html#Well-Teaser">Well Teaser</a>
+</li>
+<li>
+<a href="molecules.html#Mosaic">Mosaic</a>
+</li>
+<li class="divider"></li>
+</ul>
+</div>
+<div class="col-md-4 col-sm-6 col-xs-12">
+<ul class="list-unstyled">
+<li class="dropdown-header">
+Organisms
+</li>
+<li>
+<a href="organisms.html#Article">Article</a>
+</li>
+<li>
+<a href="organisms.html#Navbar">Navbar</a>
+</li>
+<li>
+<a href="organisms.html#Medialist">Medialist</a>
+</li>
+<li>
+<a href="organisms.html#Grid-filter">Grid filter</a>
+</li>
+<li>
+<a href="organisms.html#Thumbnail-carousel">Thumbnail carousel</a>
+</li>
+<li>
+<a href="organisms.html#Mega-dropdown">Mega dropdown</a>
+</li>
+<li>
+<a href="organisms.html#Form-dropdown">Form dropdown</a>
+</li>
+<li>
+<a href="organisms.html#Accordion">Accordion</a>
+</li>
+<li>
+<a href="organisms.html#Lightbox">Lightbox</a>
+</li>
+<li>
+<a href="organisms.html#Tabs">Tabs</a>
+</li>
+<li>
+<a href="organisms.html#Contact-Info">Contact Info</a>
+</li>
+<li class="divider"></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="dropdown mega-dropdown">
+<a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Templates<span class="caret"></span></a>
+<div class="dropdown-menu mega-dropdown-menu">
+<div class="row">
+<div class="col-md-4 col-sm-6">
+<ul class="list-unstyled">
+<li class="dropdown-header">
+Page-layout
+</li>
+<li class="">
+Layout
+</li>
+<ul>
+<li>
+<a href="/page-layout-layout-fluid.html">fluid</a>
+</li>
+<li>
+<a href="/page-layout-layout-fixed.html">fixed</a>
+</li>
+<li>
+<a href="/page-layout-layout-fixed-with-background.html">fixed with background</a>
+</li>
+</ul>
+<li class="">
+Off-canvas-sidebar
+</li>
+<ul>
+<li>
+<a href="/page-layout-off-canvas-sidebar-left.html">left</a>
+</li>
+<li>
+<a href="/page-layout-off-canvas-sidebar-both.html">both</a>
+</li>
+</ul>
+<li class="">
+Header
+</li>
+<ul>
+<li>
+<a href="/page-layout-header-fixed.html">fixed</a>
+</li>
+<li>
+<a href="/page-layout-header-static.html">static</a>
+</li>
+<li>
+<a href="/page-layout-header-header-top.html">header top</a>
+</li>
+</ul>
+<li class="">
+Footer
+</li>
+<ul>
+<li>
+<a href="/page-layout-footer-footer.html">footer</a>
+</li>
+<li>
+<a href="/page-layout-footer-simple-footer.html">simple footer</a>
+</li>
+</ul>
+</ul>
+</div>
+<div class="col-md-4 col-sm-6">
+<ul class="list-unstyled">
+<li class="dropdown-header">
+Content
+</li>
+<li class="">
+Content-area
+</li>
+<ul>
+<li>
+<a href="/content-content-area-sections.html">sections</a>
+</li>
+<li>
+<a href="/content-content-area-sidebar-left.html">sidebar left</a>
+</li>
+<li>
+<a href="/content-content-area-sidebar-right.html">sidebar right</a>
+</li>
+<li>
+<a href="/content-content-area-sidebar-both.html">sidebar both</a>
+</li>
+<li>
+<a href="/content-content-area-placeholders.html">placeholders</a>
+</li>
+</ul>
+<li class="">
+Components
+</li>
+<ul>
+<li>
+<a href="/content-components-atoms.html">atoms</a>
+</li>
+<li>
+<a href="/content-components-molecules.html">molecules</a>
+</li>
+<li>
+<a href="/content-components-organisms.html">organisms</a>
+</li>
+</ul>
+</ul>
+</div>
+<div class="col-md-4 col-sm-6">
+<ul class="list-unstyled">
+<li class="dropdown-header">
+Variations
+</li>
+<li class="">
+Header
+</li>
+<ul>
+<li>
+<a href="/variations-header-menu-left.html">menu left</a>
+</li>
+<li>
+<a href="/variations-header-menu-center.html">menu center</a>
+</li>
+<li>
+<a href="/variations-header-menu-right.html">menu right</a>
+</li>
+<li>
+<a href="/variations-header-no-menu.html">no menu</a>
+</li>
+</ul>
+<li class="">
+Header-colour
+</li>
+<ul>
+<li>
+<a href="/variations-header-colour-default.html">default</a>
+</li>
+<li>
+<a href="/variations-header-colour-white.html">white</a>
+</li>
+<li>
+<a href="/variations-header-colour-primary.html">primary</a>
+</li>
+<li>
+<a href="/variations-header-colour-secondary.html">secondary</a>
+</li>
+<li>
+<a href="/variations-header-colour-transparent.html">transparent</a>
+</li>
+<li>
+<a href="/variations-header-colour-transparent-with-fixed-header.html">transparent with fixed header</a>
+</li>
+</ul>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="dropdown mega-dropdown">
+<a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
+<div class="dropdown-menu mega-dropdown-menu">
+<div class="row">
+<div class="col-md-4">
+<ul class="list list-unstyled">
+<li class="dropdown-header">
+Structured pages
+</li>
+<li>
+<a href="/">Front page</a>
+</li>
+<li>
+<a href="/page-campaign.html">Campaign page</a>
+</li>
+<li>
+<a href="/page-404.html">404 page</a>
+</li>
+<li class="divider"></li>
+<li class="dropdown-header">
+Commerce pages
+</li>
+<li>
+<a href="/page-shopping-cart.html">Shopping cart page</a>
+</li>
+<li>
+<a href="/page-order-confirmation.html">Order confirmation page</a>
+</li>
+<li>
+<a href="/page-checkout.html">Checkout page</a>
+</li>
+<li class="divider"></li>
+</ul>
+</div>
+<div class="col-md-4">
+<ul class="list list-unstyled">
+<li class="dropdown-header">
+Content pages
+</li>
+<li>
+<a href="/page-article.html">General article page</a>
+</li>
+<li>
+<a href="/page-news.html">News page</a>
+</li>
+<li>
+<a href="/page-blog.html">Blog page</a>
+</li>
+<li>
+<a href="/page-person.html">Person page</a>
+</li>
+<li>
+<a href="/page-team.html">Team page</a>
+</li>
+<li>
+<a href="/page-product.html">Product page</a>
+</li>
+<li>
+<a href="/page-faq.html">FAQ page</a>
+</li>
+<li>
+<a href="/page-email-template.html">E-mail template</a>
+</li>
+<li class="divider"></li>
+</ul>
+</div>
+<div class="col-md-4">
+<ul class="list list-unstyled">
+<li class="dropdown-header">
+List pages
+</li>
+<li>
+<a href="/page-news-list.html">News list page</a>
+</li>
+<li>
+<a href="/page-events-list.html">Events list page</a>
+</li>
+<li>
+<a href="/page-search-results.html">Search results page</a>
+</li>
+<li>
+<a href="/page-gallery.html">Gallery page</a>
+</li>
+<li class="divider"></li>
+<li class="dropdown-header">
+Service pages
+</li>
+<li>
+<a href="/page-login.html">Login page</a>
+</li>
+<li>
+<a href="/page-register.html">Register page</a>
+</li>
+<li>
+<a href="/page-contact.html">Contact page</a>
+</li>
+<li class="divider"></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Themes<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li class="dropdown-header">
+Main themes
+</li>
+<li>
+<a href="#" data-toggle="theme" data-themetype="main" data-theme="niteflight">Niteflight (default)</a>
+</li>
+<li>
+<a href="#" data-toggle="theme" data-themetype="main" data-theme="dayfrost">Dayfrost</a>
+</li>
+<li>
+<a href="#" data-toggle="theme" data-themetype="main" data-theme="white-wonder">White wonder</a>
+</li>
+<li>
+<a href="#" data-toggle="theme" data-themetype="main" data-theme="default">Default</a>
+</li>
+</ul>
+</li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div>
+<div class="navbar-right">
+<div class="navbar-activity">
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a href="#" class="btn dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+<span class="glyphicon glyphicon-home"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</li>
+<li class="dropdown hidden-xs">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span> <span class="badge bg-primary">4</span></a>
+<div class="dropdown-menu">
+<h4>Shopping cart</h4>
+<ul class="media-list">
+<li class="media">
+<div class="media-left">
+<img class="media-object" src="http://placehold.it/64x64">
+</div>
+<div class="media-body">
+<strong class="media-heading">Some awesome product you want to buy</strong>
+<p>
+Price: $20,099
+</p>
+</div>
+<div class="media-right">
+<button type="button" class="btn btn-danger">X</button>
+</div>
+</li>
+<li class="media media-align-middle">
+<div class="media-left">
+<img class="media-object" src="http://placehold.it/64x64">
+</div>
+<div class="media-body">
+<strong class="media-heading">Some awesome product you want to buy</strong>
+<p>
+Price: $20,099
+</p>
+</div>
+<div class="media-right">
+<button type="button" class="btn btn-danger">X</button>
+</div>
+</li>
+<li class="media media-align-middle">
+<div class="media-left">
+<img class="media-object" src="http://placehold.it/64x64">
+</div>
+<div class="media-body">
+<strong class="media-heading">Some awesome product you want to buy</strong>
+<p>
+Price: $20,099
+</p>
+</div>
+<div class="media-right">
+<button type="button" class="btn btn-danger">X</button>
+</div>
+</li>
+</ul>
+<a href="/page-shopping-cart.html" class="btn btn-block btn-default">View cart</a>
+</div>
+</li>
+<li class="dropdown hidden-xs">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span></a>
+<div class="dropdown-menu">
+<h4>Login</h4>
+<form>
+<div class="form-group">
+<label for="exampleInputEmail1">Email address</label>
+<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+</div>
+<div class="form-group">
+<label for="exampleInputPassword1">Password</label>
+<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" readonly="">
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox"> Remember me
+</label>
+</div>
+<a href="#">Forgot password?</a> <a href="/pages-register.html">Register</a>
+<button type="submit" class="btn btn-block btn-default">Submit</button>
+</form>
+</div>
+</li>
+<li class="navbar-activity-search">
+<form class="navbar-form" role="search">
+<div class="form-group">
+<input type="text" placeholder="Search">
+</div>
+</form>
+<a href="#" class="btn navbar-toggle-search" data-toggle-class="is-searching" data-target="#mainNavbar"><span class="glyphicon glyphicon-search"></span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<main role="main">
+<header class="page-header documentation" style="">
+<div class="jumbotron" style="">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h1>Sections</h1>
+<p class="lead">
+The page content can be contructed of sections spanning the full width of the page.
+</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<section class="section section-full" style="">
+<div class="container">
+<div class="jumbotron" style="">
+<h1>Powered by Sitecore</h1>
+<p>This is the standard default section</p>
+</div>
+</div>
+</section>
+<section class="section section-full bg-dark" style="">
+<div class="container">
+<div class="jumbotron" style="">
+<h1>Powered by Sitecore</h1>
+<p>This is a dark section</p>
+</div>
+</div>
+</section>
+<section class="section section-full bg-white" style="">
+<div class="container">
+<div class="jumbotron" style="">
+<h1>Powered by Sitecore</h1>
+<p>This is a white section</p>
+</div>
+</div>
+</section>
+<section class="section section-full bg-primary" style="">
+<div class="container">
+<div class="jumbotron" style="">
+<h1>Powered by Sitecore</h1>
+<p>This is a theme coloured section</p>
+</div>
+</div>
+</section>
+<section class="section section-full bg-secondary" style="">
+<div class="container">
+<div class="jumbotron" style="">
+<h1>Powered by Sitecore</h1>
+<p>This is a secondary coloured section</p>
+</div>
+</div>
+</section>
+<section class="section section-full bg-media" style="background-image: url(&#39;http://lorempixel.com/g/1000/800/&#39;)">
+<div class="container">
+<div class="jumbotron" style="">
+<h1>Powered by Sitecore</h1>
+<p>This is a section with a background image</p>
+</div>
+</div>
+</section>
+<section class="section section-full bg-media bg-parallax" style="background-image: url(&#39;http://lorempixel.com/g/1000/800/&#39;)">
+<div class="container">
+<div class="jumbotron" style="">
+<h1>Powered by Sitecore</h1>
+<p>This is a section with a background image - with parallax effect</p>
+</div>
+</div>
+</section>
+<section class="section section-full bg-media" style="background-image: url(&#39;http://lorempixel.com/g/1000/800/&#39;)">
+<video autoplay muted class="video-bg">
+<source src="images/Sitecore Experience.mp4" type="video/mp4">
+</video>
+<div class="container">
+<div class="jumbotron" style="">
+<h1>Powered by Sitecore</h1>
+<p>This is a section with a background video</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-dark">
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-sm-4 col-xs-12">
+<ul class="nav nav-stacked">
+<li role="presentation" class="active"><a href="#">Active item</a></li>
+<li role="presentation"><a href="#">Second item</a></li>
+<li role="presentation"><a href="#">Third item</a></li>
+<li role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-12">
+<div class="well">
+<h5 class="text-uppercase">Latest posts
+<ul class="media-list">
+<li class="media">
+<div class="media-body">
+<date>14 September 2015</date>
+<h4 class="media-heading"><a href="#">Sitecore XP rated Best in Class - again</a></h4>
+</div>
+</li>
+<li class="media">
+<div class="media-body">
+<date>14 September 2015</date>
+<h4 class="media-heading"><a href="#">Sitecore XP rated Best in Class - again</a></h4>
+</div>
+</li>
+<li class="media">
+<div class="media-body">
+<date>14 September 2015</date>
+<h4 class="media-heading"><a href="#">Sitecore XP rated Best in Class - again</a></h4>
+</div>
+</li>
+<li class="media">
+<div class="media-body">
+<date>14 September 2015</date>
+<h4 class="media-heading"><a href="#">Sitecore XP rated Best in Class - again</a></h4>
+</div>
+</li>
+</ul>
+<a href="#" class="btn btn-default">Read more</a>
+</h5></div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-12">
+<div class="well">
+<h3>About</h3>
+<p>
+Sitecore Habitat is a methodology for developing Sitecore Solutions. It is based on a layered and modular architecture focusing on high efficiency and simplicity.
+</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-12">
+<div class="well">
+<h4>Contact information</h4>
+<address>
+<strong>Sitecore Corporation</strong><br>
+Vester Farimagsgade 3,5<br>
+1606 Copenhagen V<br>
+Denmark<br>
+<abbr title="Phone">P:</abbr> +45 7022 4606
+</address>
+<address>
+<strong>Email</strong><br>
+<a href="mailto:#">sales@sitecore.net</a>
+</address>
+<a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+<a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+<a class="btn btn-social-icon btn-youtube"><i class="fa fa-youtube"></i></a>
+<a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></a>
+<a class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
+<a class="btn btn-social-icon btn-google-plus"><i class="fa fa-google-plus"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom text-center">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<ul class="nav list-inline">
+<li>
+<a href="#">Copyright</a>
+</li>
+<li class="divider-left">
+<a href="#">Legal link</a>
+</li>
+<li class="divider-left">
+<a href="#">Sitecore.net</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<small>This is the legal footer</small>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="scripts/vendor.js"></script>
+<script src="scripts/jquery.modern.js"></script>
+<script src="scripts/plugins.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>

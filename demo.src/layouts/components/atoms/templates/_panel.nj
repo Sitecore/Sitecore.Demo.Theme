@@ -1,0 +1,121 @@
+{% macro template(type = 'default', maintag = 'div', caller=false, class, heading = true, footer = true) %}
+  <{{maintag}} class="panel panel-{{type}} {{class}}">
+    {% if heading %}
+    <div class="panel-heading">
+      <h3 class="panel-title">Panel title</h3>
+    </div>
+    {% endif %}
+    <div class="panel-body">
+      {% if caller %}
+      {{caller()}}
+      {% else %}
+      Panel content
+      {% endif %}
+    </div>
+    {% if footer %}
+    <div class="panel-footer">
+      Panel footer
+    </div>
+    {% endif %}
+  </{{maintag}}>
+{% endmacro %}
+
+{% macro custom(type='default', heading = 'Default heading', body = 'Default content', footer = 'Default footer', caller = false, class) %}
+<div class="panel panel-{{type}}" class={{class}}>
+  <div class="panel-heading">
+    {{heading}}
+  </div>
+  <div class="panel-body">
+    {% if caller %}
+    {{caller()}}
+    {% else %}
+    {{body}}
+    {% endif %}
+  </div>
+  <div class="panel-footer">
+    {{footer}}
+  </div>
+</div>
+{% endmacro %}
+
+{% macro small(type = 'default', class) %}
+  <div class="panel {{class}}">
+    <div class="panel-body">
+      {{ caller() }}
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro pricing(type = 'default', maintag = 'div', class, heading = true, footer = true) %}
+<{{maintag}} class="panel panel-{{type}} {{class}}">
+  {% if heading %}
+  <div class="panel-heading">
+    <h3 class="text-center">SMALL TEAM</h3>
+    <p class="text-center">MAX TEAM SIZE 25</p>
+  </div>
+  {% endif %}
+  <div class="panel-body text-center">
+      <p class="lead"><strong>$20/month</strong></p>
+      <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item">
+              <span class="glyphicon glyphicon-calendar"></span> Unlimited Events
+          </li>
+          <li class="list-group-item">
+              <span class="glyphicon glyphicon-envelope"></span> Unlimited Email Invitations
+          </li>
+          <li class="list-group-item">
+              <span class="glyphicon glyphicon-heart"></span> Fantastic Support
+          </li>
+      </ul>
+  </div>
+  {% if footer %}
+  <div class="panel-footer"> <a class="btn btn-lg btn-block btn-danger" href="#">SUBSCRIBE</a> </div>
+  {% endif %}
+</{{maintag}}>
+{% endmacro %}
+
+{% macro accordion(type = 'default', maintag = 'div', accordionId = 'accordion', id = 'collapse1', in = false, icon=true, class) %}
+<{{maintag}} class="panel panel-{{type}}">
+  <div class="panel-heading" role="tab" id="heading{{id}}">
+    <div class="panel-title">
+      <a role="button" data-toggle="collapse" data-parent="#{{accordionId}}" href="#{{id}}" aria-expanded="true" aria-controls="{{id}}">
+        {% if icon %}<span class="glyphicon glyphicon-search" aria-hidden="true"></span>{% endif %}
+        Collapsible Group Item {{id}}
+      </a>
+    </div>
+  </div>
+  <div id="{{id}}" class="panel-collapse collapse {% if in %}in{% endif %}" role="tabpanel" aria-labelledby="heading{{id}}" aria-expanded="{% if in %}true{% else %}false{% endif %}">
+    <div class="panel-body">
+      {% if caller  %}
+        {{ caller() }}
+      {% else  %}
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      {% endif  %}
+    </div>
+  </div>
+</{{maintag}}>
+{% endmacro %}
+
+{% macro person(maintag='div', type='hollow', image='http://lorempixel.com/500/500/people', bodytitle='Jon Doe the Third', bodytext='Lorem ipsum dolor sit amet, consectetur adipiscing elit', footer=true) %}
+<{{maintag}} class="panel panel-{{type}}">
+  <div class="panel-heading">
+    {% if image %}
+      <img src="{{image}}" class="img-responsive img-circle">
+    {% endif %}
+  </div>
+  <div class="panel-body text-center">
+    <h4>{{bodytitle}}</h4>
+    <p>
+      {{bodytext}}
+    </p>
+  </div>
+  {% if footer %}
+  <div class="panel-footer">
+    <div class="text-center">
+      <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+      <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+    </div>
+  </div>
+  {% endif %}
+</{{maintag}}>
+{% endmacro %}

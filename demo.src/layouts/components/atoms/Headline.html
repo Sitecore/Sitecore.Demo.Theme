@@ -1,0 +1,13 @@
+{% import "layouts/components/atoms/templates/_headline.nj" as headline %}
+
+<div class="row">
+  <div class="col-md-12">
+    {{headline.template()}}
+  </div>
+  <div class="col-md-12">
+    {{headline.template(tag='h2')}}
+  </div>
+  <div class="col-md-12">
+    {{headline.template(tag='h3', class='text-center')}}
+  </div>
+</div>

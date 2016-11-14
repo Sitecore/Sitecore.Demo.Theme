@@ -1,0 +1,79 @@
+{% import "layouts/components/atoms/templates/_dropdown.nj" as dropdown %}
+{% import "layouts/components/atoms/templates/_button.nj" as button %}
+
+{% macro nav(class, caller = false) %}
+<ul class="nav {{class}}">
+  {% if caller %}
+    {{caller()}}
+  {% else %}
+    <li role="presentation" class="active"><a href="#">Active item</a></li>
+    <li role="presentation"><a href="#">Second item</a></li>
+    <li role="presentation"><a href="#">Third item</a></li>
+    <li role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+    {{dropdown.template('li', 'a', '')}}
+  {% endif %}
+</ul>
+{% endmacro %}
+
+{% macro tabs(class, caller = false) %}
+  {% if caller %}
+    {% call nav('nav-tabs ' + class, caller = caller) %}
+      {{caller()}}
+    {% endcall %}
+  {% else %}
+    {{ nav('nav-tabs ' + class) }}
+  {% endif %}
+{% endmacro %}
+
+{% macro process() %}
+<ul class="nav nav-tabs">
+  <li role="presentation"><a href="#">First step <span class="glyphicon glyphicon-chevron-right"></span></a></a></li>
+  <li role="presentation" class="active"><a href="#">Current step <span class="glyphicon glyphicon-chevron-right"></span></a></a></li>
+  <li role="presentation" class="disabled"><a href="#">Next step <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+  <li role="presentation" class="disabled"><a href="#">Last step</a></li>
+</ul>
+{% endmacro %}
+
+{% macro pills(class) %}
+{{ nav('nav-pills ' + class) }}
+{% endmacro %}
+
+{% macro service(class) %}
+<ul class="nav nav-service navbar-nav hidden-sm hidden-xs">
+  <li>
+    <a href="#">Github</a>
+  </li>
+  <li>
+    <a href="#">Wiki</a>
+  </li>
+  <li class="divider-right">
+    <a href="#">Sitecore.net</a>
+  </li>
+  {{dropdown.template(maintag='li', toggletag='a', toggleclass='', side='right')}}
+</ul>
+{% endmacro %}
+
+{% macro footerBottom(class) %}
+<ul class="nav list-inline">
+  <li>
+    <a href="#">Copyright</a>
+  </li>
+  <li class="divider-left">
+    <a href="#">Legal link</a>
+  </li>
+  <li class="divider-left">
+    <a href="#">Sitecore.net</a>
+  </li>
+</ul>
+{% endmacro %}
+
+{% macro social(class) %}
+<ul class="nav nav-social navbar-nav hidden-sm hidden-xs">
+  <li>{{button.social(type="facebook")}}</li>
+  <li>{{button.social(type="twitter")}}</li>
+  <li>{{button.social(type="youtube")}}</li>
+  <li>{{button.social(type="instagram")}}</li>
+  <li>{{button.social(type="linkedin")}}</li>
+  <li>{{button.social(type="google-plus")}}</li>
+</ul>
+{% endmacro %}

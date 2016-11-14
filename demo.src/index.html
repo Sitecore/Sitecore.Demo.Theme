@@ -1,0 +1,77 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% import "layouts/components/molecules/templates/_advanced-thumbnail.nj" as thumbnail %}
+{% import "layouts/components/molecules/templates/_carousel.nj" as carousel %}
+{% import "layouts/components/molecules/templates/_jumbotron.nj" as jumbotron %}
+{% import "layouts/components/molecules/templates/_well-teaser.nj" as wellTeaser %}
+
+{% import "layouts/components/organisms/templates/_media-list.nj" as mediaList %}
+
+{% set pageHeaderTop = true %}
+
+{% extends "layouts/default.html" %}
+
+{% set curPage = 'home' %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader() %}
+    {% call carousel.template(id='frontpage-carousel', itemcount=3) %}
+      {% for i in range(0, 3) -%}
+        <div class="item {% if loop.first %}active{% endif %}">
+          {{jumbotron.header(linkText='Learn more about Habitat', subTitle='Slide ' + i, backgroundImageUrl='url(\'images/lion.jpg\')')}}
+        </div>
+      {%- endfor %}
+    {% endcall %}
+  {% endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        {% for i in range(0,3) %}
+        <div class="col-md-4">
+          {{ thumbnail.template() }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  {%- endcall -%}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          {{ thumbnail.template(link=true) }}
+        </div>
+        <div class="col-md-3">
+          {{thumbnail.template(linkClass='', date=true)}}
+        </div>
+        <div class="col-md-3">
+          {{mediaList.teaser('bg-primary')}}
+        </div>
+      </div>
+    </div>
+  {%- endcall -%}
+  {% call layout.section('bg-secondary') %}
+    <div class="container">
+      <div class="col-md-6">
+        {{wellTeaser.teaser()}}
+      </div>
+      <div class="col-md-6">
+        <div class="well">
+            <h4>Tweets by @DSTChase</h4>
+            <div>
+              <a class="twitter-timeline" href="https://twitter.com/DSTChase" data-widget-id="696435650342612992" data-tweet-limit="2" data-chrome="noheader nofooter noscrollbar noborders transparent">Tweets by @DSTChase</a>
+              <script src="http://platform.twitter.com/widgets.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+  {%- endcall -%}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

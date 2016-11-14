@@ -1,0 +1,185 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/organisms/templates/_page-header.nj" as pageheader %}
+
+{% set pageHeaderTop = true %} 
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader() -%}
+    {{pageheader.pagetitle(title='Current cart', lead=false)}}
+    {{pageheader.process()}}
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr class="row">
+                <th class="col-md-2 hidden-xs">
+                  Image
+                </th>
+                <th class="col-md-4">
+                  Description
+                </th>
+                <th colspan="1" class="visible-xs"></th>
+                <th class="col-xs-10 visible-xs text-right">
+                  Details
+                </th>
+                <th class="col-md-1 hidden-xs">
+                  Quantity
+                </th>
+                <th class="col-md-2 text-right hidden-xs">
+                  Price
+                </th>
+                <th class="col-md-2 text-right hidden-xs">
+                  Subtotal
+                </th>
+                <th class="col-md-1 hidden-xs">
+
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row">
+                <td class="hidden-xs">
+                  <img src="http://placehold.it/100x100">
+                </td>
+                <td>
+                  <a href="#">
+                    <h4 class="m-b-0">Raspberry pi</h4>
+                    <p>
+                      Model: 2+
+                    </p>
+                  </a>
+                </td>
+                <td class="visible-xs">
+
+                </td>
+                <td class="visible-xs text-right">
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="glyphicon glyphicon-edit"></span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li>
+                        <a href="#"><label>Quantity:</label><input type="number" value="1" class="form-control"></a>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <a href="#"><strong>Subtotal:</strong> $20,099</a>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <a href="#"><button type="button" class="btn btn-danger">Remove this item</button></a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+                <td class="hidden-xs">
+                  <input type="number" class="form-control" value="1">
+                </td>
+                <td class="hidden-xs text-right">
+                  <p class="m-b-0">
+                    $20,999
+                  </p>
+                </td>
+                <td class="hidden-xs text-right">
+                  <strong class="m-b-0">
+                    $20,999
+                  </strong>
+                </td>
+                <td class="hidden-xs">
+                  <a href="#"><span class="glyphicon glyphicon-remove icon-md"></span></a>
+                </td>
+              </tr>
+              <tr class="row">
+                <td class="col-md-2 col-xs-4 hidden-xs">
+                  <img src="http://placehold.it/100x100">
+                </td>
+                <td class="col-md-4 col-xs-10">
+                  <a href="#">
+                    <h4 class="m-b-0">Raspberry pi</h4>
+                    <p>
+                      Model: 1NB
+                    </p>
+                  </a>
+
+                </td>
+                <td class="visible-xs">
+
+                </td>
+                <td class="col-xs-2 visible-xs text-right">
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="glyphicon glyphicon-edit"></span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li>
+                        <a href="#"><label>Quantity:</label><input type="number" value="1" class="form-control"></a>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <a href="#"><strong>Subtotal:</strong> $20,099</a>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <a href="#"><button type="button" class="btn btn-danger">Remove this item</button></a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+                <td class="col-md-1 col-xs-1 hidden-xs">
+                  <input type="number" class="form-control" value="1">
+                </td>
+                <td class="col-md-2 col-xs-5 text-right hidden-xs">
+                  <p class="m-b-0">
+                    $20,999
+                  </p>
+                </td>
+                <td class="col-md-2 col-xs-5 text-right hidden-xs">
+                  <strong class="m-b-0">
+                    $20,999
+                  </strong>
+                </td>
+                <td class="col-md-1 col-xs-1 hidden-xs">
+                  <a href="#"><span class="glyphicon glyphicon-remove icon-md"></span></a>
+                </td>
+              </tr>
+              <tr class="row visible-xs">
+                <td colspan="3" class="text-right">
+                  <strong>Total:</strong> $20,099
+                </td>
+              </tr>
+              <tr class="row">
+                <td>
+                  <button type="button" class="btn btn-lg btn-warning"><span class="glyphicon glyphicon-chevron-left"></span> Back</button>
+                </td>
+                <td colspan="3" class="hidden-xs"></td>
+                <td class="hidden-xs text-right">
+                  <strong>Total:</strong> $20,099
+                </td>
+                <td class="visible-xs">
+
+                </td>
+                <td>
+                  <button class="btn btn-lg btn-success pull-right">Order <span class="glyphicon glyphicon-chevron-right"></span></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

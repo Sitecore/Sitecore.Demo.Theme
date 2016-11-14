@@ -1,0 +1,7 @@
+{% macro template(type='info', closeable=true, linktext='Read more about alert') %}
+<div class="alert alert-{{type}}" role="alert">
+  {% if closeable %}<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>{% endif %}
+  There is something you should know.
+  {% if linktext %}<a href="#" class="alert-link">{{linktext}}</a>{% endif %}
+</div>
+{% endmacro %}

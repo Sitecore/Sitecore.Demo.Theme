@@ -1,0 +1,23 @@
+{% macro mediaLeft(maintag = 'div', class) %}
+  <{{maintag}} class="media-left {{class}}">
+    {{ caller() }}
+  </{{maintag}}
+{% endmacro %}
+
+{% macro mediaBody(maintag = 'div', class) %}
+  <{{maintag}} class="media-body {{class}}">
+    {{ caller() }}
+  </{{maintag}}>
+{% endmacro %}
+
+{% macro mediaRight(maintag = 'div', class) %}
+  <{{maintag}} class="media-right {{class}}">
+    {{ caller() }}
+  </{{maintag}}>
+{% endmacro %}
+
+{% macro mediaPart(type, maintag = 'div', class) %}
+  <{{maintag}} class="media-{{type}} {{class}}">
+    {{ caller() }}
+  </{{maintag}}>
+{% endmacro %}

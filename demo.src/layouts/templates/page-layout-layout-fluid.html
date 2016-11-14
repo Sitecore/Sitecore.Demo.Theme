@@ -1,0 +1,20 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% extends "layouts/default.html" %}
+
+{% set pageLayout = 'pagelayout-fluid' %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header.html" %}
+
+{% call layout.main() -%}
+  {{ doc.pageheader('Fluid page layout', 'In this page layout, the width of the header, sections and footer extends to the full page width.') }}
+
+  {% include "layouts/sublayouts/default-content-fluid.html" %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

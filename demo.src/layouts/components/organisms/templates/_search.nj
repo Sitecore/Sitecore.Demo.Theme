@@ -1,0 +1,8 @@
+{% import "layouts/components/atoms/templates/_form.nj" as form %}
+
+{% macro form() %}
+  {% call form.form(class="text-center form-inline") %}
+    {{ form.text() }}
+    {{ form.button(text='Search again') }}
+  {% endcall %}
+{% endmacro %}

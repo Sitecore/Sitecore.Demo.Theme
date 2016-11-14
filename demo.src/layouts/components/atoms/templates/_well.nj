@@ -1,0 +1,5 @@
+{% macro template(class) %}
+  <div class="well {{class}}">
+    {{caller()}}
+  </div>
+{% endmacro %}

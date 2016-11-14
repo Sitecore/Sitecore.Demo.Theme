@@ -1,0 +1,15 @@
+{% import "layouts/components/atoms/templates/_well.nj" as well %}
+
+{% macro template(class, tag='h2', text) %}
+  {% call well.template(class=class) %}
+    <header>
+      <{{tag}}>
+        {% if caller %}
+          {{caller()}}
+        {% else %}
+          {{text}}
+        {% endif %}
+      </{{tag}}>
+    </header>
+  {% endcall %}
+{% endmacro %}

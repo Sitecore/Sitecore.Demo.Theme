@@ -1,0 +1,374 @@
+{
+  "atoms": [
+    { "name": "Address",
+      "path": "layouts/components/atoms"
+    },
+    { "name": "Blockgrid",
+      "path": "layouts/components/atoms"
+    },
+    { "name": "Breadcrumb",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Button",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Social-button",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Button-group",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Dropdown",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Navigation",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Pagination",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Panel",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Well",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Blockquote",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Table",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Form-elements",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Progress-bar",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Typography",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Headline",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Address",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Labels-and-badges",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Tooltip",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Popover",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Counter",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Alert",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "List",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "List-group",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Image",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Simple-thumbnail",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Video",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Divider",
+      "path": "layouts/components/atoms"
+    },
+    {
+      "name": "Well",
+      "path": "layouts/components/atoms"
+    }
+  ],
+  "molecules": [
+    {
+      "name": "Media",
+      "path": "layouts/components/molecules",
+      "parts": {
+        "atoms": [
+          "Image",
+          "Typography"
+        ]
+      }
+    },
+    {
+      "name": "Collapse",
+      "path": "layouts/components/molecules",
+      "parts": {
+        "atoms": [
+          "Button",
+          "Well"
+        ]
+      }
+    },
+    {
+      "name": "Section-Header",
+      "path": "layouts/components/molecules",
+      "parts": {
+        "atoms": [
+          "well"
+        ]
+      }
+    },
+    {
+      "name": "Sidebar-navigation-static",
+      "path": "layouts/components/molecules",
+      "parts": {
+        "atoms": [
+          "Button",
+          "Divider",
+          "Navigation"
+        ]
+      }
+    },
+    {
+      "name": "Sidebar-navigation-dynamic",
+      "path": "layouts/components/molecules",
+      "parts": {
+        "atoms": [
+          "Button",
+          "Divider",
+          "Navigation"
+        ]
+      }
+    },
+    {
+      "name": "Pricing-table",
+      "path": "layouts/components/molecules",
+      "parts": {
+        "atoms": [
+          "Panel",
+          "Button",
+          "List-group"
+        ]
+      }
+    },
+    {
+      "name": "Jumbotron",
+      "path": "layouts/components/molecules",
+      "parts": {
+        "atoms": [
+          "Button",
+          "Typography"
+        ]
+      }
+    },
+    {
+      "name": "Advanced-thumbnail",
+      "path": "layouts/components/molecules",
+      "parts": {
+        "atoms": [
+          "Simple-thumbnail",
+          "Typography",
+          "Button"
+        ]
+      }
+    },
+    {
+      "name": "Modal",
+      "path": "layouts/components/molecules",
+      "parts": {
+        "atoms": ["Button"],
+        "molecules": []
+      }
+    },
+    {
+      "name": "Carousel",
+      "path": "layouts/components/molecules",
+      "parts": {
+        "atoms": [
+          "Button"
+        ],
+        "molecules": [
+
+        ]
+      }
+    },
+    {
+      "name": "Well-Teaser",
+      "path": "layouts/components/molecules",
+      "parts": {
+        "atoms": [
+          "Well"
+        ],
+        "molecules": [
+        ]
+      }
+    },
+    {
+      "name": "Mosaic",
+      "path": "layouts/components/molecules",
+      "parts": {
+        "atoms": [
+          "Icon"
+        ],
+        "molecules": [
+          
+        ]
+      }
+    }
+  ],
+  "organisms": [
+    {
+      "name": "Article",
+      "path": "layouts/components/organisms",
+      "parts": {
+        "atoms": [
+          "Typography"
+        ]
+      }
+    },
+    {
+      "name": "Navbar",
+      "path": "layouts/components/organisms",
+      "parts": {
+        "atoms": [
+          "Navigation",
+          "Button",
+          "Dropdown"
+        ],
+        "molecules": [
+          "Form"
+        ]
+      }
+    },
+    {
+      "name": "Medialist",
+      "path": "layouts/components/organisms",
+      "parts": {
+        "molecules": [
+          "Media",
+          "Button"
+        ]
+      }
+    },
+    {
+      "name": "Grid-filter",
+      "path": "layouts/components/organisms",
+      "parts": {
+        "atoms": [
+          "Button"
+        ],
+        "molecules": [
+          "Button-group"
+        ]
+      }
+    },
+    {
+      "name": "Thumbnail-carousel",
+      "path": "layouts/components/organisms",
+      "parts": {
+        "molecules": [
+          "Thumbnail"
+        ]
+      }
+    },
+    {
+      "name": "Mega-dropdown",
+      "path": "layouts/components/organisms",
+      "parts": {
+        "atoms": [
+          "Navigation"
+        ],
+        "molecules": [
+
+        ]
+      }
+    },
+    {
+      "name": "Form-dropdown",
+      "path": "layouts/components/organisms",
+      "parts": {
+        "atoms": [
+          "Form-elements",
+          "Dropdown"
+        ],
+        "molecules": [
+
+        ]
+      }
+    },
+    {
+      "name": "Accordion",
+      "path": "layouts/components/organisms",
+      "parts": {
+        "atoms": [
+          "Button",
+          "Panel"
+        ],
+        "molecules": [
+          "Collapse"
+        ]
+      }
+    },
+    {
+      "name": "Lightbox",
+      "path": "layouts/components/organisms",
+      "parts": {
+        "atoms": [
+          "Image"
+        ]
+      }
+    },
+    {
+      "name": "Tabs",
+      "path": "layouts/components/organisms",
+      "parts": {
+        "atoms": [
+
+        ],
+        "molecules": [
+
+        ]
+      }
+    },
+    {
+      "name": "Contact-Info",
+      "path": "layouts/components/organisms",
+      "parts": {
+        "atoms": [
+          "Well",
+          "Address"
+        ]
+      }
+    }
+  ]
+}

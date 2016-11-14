@@ -1,0 +1,3 @@
+{% macro template(maintag='button', placement='left', title='Default tooltip') %}
+<{{maintag}} class="btn btn-default" data-toggle="tooltip" data-placement="{{placement}}" title="{{title}}">{{title}}</button>
+{% endmacro %}

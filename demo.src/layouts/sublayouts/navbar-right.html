@@ -1,0 +1,26 @@
+{% if not navbarstyle %}
+{% set navbarstyle = 'navbar-fixed-top' %}
+{% endif %}
+
+{% import "layouts/sublayouts/macros/navbar.nj" as navbar %}
+
+<nav class="navbar navbar-default navbar-mega {{navbarstyle}}" id="mainNavbar">
+  <div class="container">
+    <div class="navbar-left">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#siteNavbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      {{navbar.brand()}}
+    </div>
+
+    <div class="navbar-right">
+      <div class="collapse navbar-collapse" id="siteNavbar">
+        {{navbar.nav(componentsToLoad, templatesToLoad)}}
+      </div>
+      {{navbar.activity()}}
+    </div>
+  </div>
+</nav>

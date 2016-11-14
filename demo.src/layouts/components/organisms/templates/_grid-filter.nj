@@ -1,0 +1,24 @@
+{% import "layouts/components/atoms/templates/_button.nj" as button %}
+{% import "layouts/components/atoms/templates/_form.nj" as form %}
+
+
+{% macro template(gridId = '#defaultGrid', selectors = ['one', 'two', 'three'], sort = false, search = true) %}
+  <div class="grid-filter" data-grid-filter="{{gridId}}">
+    <div class="btn-group">
+      <button class="active btn btn-default" data-group="all">Show all</button>
+      {% for selector in selectors %}
+      <button class="btn btn-default" data-group="{{selector}}">{{selector}}</button>
+      {% endfor %}
+    </div>
+    {% if sort %}
+    <div class="pull-right">
+      {{form.formgroup(class='form-inline', label=form.label(caption='Sort by:'), input=form.select(id='gridSort', class='grid-filter-sort'))}}
+    </div>
+    {% endif %}
+    {% if search %}
+      <div class="pull-right">
+        {{form.formgroup(class='form-inline', label=form.label('Search:'), input=form.text('filterSearch', 'grid-filter-search'))}}
+      </div>
+    {% endif %}
+  </div>
+{% endmacro %}

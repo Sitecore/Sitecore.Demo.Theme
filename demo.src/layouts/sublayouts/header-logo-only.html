@@ -1,0 +1,12 @@
+{% if not headerstyle %}
+{% set headerstyle = 'header-fixed' %}
+{% endif %}
+{% if not (headerstyle == 'header-fixed') %}
+{% set navbarstyle = 'navbar-static' %}
+{% endif %}
+
+<header class="{{headerstyle}}">
+  {% set hidenav = true %}
+  {% set hideactivity = true %}
+  {% include "layouts/sublayouts/navbar.html" %}
+</header>

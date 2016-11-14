@@ -1,0 +1,18 @@
+{% macro template(class, lg=4, md=3, sm=2, xs=1, gridtag='div', itemtag='div', id='grid', count=8, padding=true) %}
+  {% set paddingclass = "" %}
+  {% if padding %}
+    {% set paddingclass = "block-grid-no-padding" %}
+  {% endif %}
+
+  <{{gridtag}} class="block-grid-lg-{{lg}} block-grid-md-{{md}} block-grid-sm-{{sm}} block-grid-xs-{{xs}} {{paddingclass}} {{class}}" id="{{id}}">
+    {% for i in range(0, count) %}
+      <{{itemtag}} class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+        {% if caller %}
+          {{caller()}}
+        {% else %}
+          <img class="img-responsive" src="http://placehold.it/500x500"/>
+        {% endif %}
+      </{{itemtag}}>
+    {% endfor %}
+  </{{gridtag}}>
+{% endmacro %}

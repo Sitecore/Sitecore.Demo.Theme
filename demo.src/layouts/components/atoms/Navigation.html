@@ -1,0 +1,19 @@
+{% import "layouts/components/atoms/templates/_nav.nj" as nav %}
+<div class="row">
+  <div class="col-md-12">
+    {{nav.tabs()}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    {{nav.tabs('nav-justified')}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    {{nav.pills()}}
+  </div>
+  <div class="col-md-4">
+    {{nav.pills('nav-stacked')}}
+  </div>
+</div>

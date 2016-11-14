@@ -1,0 +1,24 @@
+{% import "layouts/components/atoms/templates/_button.nj" as button %}
+{% import "layouts/components/atoms/templates/_button-group.nj" as buttongroup %}
+{% import "layouts/components/atoms/templates/_dropdown.nj" as dropdown %}
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="btn-group" role="group">
+      {{button.template(type='default', text='Left')}}
+      {{button.template(type='default', text='Middle')}}
+      {{button.template(type='default', text='Right')}}
+    </div>
+  </div>
+  <div class="col-md-4">
+    {% call buttongroup.group() %}
+      {{button.template(type='info', text='Button with dropdown')}}
+      <button type="button" class="btn btn-info dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+    {% endcall %}
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>

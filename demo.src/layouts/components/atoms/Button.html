@@ -1,0 +1,21 @@
+{% import "layouts/components/atoms/templates/_button.nj" as button %}
+
+<div class="row">
+  <div class="col-md-6">
+    {{ button.template(text='Default') }}
+    {{ button.template(type='primary', text='Primary') }}
+    {{ button.template(type='hollow', text='Hollow') }}
+    {{ button.template(type='info', text='Info') }}
+    {{ button.template(type='success', text='Success') }}
+    {{ button.template(type='warning', text='Warning') }}
+    {{ button.template(type='danger', text='Danger') }}
+  </div>
+  <div class="col-md-3">
+    {{ button.template(text='Active', state='active') }}
+    {{ button.template(text='Disabled', state='disabled') }}
+  </div>
+  <div class="col-md-3">
+    {{ button.template(text='Default', class='btn-block') }}
+    {{ button.template(text='Info', type='info', class='btn-block') }}
+  </div>
+</div>

@@ -1,0 +1,3 @@
+{% macro template(src, width = 100, height = 100, alt = 'Placeholdere image', responsive = true, type, class, data) %}
+  <img src="{% if not src %}http://placehold.it/{{width}}x{{height}}{% else %}{{src}}{% endif %}" class="{% if responsive %}img-responsive{% endif %} {% if type %}img-{{type}}{% endif %} {{class}}" alt="{{alt}}" {{data}}>
+{% endmacro %}

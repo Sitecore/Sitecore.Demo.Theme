@@ -1,0 +1,52 @@
+{% import "layouts/components/organisms/templates/_tabs.nj" as tabs %}
+
+<div class="row">
+  <div class="col-md-12">
+    {% call tabs.navigation() %}
+      {{tabs.navitem(target='homeTab', text='Home', class='active')}}
+      {{tabs.navitem(target='sectionTab', text='Section')}}
+      {{tabs.navitem(target='imageTab', text='Images')}}
+    {% endcall %}
+    {% call tabs.content() %}
+      {% call tabs.item('homeTab', class='active') %}
+        <div class="well">Hi there, this is the home tab!</div>
+      {% endcall %}
+      {% call tabs.item('sectionTab') %}
+        <div class="well">Heres the section tab</div>
+      {% endcall %}
+      {% call tabs.item('imageTab') %}
+        <div class="well">This should be the image tab</div>
+      {% endcall %}
+    {% endcall %}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    {% call tabs.navigation(class='nav-tabs-block') %}
+      {% call tabs.navitem(target='homeTab2', class='active') %}
+        <span class="glyphicon glyphicon-home icon-xl center-block"></span>
+        <p>Home</p>
+      {% endcall %}
+      {% call tabs.navitem(target='sectionTab2') %}
+        <span class="glyphicon glyphicon-arrow-up icon-xl center-block"></span>
+        <p>Section</p>
+      {% endcall %}
+      {% call tabs.navitem(target='imageTab2') %}
+        <span class="glyphicon glyphicon-globe icon-xl center-block"></span>
+        <p>Image</p>
+      {% endcall %}
+    {% endcall %}
+    {% call tabs.content() %}
+      {% call tabs.item('homeTab2', class='active') %}
+        <div class="well">Hi there, this is the home tab!</div>
+      {% endcall %}
+      {% call tabs.item('sectionTab2') %}
+        <div class="well">Heres the section tab</div>
+      {% endcall %}
+      {% call tabs.item('imageTab2') %}
+        <div class="well">This should be the image tab</div>
+      {% endcall %}
+    {% endcall %}
+  </div>
+</div>

@@ -1,0 +1,28 @@
+{% import "layouts/components/atoms/templates/_panel.nj" as panel %}
+
+<div class="row">
+  <div class="col-md-4">
+    {{ panel.template() }}
+  </div>
+  <div class="col-md-4">
+    {{ panel.template(type='primary') }}
+  </div>
+  <div class="col-md-4">
+    {{ panel.template(type='hollow') }}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+    {{ panel.template(type='success') }}
+  </div>
+  <div class="col-md-3">
+    {{ panel.template(type='info') }}
+  </div>
+  <div class="col-md-3">
+    {{ panel.template(type='warning') }}
+  </div>
+  <div class="col-md-3">
+    {{ panel.template(type='danger') }}
+  </div>
+</div>

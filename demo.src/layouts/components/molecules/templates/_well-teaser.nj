@@ -1,0 +1,10 @@
+{% import "layouts/components/atoms/templates/_well.nj" as well %}
+
+{% macro teaser(class) %}
+  {% call well.template(class) %}
+    <h3>About</h3>
+    <p>
+      Sitecore Habitat is a methodology for developing Sitecore Solutions. It is based on a layered and modular architecture focusing on high efficiency and simplicity.
+    </p>
+  {% endcall %}
+{% endmacro %}

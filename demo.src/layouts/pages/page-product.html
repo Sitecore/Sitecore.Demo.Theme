@@ -1,0 +1,110 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/organisms/templates/_page-header.nj" as pageheader %}
+
+{% import "layouts/components/molecules/templates/_advanced-thumbnail.nj" as thumbnail %}
+{% import "layouts/components/organisms/templates/_media-list.nj" as medialist %}
+{% import "layouts/components/molecules/templates/_media.nj" as media %}
+{% import "layouts/components/molecules/templates/_carousel.nj" as carousel %}
+{% from "layouts/components/atoms/templates/_labels-badges.nj" import label as label %}
+{% import "layouts/components/atoms/templates/_image.nj" as image %}
+{% import "layouts/components/atoms/templates/_headline.nj" as headline %}
+{% import "layouts/components/atoms/templates/_list.nj" as list %}
+{% import "layouts/components/atoms/templates/_button.nj" as button %}
+{% import "layouts/components/organisms/templates/_tabs.nj" as tabs %}
+
+{% set pageHeaderTop = true %} 
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader() -%}
+    {{pageheader.breadcrumb()}}
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          {{carousel.template(id='product-carousel', item=image.template(width=1000,height=600), itemcount=3)}}
+        </div>
+        <div class="col-md-8">
+          <h1>Raspberry Pi <small>Model 2B</small></h1>
+          <p>
+            The Raspberry Pi Model 2B is the ideal choice for high performance at a low price
+          </p>
+          <p>
+            <big>Stock: {{label(text='400', type='success')}}</big>
+          </p>
+          <p>
+            <big>Price: 400$ {{label(text='-45%', type='danger')}}</big>
+          </p>
+          {{button.template(maintag='a', type='success', text='Buy now', class='btn-block')}}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {% call tabs.navigation(class='nav-justified') %}
+            {{tabs.navitem(target='detailsTab', class='active', text='Details')}}
+            {{tabs.navitem(target='specsTab', text='Specifications')}}
+            {{tabs.navitem(target='reviewsTab', text='Reviews')}}
+          {% endcall %}
+          {% call tabs.content() %}
+            {% call tabs.item(id='detailsTab', class='active') %}
+              <h3>The Raspberry Pi 2 - a wonder</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet arcu id turpis tincidunt porttitor. Donec a vehicula erat. Curabitur iaculis, enim in consequat aliquam, lacus mi tempor lectus, sit amet sollicitudin elit mi eu nibh. Donec in justo neque. Donec mollis elit ullamcorper metus cursus, in vulputate erat venenatis. Phasellus nisl turpis, vestibulum nec euismod in, venenatis sed turpis. Nulla arcu lectus, dignissim in sollicitudin ac, ornare eu metus. Morbi feugiat justo ipsum, sed ultricies dolor vulputate vehicula. Donec ullamcorper, nisl non facilisis maximus, neque est vehicula tortor, commodo fringilla ante sem non lectus.
+              </p>
+            {% endcall %}
+            {% call tabs.item(id='specsTab') %}
+              <h3>Technical specifications</h3>
+              {{list.list(itemcount=12)}}
+            {% endcall %}
+            {% call tabs.item(id='reviewsTab') %}
+              {% call medialist.template(maintag='ul', caller=true, class='media-list-divided') %}
+                {% call media.template(maintag='li', caller=true, media=label(type='success', text='4.5', class='label-square')) %}
+                  <h4 class="media-heading">Product review title</h4>
+                  <p>
+                    Default product review text.
+                  </p>
+                  {% call media.template(caller=true, media=image.template(width = 40, height = 40, responsive=false)) %}
+                    <h5 class="media-title">Persons name</h5>
+                  {% endcall %}
+                {% endcall %}
+              {% endcall %}
+            {% endcall %}
+          {% endcall %}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section('bg-secondary') -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{headline.template(text='More like this', tag='h2', class='text-center')}}
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        {% for i in range(0,4) %}
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          {{thumbnail.template()}}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  {%- endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

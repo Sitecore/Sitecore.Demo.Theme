@@ -1,0 +1,30 @@
+{% import "layouts/components/atoms/templates/_well.nj" as well %}
+
+<div class="row">
+  <div class="col-md-3">
+    {% call well.template() %}
+      Default
+    {% endcall %}
+  </div>
+  <div class="col-md-3">
+    {% call well.template('bg-primary') %}
+      Primary
+    {% endcall %}
+  </div>
+  <div class="col-md-2">
+    {% call well.template('bg-secondary') %}
+      Secondary
+    {% endcall %}
+  </div>
+  <div class="col-md-2">
+    {% call well.template('bg-dark') %}
+      Dark
+    {% endcall %}
+  </div>
+  <div class="col-md-2">
+    {% call well.template('bg-white') %}
+      White
+    {% endcall %}
+  </div>
+</div>
+

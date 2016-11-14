@@ -1,0 +1,32 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% import "layouts/components/molecules/templates/_media.nj" as media %}
+{% import "layouts/components/atoms/templates/_image.nj" as image %}
+{% import "layouts/components/atoms/templates/_list.nj" as list %}
+{% import "layouts/components/organisms/templates/_article.nj" as article %}
+{% import "layouts/components/organisms/templates/_page-header.nj" as pageheader %}
+
+{% set pageHeaderTop = true %} 
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader(class='bg-dark') -%}
+    {{pageheader.breadcrumb()}}
+    {{pageheader.pagetitle(time='21:04 07-01-2016', class='text-center')}}
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      {{ article.default(title=false) }}
+    </div>
+  {%- endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% import "layouts/components/atoms/templates/_labels-badges.nj" as indicators %}
+{% import "layouts/components/atoms/templates/_button.nj" as button %}
+
+<div class="row">
+  <div class="col-md-6">
+    <h3>Labels {{indicators.label()}}</h3>
+    {{indicators.label(text='Default')}}
+    {{indicators.label(type='primary', text='Primary')}}
+    {{indicators.label(type='success', text='Success')}}
+    {{indicators.label(type='success', text='Info')}}
+    {{indicators.label(type='warning', text='Warning')}}
+    {{indicators.label(type='danger', text='Danger')}}
+  </div>
+  <div class="col-md-6">
+    <h3>Badges {{indicators.badge(text='4')}}</h3>
+    <a href="#">Inbox {{indicators.badge(text='42')}}</a>
+
+    {% call button.template(caller=true) %}
+      Messages {{indicators.badge(text='8')}}
+    {% endcall %}
+  </div>
+</div>

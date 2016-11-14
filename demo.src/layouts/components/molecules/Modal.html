@@ -1,0 +1,12 @@
+{% import "layouts/components/molecules/templates/_modal.nj" as modal %}
+
+<div class="row">
+  <div class="col-md-4">
+    {% call modal.template(id='modalCall', title='My modal title', footer=true) %}
+      Some text here
+    {% endcall %}
+  </div>
+  <div class="col-md-4">
+    {{ modal.template() }}
+  </div>
+</div>

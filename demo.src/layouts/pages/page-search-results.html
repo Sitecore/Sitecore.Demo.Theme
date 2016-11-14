@@ -1,0 +1,48 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/organisms/templates/_page-header.nj" as pageheader %}
+{% import "layouts/components/organisms/templates/_search.nj" as search %}
+{% import "layouts/components/atoms/templates/_labels-badges.nj" as indicators %}
+
+{% import "layouts/components/atoms/templates/_form.nj" as form %}
+{% import "layouts/components/atoms/templates/_list.nj" as list %}
+{% import "layouts/components/atoms/templates/_pagination.nj" as pagination %}
+
+{% set pageHeaderTop = true %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader() -%}
+    {{pageheader.pagetitle(title='Your search for <a href="#">Interesting bikes</a> yielded 43 results:', lead=false)}}
+    <div class="container">
+      {{search.form()}}
+    </div>
+  {%- endcall %}
+
+  {% call layout.section() -%}
+    <div class="container">
+      {% call list.list(class='list-unstyled list-divided', itemcount=3) %}
+        <a href="#">
+          <h2>Yellow bike with nice gears</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu blandit dolor. Integer a nunc magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam quis leo vel elit euismod malesuada. Quisque posuere risus sed lectus pharetra
+          </p>
+          <p>
+            {{indicators.label(type='primary', text='tag1')}}
+            {{indicators.label(type='primary', text='tag2')}}
+          </p>
+        </a>
+      {% endcall %}
+      {{pagination.template(class='text-center')}}
+    </div>
+  {%- endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

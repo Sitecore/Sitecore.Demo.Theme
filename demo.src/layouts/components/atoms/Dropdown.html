@@ -1,0 +1,10 @@
+{% import "layouts/components/atoms/templates/_dropdown.nj" as dropdown %}
+
+<div class="row">
+  <div class="col-md-2">
+    {{dropdown.template()}}
+  </div>
+  <div class="col-md-2">
+    {{dropdown.template(direction='up')}}
+  </div>
+</div>

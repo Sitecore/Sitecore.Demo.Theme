@@ -1,0 +1,3 @@
+{% macro template(type) %}
+<hr class="{% if type %}divider-{{type}}{% endif %}">
+{% endmacro %}

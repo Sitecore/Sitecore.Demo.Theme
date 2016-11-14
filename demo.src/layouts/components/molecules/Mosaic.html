@@ -1,0 +1,21 @@
+{% import "layouts/components/molecules/templates/_mosaic.nj" as mosaic %}
+
+<div class="row">
+  <div class="col-md-4">
+    {{ mosaic.template(showOverlay = true) }}
+  </div>
+  <div class="col-md-4">
+    {{ mosaic.template(overlay = 'text', type='fade') }}
+  </div>
+  <div class="col-md-4">
+    {{ mosaic.template(overlay = 'text', type='bar-bottom', showOverlay = true) }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    {{ mosaic.template(overlay = 'text', type='bar-top') }}
+  </div>
+  <div class="col-md-4">
+    {{ mosaic.template(overlay = 'text', type='cover') }}
+  </div>
+</div>

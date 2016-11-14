@@ -1,0 +1,13 @@
+{% import "layouts/components/molecules/templates/_advanced-thumbnail.nj" as thumbnail %}
+
+<div class="row">
+  <div class="col-md-4">
+    {{ thumbnail.template(width=500, height=300 )}}
+  </div>
+  <div class="col-md-4">
+    {{ thumbnail.template(type='icon') }}
+  </div>
+  <div class="col-md-4">
+    {{ thumbnail.template(width=500, height=300, date=true) }}
+  </div>
+</div>

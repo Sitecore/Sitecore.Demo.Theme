@@ -1,0 +1,37 @@
+{% import "layouts/components/atoms/templates/_form.nj" as form %}
+
+{% call form.form() %}
+  <div class="row">
+    <div class="col-md-6">
+        {{form.formgroup(form.label('E-mail', 'email1'), form.email('email1'))}}
+        {{form.formgroup(form.label('Checkbox', 'checkbox1'), form.checkbox('checkbox1', 'Check me out'))}}
+        {{form.formgroup(form.label('Password', 'password1'), form.password('password1'))}}
+        {{form.formgroup(form.label('File', 'filenone'), form.file('file1'), form.helptext('This is a help text!'))}}
+        {{form.textarea()}}
+    </div>
+    <div class="col-md-6">
+      {{form.select()}}
+
+      {{form.formgroup(form.label('Input group with success', 'inputGroupSuccess1'), form.inputgroup(form.text('inputGroupSuccess1'), '@'), class='has-success has-feedback', icon=form.icon('ok'))}}
+      {{form.formgroup(form.label('Input with warning', 'inputWarning1'), form.text('inputWarning1'), class='has-warning')}}
+      {{form.formgroup(form.label('Input with warning', 'inputError1'), form.text('inputError1'), class='has-error')}}
+      {{form.button('Submit', type='submit')}}
+    </div>
+  </div>
+{% endcall %}
+
+{% call form.form("form-inline") %}
+  <div class="row">
+    <div class="col-md-12">
+      {{form.formgroup(form.label('E-mail', 'email1'), form.email('email1'))}}
+      {{form.formgroup(form.label('Checkbox', 'checkbox1'), form.checkbox('checkbox1', 'Check me out'))}}
+      {{form.formgroup(form.label('Password', 'password1'), form.password('password1'))}}
+      {{form.formgroup(form.label('File', 'filenone'), form.file('file1'), form.helptext('This is a help text!'))}}
+      {{form.formgroup(form.label('Select', 'select1'), form.select('select1'))}}
+      {{form.formgroup(form.label('Input group with success', 'inputGroupSuccess1'), form.inputgroup(form.text('inputGroupSuccess1'), '@'), class='has-success has-feedback', icon=form.icon('ok'))}}
+      {{form.formgroup(form.label('Input with warning', 'inputWarning1'), form.text('inputWarning1'), class='has-warning')}}
+      {{form.formgroup(form.label('Input with warning', 'inputError1'), form.text('inputError1'), class='has-error')}}
+      {{form.button('Submit', type='submit')}}
+    </div>
+  </div>
+{% endcall %}

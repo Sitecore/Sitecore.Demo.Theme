@@ -1,0 +1,10 @@
+{% import "layouts/components/atoms/templates/_well.nj" as well %}
+{% import "layouts/components/atoms/templates/_address.nj" as address %}
+
+{% macro template() %}
+  {% call well.template() -%}
+    <h4>Contact information</h4>
+    {{address.variant1()}}
+    {% include "layouts/components/atoms/templates/_social-button.html" %}
+  {%- endcall %}
+{% endmacro %}

@@ -1,0 +1,43 @@
+{% macro template(class, header = true, headerSize= '3', headerText='Default header text', headerTitle='Lorem ipsum dolor sid amet era desto felicious id boc praggus', content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.', contentClass, footer = 'Someone famous in ', footerCite = 'Source title') %}
+<blockquote class="{{class}}">
+  {% if header %}
+  <header>
+    {% if headerText %}
+    <span class="label">
+      {{headerText}}
+    </span>
+    {% endif %}
+    {% if headerTitle %}
+    {% endif %}
+  </header>
+  {% endif %}
+  {% if content %}
+  <p class="{{contentClass}}">
+    {{content}}
+  </p>
+  {% endif %}
+  {% if footer %}
+  <footer>
+    {{footer}} <cite title="{{footerCite}}">{{footerCite}}</cite>
+  </footer>
+  {% endif %}
+</blockquote>
+{% endmacro %}
+
+
+{% macro image(person='Kristian Thrane', role='CTO', text='This is the default blockquote text for the testimonials. They can be changed whenever you want.', class) %}
+<blockquote class="{{class}}">
+  <header>
+    <img src="images/thrane.png" alt="Testimonial img" class="img-responsive">
+    <p>
+      {{person}}
+    </p>
+    <p>
+      {{role}}
+    </p>
+  </header>
+  <p>
+    {{text}}
+  </p>
+</blockquote>
+{% endmacro %}

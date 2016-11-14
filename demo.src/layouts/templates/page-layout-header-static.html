@@ -1,0 +1,21 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% set pageLayout = 'header-static' %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% set headerstyle = 'header-static' %}
+{% include "layouts/sublayouts/header.html" %}
+
+{% call layout.main() -%}
+  {{ doc.pageheader('Static header', 'This header disappears off the top of the page when scrolling.') }}
+
+  {% include "layouts/sublayouts/default-content.html" %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

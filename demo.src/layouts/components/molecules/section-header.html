@@ -1,0 +1,22 @@
+{% import "layouts/components/molecules/templates/_section-header.nj" as sectionHeader %}
+
+<div class="row">
+  <div class="col-md-12">
+    {% call sectionHeader.template() %}
+      This is a header text
+    {% endcall %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    {% call sectionHeader.template() %}
+      This is a header text
+    {% endcall %}
+  </div>
+  <div class="col-md-6">
+    {% call sectionHeader.template('bg-primary', tag='h2') %}
+      This is a header text
+    {% endcall %}
+  </div>
+</div>
+

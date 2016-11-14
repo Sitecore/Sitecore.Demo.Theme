@@ -1,0 +1,89 @@
+{% macro template(type, responsive = true, class) %}
+<table class="table {% if type %}table-{{type}}{% endif %} {% if responsive %}table-responsive{% endif %} {{class}}">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Heading</th>
+        <th>Heading</th>
+        <th>Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Value</td>
+        <td>Value</td>
+        <td>Value</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Value</td>
+        <td>Value</td>
+        <td>Value</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Value</td>
+        <td>Value</td>
+        <td>Value</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Value</td>
+        <td>Value</td>
+        <td>Value</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Value</td>
+        <td>Value</td>
+        <td>Value</td>
+      </tr>
+    </tbody>
+  </table>
+{% endmacro %}
+
+{% macro colored(type, class) %}
+<table class="table {% if type %}table-{{type}}{% endif %} {{class}}">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Heading</th>
+      <th>Heading</th>
+      <th>Heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="active">
+      <td>1</td>
+      <td>Value</td>
+      <td>Value</td>
+      <td>Value</td>
+    </tr>
+    <tr class="success">
+      <td>2</td>
+      <td>Value</td>
+      <td>Value</td>
+      <td>Value</td>
+    </tr>
+    <tr class="warning">
+      <td>3</td>
+      <td>Value</td>
+      <td>Value</td>
+      <td>Value</td>
+    </tr>
+    <tr class="danger">
+      <td>4</td>
+      <td>Value</td>
+      <td>Value</td>
+      <td>Value</td>
+    </tr>
+    <tr class="info">
+      <td>5</td>
+      <td>Value</td>
+      <td>Value</td>
+      <td>Value</td>
+    </tr>
+  </tbody>
+</table>
+{% endmacro %}

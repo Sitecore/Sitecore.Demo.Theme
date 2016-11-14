@@ -1,0 +1,21 @@
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/molecules/templates/_jumbotron.nj" as jumbotron %}
+
+{% macro pageheader(title, description) %}
+  {% call layout.pageHeader(class='documentation') -%}
+    {{jumbotron.header(title=title, subTitle=description, linkText=null, backgroundImageUrl=null)}}
+  {%- endcall %}
+{% endmacro %}
+
+{% macro infopanel(text, title) %}
+<div class="documentation panel panel-info">
+  {% if title %}
+    <div class="panel-heading">
+      <h3 class="panel-title">{{ title }}</h3>
+    </div>
+  {% endif %}
+  <div class="panel-body">
+    {{ text }}
+  </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,22 @@
+{% import "layouts/components/atoms/templates/_icon.nj" as icon %}
+{% import "layouts/components/atoms/templates/_image.nj" as image %}
+
+{% macro template(type = 'circle', overlay, backdrop = image.template(width = 500, height = 500), showOverlay = false, disablePointerInOverlay = false) %}
+<div class="mosaic mosaic-{{type}} {% if showOverlay %}mosaic-overlay-show{% endif %}">
+  <div class="mosaic-overlay  {% if disablePointerInOverlay %}mosaic-overlay-no-pointer{% endif %}">
+    {% if overlay and overlay != 'text' %}
+      {{overlay}}
+    {% elif overlay == 'text' %}
+      <h5>Hello, this is the default text</h5>
+      <p>
+        An example of how you can write text inside of the mosaic component. It's very basic, really.
+      </p>
+    {% else %}
+      {{ icon.template(size='lg') }}
+    {% endif %}
+  </div>
+  <div class="mosaic-backdrop">
+    {{backdrop}}
+  </div>
+</div>
+{% endmacro %}

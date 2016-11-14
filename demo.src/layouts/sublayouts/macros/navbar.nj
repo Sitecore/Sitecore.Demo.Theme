@@ -1,0 +1,277 @@
+{% import "layouts/components/atoms/templates/_logo.nj" as logo %}
+{% import "layouts/components/atoms/templates/_dropdown.nj" as dropdown %}
+{% import "layouts/components/atoms/templates/_dropdown.nj" as dropdown %}
+
+{% macro brand(tagline = 'Sitecore Experience Example') %}
+  <a class="navbar-brand has-tagline" href="/index.html">
+    {{logo.template(tagline=tagline)}}
+  </a>
+{% endmacro %}
+
+{% macro nav(componentsToLoad, templatesToLoad) %}
+  <ul class="nav navbar-nav">
+    <li class="dropdown mega-dropdown">
+      <a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Components<span class="caret"></span></a>
+      <div class="dropdown-menu mega-dropdown-menu">
+        <div class="row">
+          {% for componentCategory, components in componentsToLoad %}
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="list-unstyled">
+                <li class="dropdown-header">
+                  {{componentCategory | capitalize}}
+                </li>
+                {% for component in components %}
+                  <li>
+                    <a href="{{componentCategory}}.html#{{component.name}}">{{component.name | replace("-", " ")}}</a>
+                  </li>
+                {% endfor %}
+                <li class="divider"></li>
+              </ul>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </li>
+    <li class="dropdown mega-dropdown">
+      <a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Templates<span class="caret"></span></a>
+      <div class="dropdown-menu mega-dropdown-menu">
+        <div class="row">
+          {% for templateCategory, templates in templatesToLoad %}
+            <div class="col-md-4 col-sm-6">
+              <ul class="list-unstyled">
+                <li class="dropdown-header">
+                  {{templateCategory | capitalize}}
+                </li>
+                  {% for examplesCategory, examples in templates %}
+                    <li class="">
+                      {{examplesCategory | capitalize}}
+                    </li>
+                    <ul>
+                      {% for example in examples %}
+                        <li>
+                          <a href="/{{templateCategory}}-{{examplesCategory}}-{{example.name}}.html">{{example.name | replace("-", " ")}}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </li>
+    <li class="dropdown mega-dropdown">
+      <a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
+      <div class="dropdown-menu mega-dropdown-menu">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list list-unstyled">
+              <li class="dropdown-header">
+                Structured pages
+              </li>
+              <li>
+                <a href="/">Front page</a>
+              </li>
+              <li>
+                <a href="/page-campaign.html">Campaign page</a>
+              </li>
+              <li>
+                <a href="/page-404.html">404 page</a>
+              </li>
+              <li class="divider"></li>
+              <li class="dropdown-header">
+                Commerce pages
+              </li>
+              <li>
+                <a href="/page-shopping-cart.html">Shopping cart page</a>
+              </li>
+              <li>
+                <a href="/page-order-confirmation.html">Order confirmation page</a>
+              </li>
+              <li>
+                <a href="/page-checkout.html">Checkout page</a>
+              </li>
+              <li class="divider"></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list list-unstyled">
+              <li class="dropdown-header">
+                Content pages
+              </li>
+              <li>
+                <a href="/page-article.html">General article page</a>
+              </li>
+              <li>
+                <a href="/page-news.html">News page</a>
+              </li>
+              <li>
+                <a href="/page-blog.html">Blog page</a>
+              </li>
+              <li>
+                <a href="/page-person.html">Person page</a>
+              </li>
+              <li>
+                <a href="/page-team.html">Team page</a>
+              </li>
+              <li>
+                <a href="/page-product.html">Product page</a>
+              </li>
+              <li>
+                <a href="/page-faq.html">FAQ page</a>
+              </li>
+              <li>
+                <a href="/page-email-template.html">E-mail template</a>
+              </li>
+              <li class="divider"></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list list-unstyled">
+              <li class="dropdown-header">
+                List pages
+              </li>
+              <li>
+                <a href="/page-news-list.html">News list page</a>
+              </li>
+              <li>
+                <a href="/page-events-list.html">Events list page</a>
+              </li>
+              <li>
+                <a href="/page-search-results.html">Search results page</a>
+              </li>
+              <li>
+                <a href="/page-gallery.html">Gallery page</a>
+              </li>
+              <li class="divider"></li>
+              <li class="dropdown-header">
+                Service pages
+              </li>
+              <li>
+                <a href="/page-login.html">Login page</a>
+              </li>
+              <li>
+                <a href="/page-register.html">Register page</a>
+              </li>
+              <li>
+                <a href="/page-contact.html">Contact page</a>
+              </li>
+              <li class="divider"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Themes<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li class="dropdown-header">
+          Main themes
+        </li>
+        <li>
+          <a href="#" data-toggle="theme" data-themetype="main" data-theme="niteflight">Niteflight (default)</a>
+        </li>
+        <li>
+          <a href="#" data-toggle="theme" data-themetype="main" data-theme="dayfrost">Dayfrost</a>
+        </li>
+        <li>
+          <a href="#" data-toggle="theme" data-themetype="main" data-theme="white-wonder">White wonder</a>
+        </li>
+        <li>
+          <a href="#" data-toggle="theme" data-themetype="main" data-theme="default">Default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+{% endmacro %}
+
+{% macro activity() %}
+  <div class="navbar-activity">
+    <ul class="nav navbar-nav">
+      {{dropdown.template(maintag='li', toggletag='a', toggleclass='btn', icon='home')}}
+      <li class="dropdown hidden-xs">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span> <span class="badge bg-primary">4</span></a>
+        <div class="dropdown-menu">
+          <h4>Shopping cart</h4>
+          <ul class="media-list">
+            <li class="media">
+              <div class="media-left">
+                <img class="media-object" src="http://placehold.it/64x64">
+              </div>
+              <div class="media-body">
+                <strong class="media-heading">Some awesome product you want to buy</strong>
+                <p>
+                  Price: $20,099
+                </p>
+              </div>
+              <div class="media-right">
+                <button type="button" class="btn btn-danger">X</button>
+              </div>
+            </li>
+            <li class="media media-align-middle">
+              <div class="media-left">
+                <img class="media-object" src="http://placehold.it/64x64">
+              </div>
+              <div class="media-body">
+                <strong class="media-heading">Some awesome product you want to buy</strong>
+                <p>
+                  Price: $20,099
+                </p>
+              </div>
+              <div class="media-right">
+                <button type="button" class="btn btn-danger">X</button>
+              </div>
+            </li>
+            <li class="media media-align-middle">
+              <div class="media-left">
+                <img class="media-object" src="http://placehold.it/64x64">
+              </div>
+              <div class="media-body">
+                <strong class="media-heading">Some awesome product you want to buy</strong>
+                <p>
+                  Price: $20,099
+                </p>
+              </div>
+              <div class="media-right">
+                <button type="button" class="btn btn-danger">X</button>
+              </div>
+            </li>
+          </ul>
+          <a href="/page-shopping-cart.html" class="btn btn-block btn-default">View cart</a>
+        </div>
+      </li>
+      <li class="dropdown hidden-xs">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span></a>
+        <div class="dropdown-menu">
+          <h4>Login</h4>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" readonly="">
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Remember me
+              </label>
+            </div>
+            <a href="#">Forgot password?</a> <a href="/pages-register.html">Register</a>
+            <button type="submit" class="btn btn-block btn-default">Submit</button>
+          </form>
+        </div>
+      </li>
+      <li class="navbar-activity-search">
+        <form class="navbar-form" role="search">
+          <div class="form-group">
+            <input type="text" placeholder="Search">
+          </div>
+        </form>
+
+        <a href="#" class="btn navbar-toggle-search" data-toggle-class="is-searching" data-target="#mainNavbar"><span class="glyphicon glyphicon-search"></span></a>
+      </li>
+    </ul>
+  </div>
+{% endmacro %}

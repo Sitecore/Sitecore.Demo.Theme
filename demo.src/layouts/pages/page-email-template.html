@@ -1,0 +1,370 @@
+{#
+	Set variables
+#}
+{% set mailMaxWidth = "800" %}
+{% set fontFamily = "font-family: Bitter, Palatino Linotype, Georgia, serif" %}
+{% set headerFontSize = "font-size: 24px" %}
+{% set fontSize = "font-size: 15px" %}
+{% set fontSizeSmall = "font-size: 14px" %}
+
+{% macro well(color, buttonText, title) %}
+	{% set bgColor = "" %}
+	{% set textColor = "" %}
+	{% set buttonBorderColor = "" %}
+	{% set buttonTextColor = "" %}
+
+	{% if color == "red" %}
+		<!-- Rød -->
+		{% set bgColor = "#C8244F" %}
+		{% set textColor = "white" %}
+
+		{% set buttonBorderColor = "white" %}
+		{% set buttonTextColor = "white" %}
+	{% elif color == "white" %}
+		<!-- Hvid -->
+		{% set bgColor = "white" %}
+		{% set textColor = "black" %}
+
+		{% set buttonBorderColor = "black" %}
+		{% set buttonTextColor = "black" %}
+	{% elif color == "grey" %}
+		<!-- Transparent -->
+		{% set bgColor = "#f5f5f5" %}
+		{% set textColor = "black" %}
+
+		{% set buttonBorderColor = "black" %}
+		{% set buttonTextColor = "black" %}
+	{% endif %}
+
+	{% call table("100%", bgColor) -%}
+		<tr>
+			<td width="20"></td>
+			<td>
+				{% if title %}
+					<h3 style="margin: 20px 0 10px 0; {{headerFontSize}}; color: {{textColor}}; {{fontFamily}};">{{title}}</h3>
+				{% endif %}
+			</td>
+			<td width="20"></td>
+		</tr>
+		<tr>
+			<td width="20"></td>
+			<td style="margin: 0; color: {{textColor}}; {{fontFamily}}; {{fontSize}}; line-height: 145%;">
+				<p>
+					Sitecore Habitat is a methodology for developing Sitecore Solutions. It is based on a layered and modular architecture focusing on high efficiency and simplicity. 
+				</p>
+			</td>
+			<td width="20"></td>
+		</tr>
+		{% if buttonText %}
+		<tr>
+			<td width="20"></td>
+			<td height="45" valign="bottom">
+				{{button(buttonText, buttonBorderColor, buttonTextColor)}}
+			</td>
+			<td></td>
+		</tr>
+		{% endif %}
+		<tr>
+			<td colspan="3" height="25">
+			</td>
+		</tr>
+	{%- endcall %}
+{% endmacro %}
+
+{% macro mediaList(level, color) %}
+	<tr>
+		<td height="35">
+			{% call table("100%") -%}
+				<tr>
+					{% if level == "1" %}
+					<td width="20"></td>
+					{% endif %}
+					{% if level == "2" %}
+					<td width="92"></td>
+					{% endif %}
+					{% if level == "3" %}
+					<td width="164"></td>
+					{% endif %}
+
+					<td width="72" valign="top">
+						{{image("https://placeholdit.imgix.net/~text?txtsize=16&txt=64%C3%9764&w=64&h=64", "", "", "", false)}}
+
+						{% call table("100%") -%}
+							<tr>
+								<td height="15"></td>
+							</tr>
+						{%- endcall %}
+					</td>
+					<td valign="top" style="color: black;">
+						<h4 style="margin: 0; font-size: 18px; {{fontFamily}};">Media heading</h4>
+						<p style="margin: 0; {{fontSizeSmall}}; {{fontFamily}};">
+							Bras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+						</p>
+
+						{% call table("100%") -%}
+							<tr>
+								<td height="10"></td>
+							</tr>
+						{%- endcall %}
+
+						{% if color == "red" %}
+							{{button("Read more", "#C8244F", "#C8244F")}}
+						{% elif color == "black" %}
+							{{button("Read more", "black", "black")}}
+						{% endif %}
+
+						{% call table("100%") -%}
+							<tr>
+								<td height="15"></td>
+							</tr>
+						{%- endcall %}
+					</td>
+				</tr>
+			{%- endcall %}
+		</td>
+	</tr>
+{% endmacro %}
+
+{% macro button(buttonText, borderColor, textColor) %}
+	<table cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td height="35" {% if borderColor %}border="2" bordercolor="{{borderColor}}" style="border: 2px solid {{borderColor}};"{% endif %}>
+				<img src="http://i66.tinypic.com/17p83a.gif" height="6" alt="">
+				<a href="#" style="{% if textColor %}color: {{textColor}};{% endif %} {{fontFamily}}; {{fontSizeSmall}}; text-decoration: none;" {% if textColor %}color="{{textColor}}"{% endif %}>
+					<b style="{% if textColor %}color: {{textColor}};{% endif %}">&nbsp;&nbsp;&nbsp;{{buttonText}}&nbsp;&nbsp;&nbsp;</b>
+				</a>
+				<img src="http://i66.tinypic.com/17p83a.gif" height="6" alt="">
+			</td>
+		</tr>
+	</table>
+{% endmacro %}
+
+{% macro spacer() %}
+	<table cellpadding="0" cellspacing="0">
+		<tr>
+			<td height="20"></td>
+		</tr>
+	</table>
+{% endmacro %}
+
+{% macro table(width, bgColor) %}
+	<table border="0" cellpadding="0" cellspacing="0"{% if width %} width="{{width}}"{% endif %}{% if bgColor %} bgcolor="{{bgColor}}" style="background-color: {{bgColor}};"{% endif %}>
+	{{caller()}}
+	</table>
+{% endmacro %}
+
+{% macro image(url, alt, width, height, center=true) %}
+	{% if center %}
+	<center style="font-size: 0;">
+		<img src="{{url}}" alt="{{alt}}"{% if width %} width="{{width}}"{% endif %}{% if height %}height="height"{% endif %} />
+	</center>
+	{% else %}
+		<img src="{{url}}" alt="{{alt}}"{% if width %} width="{{width}}"{% endif %}{% if height %}height="height"{% endif %} />
+	{% endif %}
+{% endmacro %}
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Habitat themed newsletter</title>
+	<style>
+		body {
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<style type="text/css">
+		@import url(https://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
+	</style>
+
+	<!-- Max width content begin-start-->
+	{% call table("100%") -%}
+		<tr>
+			<td></td>
+			<td width="{{mailMaxWidth}}">
+	<!-- Max width content begin-end -->
+
+				<!-- Header -->
+				{% call table("100%", "#2E384E") -%}
+					<tr>
+						<td colspan="4" height="20"></td>
+					</tr>
+					<tr>
+						<td width="20"></td>
+						<td>
+							{{image("http://i66.tinypic.com/2jceufm.png", "HABITAT themed newsletter", "214", "54", false)}}
+						</td>
+						<td align="right" style="color: white;">
+							<a href="http://www.sitecore.net/learn.aspx" style="color: white; {{fontFamily}}; text-decoration: none;"><b>Learn</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="http://www.sitecore.net/about.aspx" style="color: white; {{fontFamily}}; text-decoration: none;"><b>About</b></a> 
+						</td>
+						<td width="20"></td>
+					</tr>
+					<tr>
+						<td colspan="4" height="20"></td>
+					</tr>
+				{%- endcall %}
+
+
+				{{image("http://i64.tinypic.com/2v01iki.png", "Large Image", "100%")}}
+
+				<!-- First text element, a well with custom text content -->
+				<table cellpadding="0" cellspacing="0" width="100%" bgcolor="white" style="background-color: white;" border="0">
+					<tr>
+						<td width="20"></td>
+						<td>
+							<h3 style="margin: 20px 0 10px 0; {{headerFontSize}}; color: black; {{fontFamily}};">Welcome to Sitecore</h3>
+						</td>
+						<td width="20"></td>
+					</tr>
+					<tr>
+						<td width="20"></td>
+						<td style="color: black; {{fontFamily}}; {{fontSize}}; line-height: 145%;">
+							<p>
+								In eget odio ullamcorper sem porttitor tristique eget vel elit. Nullam nec dui ullamcorper, ornare purus at, scelerisque leo. Nulla elit leo, varius quis dapibus ac, auctor sit amet ex. Maecenas non rutrum ligula. Donec at dui nibh. Phasellus rutrum orci vel accumsan laoreet. Praesent semper fringilla nisl, eu bibendum tellus mattis vitae. Suspendisse ut interdum sapien, nec malesuada sem.
+							</p>
+							<p>
+								Donec non <a href="#">ante</a> feugiat, imperdiet elit a, semper mi. Nunc at posuere massa. Praesent vel tempus odio. Vivamus non ante non nunc viverra porta. Duis rhoncus venenatis aliquam. Maecenas ullamcorper elit justo, sit amet ultricies urna consectetur id. Nam non est eu dui rhoncus ullamcorper nec bibendum nisi.
+							</p>
+							<p>
+								<ul>
+									<li>Bullet 1</li>
+									<li>Bullet 2</li>
+									<li>Bullet 3</li>
+								</ul>
+							</p>
+						</td>
+						<td width="20"></td>
+					</tr>
+					<tr>
+						<td colspan="3" height="25">
+						</td>
+					</tr>
+				</table>
+				<!-- header end -->
+
+
+
+				{{well("red", "Read more", "Learn more")}}
+
+
+
+				<!-- Media list -->
+				<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#f5f5f5" style="background-color: #f5f5f5;">
+					<tr>
+						<td bgcolor="#f5f5f5" style="background-color: #f5f5f5;">
+							{% call table("100%", "#f5f5f5") -%}
+								<tr>
+									<td height="20"></td>
+								</tr>
+							{%- endcall %}
+							{% call table("100%", "#f5f5f5") -%}
+								{{mediaList("1", "")}}
+							{%- endcall %}
+							{% call table("100%", "#f5f5f5") -%}
+								{{mediaList("1", "")}}
+								{{mediaList("2", "red")}}
+								{{mediaList("2", "red")}}
+								{{mediaList("3", "black")}}
+							{%- endcall %}
+							{% call table("100%", "#f5f5f5") -%}
+								<tr>
+									<td height="5"></td>
+								</tr>
+							{%- endcall %}
+						</td>
+					</tr>
+				</table>
+
+
+
+				<!-- Image -->
+				{{image("http://i64.tinypic.com/2v01iki.png", "Large Image", "100%")}}
+
+
+
+				<!-- Well teaser -->
+				{{well("red", "Read more", "About")}}
+				{{well("white", "Read more", "About")}}
+				{{well("grey", "Read more", "About")}}
+				{{well("red", "", "About")}}
+				{{well("white", "", "About")}}
+				{{well("grey", "", "About")}}
+
+
+
+				<!-- Advanced thumbnail -->
+				{{image("http://i64.tinypic.com/2v01iki.png", "Large Image", "100%")}}
+				{{well("white", "Read more", "About")}}
+				{{spacer()}}
+
+
+
+
+				<!-- Advanced thumbnail 2 x 50% -->
+				{% call table("100%") -%}
+					<tr>
+						<td>
+							{{image("http://i68.tinypic.com/2ahb4h0.png", "Small", "100%")}}
+							{{well("white", "Read more", "About")}}
+							{{spacer()}}
+						</td>
+						<td width="20"></td>
+						<td>
+							{{image("http://i68.tinypic.com/2ahb4h0.png", "Small", "100%")}}
+							{{well("white", "Read more", "About")}}
+							{{spacer()}}
+						</td>
+					</tr>
+				{%- endcall %}
+
+
+
+				<!-- Footer -->
+				{% call table("100%", "#2E384E") -%}
+					<tr>
+						<td width="100%">
+							<table width="100%" cellpadding="0" cellspacing="0">
+								<tr>
+									<td height="60" valign="middle">
+										<center>
+											<p style="{{fontSizeSmall}}; color: #9499A4;">
+												<a style="color: #9499A4; text-decoration: none; {{fontFamily}};" href="https://github.com/PentiaLabs/SitecoreHabitatTheme/"><b>Habitat</b></a> |
+												<a style="color: #9499A4; text-decoration: none; {{fontFamily}};" href="http://www.sitecore.net/"><b>Sitecore.net</b></a> |
+												<a style="color: #9499A4; text-decoration: none; {{fontFamily}};" href="#"><b>Unsubscribe</b></a>
+											</p>
+										</center>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<center>
+								<p style="{{fontSizeSmall}}; color: #9499A4; {{fontFamily}}; margin: 0;">
+									This is the legal footer
+								</p>
+							</center>
+						</td>
+					</tr>
+					<tr>
+						<td height="15"></td>
+					</tr>
+				{%- endcall %}
+
+	<!-- Max width content end-start-->
+			</td>
+			<td></td>
+		</tr>
+	{%- endcall %}
+	<!-- Max width content end-end-->
+
+</body>
+</html>

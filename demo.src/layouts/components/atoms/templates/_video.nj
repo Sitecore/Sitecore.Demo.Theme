@@ -1,0 +1,13 @@
+{% macro template(containertag = 'div', src = 'images/Sitecore Experience.mp4', type = 'mp4', format = '16by9', class, attrs) %}
+<{{containertag}} class="embed-responsive embed-responsive-{{format}} {{class}}">
+  <video {{attrs}} autoplay="" muted="" loop="">
+    <source src="{{src}}" type="video/{{type}}">
+  </video>
+</{{containertag}}>
+{% endmacro %}
+
+{% macro pure(src = 'images/Sitecore Experience.mp4', type = 'mp4', attrs, class) %}
+<video {{attrs}} class="{{class}}">
+  <source src="{{src}}" type="video/{{type}}">
+</video>
+{% endmacro %}

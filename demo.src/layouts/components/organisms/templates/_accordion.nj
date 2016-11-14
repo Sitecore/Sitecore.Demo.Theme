@@ -1,0 +1,56 @@
+{% import "layouts/components/atoms/templates/_panel.nj" as panel %}
+{% import "layouts/components/atoms/templates/_video.nj" as video %}
+{% import "layouts/components/atoms/templates/_well.nj" as well %}
+{% import "layouts/components/molecules/templates/_well-teaser.nj" as wellTeaser %}
+{% import "layouts/components/organisms/templates/_media-list.nj" as mediaList %}
+{% import "layouts/components/atoms/templates/_progress-bar.nj" as progress %}
+
+{% macro template(maintag='div', id='accordion', itemcount = 6, caller = false, class) %}
+<{{maintag}} class="panel-group {{class}}" id="{{id}}" role="tablist" aria-multiselectable="true">
+  {% if caller %}
+  {{caller()}}
+  {% else %}
+  {% for i in range(0,itemcount) %}
+    {% set in = false %}
+    {% if loop.first %}
+      {% set in = true %}
+    {% endif %}
+    {{panel.accordion(in=in, id='collapse'+i)}}
+  {% endfor %}
+  {% endif %}
+</{{maintag}}>
+{% endmacro %}
+
+{% macro variant2(maintag='div', id='accordion') %}
+<{{maintag}} class="panel-group {{class}}" id="{{id}}" role="tablist" aria-multiselectable="true">
+  {% call panel.accordion(id='collapse1') %}
+    {{video.template()}}
+  {% endcall %}
+  {% call panel.accordion(id='collapse2') %}
+    {{mediaList.teaser('bg-primary')}}
+  {% endcall %}
+  {% call panel.accordion(id='collapse3') %}
+    {{wellTeaser.teaser()}}
+  {% endcall %}
+  {% call panel.accordion(id='collapse4') %}
+    {% call well.template() %}
+      {{ progress.template(showProgress=true) }}
+      {{ progress.template(type='success', showProgress=true, progress='40') }}
+      {{ progress.template(type='info', progress='20', striped=true) }}
+    {% endcall %}
+  {% endcall %}
+  {% call panel.accordion(id='collapse5') %}
+    <div class="panel-group" id="accordion-inner" role="tablist" aria-multiselectable="true">
+      {% for i in range(0, 3) %}
+        {% set in = false %}
+        {% if loop.first %}
+          {% set in = true %}
+        {% endif %}
+        {% call panel.accordion(accordionId = 'accordion-inner', id='collapse-inner-' + i) %}
+          hello
+        {% endcall %}
+      {% endfor %}
+    </div>
+  {% endcall %}
+</{{maintag}}>
+{% endmacro %}

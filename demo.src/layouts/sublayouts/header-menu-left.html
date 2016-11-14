@@ -1,0 +1,12 @@
+{% if not headerstyle %}
+{% set headerstyle = 'header-fixed header-has-top header-logo-center' %}
+{% endif %}
+{% if not (headerstyle == 'header-fixed') %}
+{% set navbarstyle = 'navbar-static' %}
+{% endif %}
+
+<header class="{{headerstyle}}">
+  {% include "layouts/sublayouts/header-top.html" %}
+  {% set tagline = false %}
+  {% include "layouts/sublayouts/navbar-left.html" %}
+</header>

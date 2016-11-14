@@ -1,0 +1,114 @@
+{% macro formgroup(label, input, helptext, caller = false, class, icon) %}
+<div class="form-group {{class}}">
+  {{label}}
+  {{input}}
+  {{icon}}
+  {{helptext}}
+  {% if caller %}
+  {{caller()}}
+  {% endif %}
+</div>
+{% endmacro %}
+
+{% macro form(class, action = "") %}
+<form class="{{class}}" action="{{action}}">
+  {{caller()}}
+</form>
+{% endmacro %}
+
+{% macro inputgroup(input, addon) %}
+ <div class="input-group">
+    <span class="input-group-addon">{{addon}}</span>
+    {{input}}
+  </div>
+{% endmacro %}
+
+{% macro inputgroupbtn(input, prebutton, postbutton) %}
+<div class="input-group">
+  {% if prebutton %}
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button">{{prebutton}}</button>
+    </span>
+  {% endif %}
+  {{input}}
+  {% if postbutton %}
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button">{{postbutton}}</button>
+    </span>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{% macro label(caption, for='input') %}
+  <label for="{{for}}">{{caption}}</label>
+{% endmacro %}
+
+{% macro icon(icon) %}
+  <span class="glyphicon glyphicon-{{icon}} form-control-feedback" aria-hidden="true"></span>
+{% endmacro %}
+
+{% macro text(id, class) %}
+  <input type="text" class="form-control {{class}}" id="{{id}}" placeholder="Enter text here">
+{% endmacro %}
+
+{% macro number(id, class) %}
+  <input type="number" class="form-control {{class}}" id="{{id}}" placeholder="Enter number">
+{% endmacro %}
+
+{% macro date(id, class) %}
+  <input type="date" class="form-control {{class}}" id="{{id}}" placeholder="Enter text here">
+{% endmacro %}
+
+{% macro email(id) %}
+  <input type="email" class="form-control" id="{{id}}" placeholder="Email">
+{% endmacro %}
+
+{% macro checkbox(id, label) %}
+<div class="checkbox">
+  <label>
+    <input type="checkbox" id="{{id}}"> {{label}}
+  </label>
+</div>
+{% endmacro %}
+
+{% macro password(id) %}
+  <input type="password" class="form-control" id="{{id}}" placeholder="Password" readonly>
+{% endmacro %}
+
+{% macro file(id) %}
+  <div class="form-group">
+    <input type="file" id="{{id}}" />
+    <label for="{{id}}" data-filename="No file chosen">Choose file</label>
+  </div>
+{% endmacro %}
+
+{% macro textarea(id, rows=3) %}
+  <textarea class="form-control" id="{{id}}" rows="{{3}}"></textarea>
+{% endmacro %}
+
+{% macro select(id, class) %}
+  <select class="form-control {{class}}" id="{{id}}">
+    <option>Afghanistan</option>
+    <option>Bahamas</option>
+    <option>Cambodia</option>
+    <option>Denmark</option>
+    <option>Ecuador</option>
+    <option>Fiji</option>
+    <option>Gabon</option>
+    <option>Haiti</option>
+  </select>
+{% endmacro %}
+
+{% macro radio(id, inline=false, caption) %}
+  <label {% if inline %}class="radio-inline"{% endif %}>
+    <input type="radio" id="{{id}}" value="{{caption}}"> {{caption}}
+  </label>
+{% endmacro %}
+
+{% macro helptext(text) %}
+  <p class="help-block">{{text}}</p>
+{% endmacro %}
+
+{% macro button(text, type='submit', class='btn-default') %}
+  <button type="{{type}}" class="btn {{class}}">{{text}}</button>
+{% endmacro %}

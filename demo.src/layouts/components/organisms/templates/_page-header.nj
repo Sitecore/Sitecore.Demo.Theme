@@ -1,0 +1,43 @@
+{% import "layouts/components/molecules/templates/_media.nj" as media %}
+{% import "layouts/components/atoms/templates/_image.nj" as image %}
+{% import "layouts/components/atoms/templates/_nav.nj" as nav %}
+
+{% macro pagetitle(title = 'Default page heading right here', lead='Default details right here. It could be really long or really short.', time, class) %}
+  <div class="container {{class}}">
+    <h1>
+      {{title | safe}}
+      {% if lead %}
+      <br/><small>
+        {{lead}}
+      </small>
+      {% endif %}
+    </h1>
+    {% if time %}
+    <p>
+      <time>{{time}}</time>
+    </p>
+    {% endif %}
+  </div>
+{% endmacro %}
+
+{% macro breadcrumb() %}
+  <div class="container">
+    {% include "layouts/components/atoms/breadcrumb.html" %}
+  </div>
+{% endmacro %}
+
+{% macro author() %}
+  <div class="container">
+    {% call media.template(class='well', media=image.template(responsive=false, type='circle', height=48, width=48, class='media-object')) %}
+      <h4 class="media-heading">About the author</h4>
+      <span role="author">John Doe. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie nisi velit, quis molestie tellus eleifend quis. Praesent sed sodales sapien. Pellentesque viverra tellus massa, ut porttitor augue luctus in.</span>
+    {% endcall %}
+  </div>
+{% endmacro %}
+
+{% macro process() %}
+  <div class="container">
+    {{nav.process()}}
+  </div>
+{% endmacro %}
+

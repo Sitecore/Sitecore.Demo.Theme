@@ -1,0 +1,16 @@
+{% import "layouts/components/organisms/templates/_lightbox.nj" as lightbox %}
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="block-grid-md-4 block-grid-sm-3 block-grid-xs-2">
+      {{lightbox.image(tag='li')}}
+      {{lightbox.image(tag='li')}}
+      {{lightbox.video(tag='li')}}
+      {{lightbox.image(tag='li')}}
+      {{lightbox.image(tag='li')}}
+      {{lightbox.image(tag='li')}}
+      {{lightbox.video(tag='li', type='video', link='http://www.w3schools.com/html/mov_bbb.mp4')}}
+      {{lightbox.image(tag='li')}}
+    </ul>
+  </div>
+</div>

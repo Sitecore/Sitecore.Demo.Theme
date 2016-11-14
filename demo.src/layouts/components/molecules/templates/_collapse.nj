@@ -1,0 +1,10 @@
+{% macro template(button, maintag='div', class, id='collapseExample', content='Some content inside the thing') %}
+{% if not button %}
+<a href="#{{id}}" class="btn btn-primary" role="button" data-toggle="collapse" href="#{{id}}" aria-expanded="false" aria-controls="{{id}}">Collapse toggle</a>
+{% else %}
+{{button}}
+{% endif %}
+<{{maintag}} class="collapse {{class}}" id="{{id}}">
+  {{content}}
+</{{maintag}}>
+{% endmacro %}

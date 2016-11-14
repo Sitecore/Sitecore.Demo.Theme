@@ -1,0 +1,18 @@
+{% if not headerstyle %}
+{% set headerstyle = 'header-fixed header-has-top' %}
+{% endif %}
+{% if not (headerstyle == 'header-fixed') %}
+{% set navbarstyle = 'navbar-static' %}
+{% endif %}
+
+<header class="{{headerstyle}} {{headerbackground}}">
+  <!--[if lt IE 10]>
+    <div class="browserupgrade bg-danger">
+      <div class="container">
+      <p class="">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      </div>
+    </div>
+  <![endif]-->
+  {% include "layouts/sublayouts/header-top.html" %}
+  {% include "layouts/sublayouts/navbar.html" %}
+</header>

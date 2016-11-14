@@ -1,0 +1,55 @@
+{% import "layouts/components/atoms/templates/_well.nj" as well %}
+{% import "layouts/components/molecules/templates/_media-parts.nj" as mediaparts %}
+{% import "layouts/components/molecules/templates/_media.nj" as media %}
+{% from "layouts/components/atoms/templates/_labels-badges.nj" import label as label %}
+
+{% macro template(maintag = 'div', item, itemcount = 4, caller = false, class) %}
+  <{{maintag}} class="media-list {{class}}">
+    {% if caller %}
+      {% for i in range(0,itemcount) %}
+        {{caller()}}
+      {% endfor %}
+    {% else %}
+      {% for i in range(0,itemcount) %}
+        {{item}}
+      {% endfor %}
+    {% endif %}
+  </{{maintag}}>
+{% endmacro %}
+
+{% macro calltemplate(maintag = 'div', class) %}
+  <{{maintag}} class="media-list {{class}}">
+    {{caller()}}
+  </{{maintag}}>
+{% endmacro %}
+
+{% macro reviews(maintag = 'div', itemcount = 3, class) %}
+  <{{maintag}} class="media-list media-list-divided {{class}}">
+    {% call mediaparts.mediaLeft() %}
+      {{ label('success', '4.5', 'label-square') }}
+    {% endcall %}
+    {% call mediaparts.mediaBody() %}
+      <h3>A standard review about the product</h3>
+      <p>Maecenas mollis in libero id pellentesque. Suspendisse potenti. Pellentesque non nulla augue. Suspendisse pretium fringilla diam, sed ullamcorper nunc iaculis vitae. Vestibulum semper augue velit. Duis nec leo nisl. Nulla auctor ornare massa vel fermentum. Maecenas mollis in libero id pellentesque. Suspendisse potenti. Pellentesque non nulla augue. Suspendisse pretium fringilla diam, sed ullamcorper nunc iaculis vitae. Vestibulum semper augue velit. Duis nec leo nisl. Nulla auctor ornare massa vel fermentum. Maecenas mollis in libero id pellentesque. Suspendisse potenti. Pellentesque non nulla augue. Suspendisse pretium fringilla diam, sed ullamcorper nunc iaculis vitae. Vestibulum semper augue velit. Duis nec leo nisl. Nulla auctor ornare massa vel fermentum.</p>
+      <div class="media">
+        {% call mediaparts.mediaLeft() %}
+        {% endcall %}
+      </div>
+    {% endcall %}
+  </{{maintag}}>
+{% endmacro %}
+
+{% macro teaser(class) %}
+  {% call well.template(class) -%}
+    <h5 class="text-uppercase">Latest posts</h4>
+    {% call template(maintag='ul') %}
+      <li class="media">
+        <div class="media-body">
+          <date>14 September 2015</date>
+          <h4 class="media-heading"><a href="#">Sitecore XP rated Best in Class - again</a></h4>
+        </div>
+      </li>
+    {% endcall %}
+    <a href="#" class="btn btn-default">Read more</a>    
+  {%- endcall %}
+{% endmacro %}

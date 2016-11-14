@@ -1,0 +1,14 @@
+{% import "layouts/components/molecules/templates/_advanced-thumbnail.nj" as thumbnail -%}
+{% import "layouts/components/molecules/templates/_mosaic.nj" as mosaic %}
+
+<div class="owl-carousel" data-options='{"items": 3, "navigation": false, "navigationText": ["<", ">"], "autoPlay": true}'>
+  {{ mosaic.template(showOverlay = true) }}
+  {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+  {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+  {% include "layouts/components/molecules/templates/_media-1.html" %}
+  {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+  {% include "layouts/components/molecules/templates/_media-3.html" %}
+  {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+  {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+  {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+</div>

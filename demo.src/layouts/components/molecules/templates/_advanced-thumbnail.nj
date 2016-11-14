@@ -1,0 +1,114 @@
+{% import "layouts/components/atoms/templates/_image.nj" as image %}
+
+{% macro template(maintag = 'div', media, class, link = true, linkClass = 'btn btn-default', date, content = 'It doesn\'t really look of much, since it\'s only a thumbnail') -%}
+<{{maintag}} class="thumbnail {{class}}">
+  {% if media %}
+    {{media}}
+  {% else %}
+    {{ image.template(width=500, height=300) }}
+  {% endif %}
+  <div class="caption">
+    <h3>This is a placeholder thumbnail</h3>
+    {% if date %}
+    <date>14 September 2015</date>
+    {% endif %}
+    {% if content %}
+    <p>
+      {{content}}
+    </p>
+    {% endif %}
+    {% if link %}
+    <a href="#" class="{{linkClass}}" role="button">Button</a>
+    {% endif %}
+  </div>
+</{{maintag}}>
+{%- endmacro %}
+
+{% macro horizontalLeft(maintag = 'div', media, class, link = true, linkClass = 'btn btn-default', date = false) -%}
+<{{maintag}} class="row thumbnail thumbnail-horizontal-left {{class}}">
+  <div class="col-sm-6">
+    {% if media %}
+      {{media}}
+    {% else %}
+      {{ image.template(width=500, height=300) }}
+    {% endif %}
+  </div>
+  <div class="col-sm-6 caption">
+    <h3>This is a placeholder thumbnail</h3>
+    {% if date %}
+    <span>14 September 2015</date>
+    {% endif %}
+    <p>
+      It doesn't really look of much, since it's only a thumbnail
+    </p>
+    {% if link %}
+    <a href="#" class="{{linkClass}}" role="button">Button</a>
+    {% endif %}
+  </div>
+</{{maintag}}>
+{%- endmacro %}
+
+{% macro horizontalRight(maintag = 'div', media, class, link = true, linkClass = 'btn btn-default', date = false) -%}
+<{{maintag}} class="row thumbnail thumbnail-horizontal-right {{class}}">
+  <div class="col-sm-6 caption">
+    <h3>This is a placeholder thumbnail</h3>
+    {% if date %}
+    <date>14 September 2015</date>
+    {% endif %}
+    <p>
+      It doesn't really look of much, since it's only a thumbnail
+    </p>
+    {% if link %}
+    <a href="#" class="{{linkClass}}" role="button">Button</a>
+    {% endif %}
+  </div>
+  <div class="col-sm-6">
+    {% if media %}
+      {{media}}
+    {% else %}
+      {{ image.template(width=500, height=300) }}
+    {% endif %}
+  </div>
+</{{maintag}}>
+{%- endmacro %}
+
+{% macro card(headline, title='Default thumb title', titlesize='h4', text='Default text', linkclass='btn btn-default', linktext='Read more', class) %}
+<div class="thumbnail {{class}}">
+  {% if headline %}
+  <header class="thumbnail-header">
+    {{headline}}
+  </header>
+  {% endif %}
+  <div class="caption">
+    {% if title %}
+    <{{titlesize}}>{{title}}</{{titlesize}}>
+    {% endif %}
+    {% if text %}
+    <p>
+      {{text}}
+    </p>
+    {% endif %}
+    <a href="#" class="{{linkclass}}">{{linktext}}</a>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro icon(maintag = 'div', title='This is a placeholder thumbnail', icon = 'cloud', class, link = true, linkClass = 'btn btn-default', date, content = 'It doesn\'t really look of much, since it\'s only a thumbnail') -%}
+<{{maintag}} class="thumbnail {{class}}">
+  <span class="icon-xl icon-spacing icon-centered glyphicon glyphicon-{{icon}}"></span>
+  <div class="caption text-center">
+    <h3>{{title}}</h3>
+    {% if date %}
+    <date>14 September 2015</date>
+    {% endif %}
+    {% if content %}
+    <p>
+      {{content}}
+    </p>
+    {% endif %}
+    {% if link %}
+    <a href="#" class="{{linkClass}}" role="button">Button</a>
+    {% endif %}
+  </div>
+</{{maintag}}>
+{% endmacro %}

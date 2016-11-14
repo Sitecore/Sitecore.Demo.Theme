@@ -1,0 +1,3 @@
+{% macro template(icon='cloud', icontype='glyphicon', size='md', class) %}
+  <span class="{{icontype}} {{icontype}}-{{icon}} {% if size %}icon-{{size}}{% endif %} {{class}}"></span>
+{% endmacro %}

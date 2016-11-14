@@ -1,0 +1,46 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/organisms/templates/_page-header.nj" as pageheader %}
+{% import "layouts/components/organisms/templates/_article.nj" as article %}
+{% import "layouts/components/atoms/templates/_list.nj" as list %}
+{% import "layouts/components/molecules/templates/_sidebar-navigation.nj" as sidebar %}
+
+{% set pageHeaderTop = true %} 
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader() -%}
+    {{pageheader.breadcrumb()}}
+    {{pageheader.pagetitle(title='BREAKING: News headline here', time='1 January 2016')}}
+    {{pageheader.author()}}
+  {%- endcall %}
+  {% call layout.section(type='sidebar') -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3" >
+          <aside>
+            {{sidebar.static()}}
+          </aside>
+        </div>
+        <div class="col-md-6">
+          {{ article.default(title=false, showFooter=false) }}
+        </div>
+        <div class="col-md-3" >
+          <aside>
+            {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+            {% include "layouts/components/molecules/templates/_media-2.html" %}
+          </aside>
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

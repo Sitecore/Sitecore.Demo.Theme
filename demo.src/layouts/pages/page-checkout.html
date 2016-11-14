@@ -1,0 +1,103 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% import "layouts/components/atoms/templates/_headline.nj" as headline %}
+{% import "layouts/components/atoms/templates/_table.nj" as table %}
+{% import "layouts/components/atoms/templates/_form.nj" as form %}
+{% import "layouts/components/atoms/templates/_well.nj" as well %}
+{% import "layouts/components/atoms/templates/_list.nj" as list %}
+{% import "layouts/components/organisms/templates/_page-header.nj" as pageheader %}
+
+{% set pageHeaderTop = true %} 
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader() -%}
+    {{pageheader.pagetitle(title='Checkout', lead=false)}}
+    {{pageheader.process()}}
+  {% endcall %}
+  {% call layout.section() %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {% call headline.template(class='text-center', tag='h3') %}
+            Order overview
+          {% endcall%}
+          {{table.template('striped')}}
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      {% call headline.template(class='text-center', tag='h3') %}
+        1. Contact Details
+      {% endcall%}
+      {% call form.form() %}
+        <div class="row">
+          <div class="col-sm-6">
+            {{form.formgroup(label=form.label(caption='First name', for='firstname'), input=form.text(id='firstname'))}}
+          </div>
+          <div class="col-sm-6">
+            {{form.formgroup(label=form.label(caption='Last name', for='lastname'), input=form.text(id='lastname'))}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8">
+            {{form.formgroup(label=form.label(caption='Address', for='address'), input=form.text(id='address'))}}
+          </div>
+          <div class="col-sm-4">
+            {{form.formgroup(label=form.label(caption='State (if any)', for='state'), input=form.text(id='state'))}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            {{form.formgroup(label=form.label(caption='City', for='city'), input=form.text(id='city'))}}
+          </div>
+          <div class="col-sm-4">
+            {{form.formgroup(label=form.label(caption='ZIP code', for='zipcode'), input=form.number(id='zipcode'))}}
+          </div>
+          <div class="col-sm-4">
+            {{form.formgroup(label=form.label(caption='Country', for='country'), input=form.select(id='country'))}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8">
+            {{form.formgroup(label=form.label(caption='Email', for='email'), input=form.email(id='email'))}}
+          </div>
+          <div class="col-sm-4">
+            {{form.formgroup(label=form.label(caption='Phone', for='phone'), input=form.number(id='phone'))}}
+          </div>
+        </div>
+        {% call headline.template(class='text-center', tag='h3') %}
+          2. Card Details
+        {% endcall%}
+        <div class="row">
+          <div class="col-sm-8">
+            {{form.formgroup(label=form.label(caption='Card number', for='cardnumber'), input=form.number(id='cardnumber'))}}
+          </div>
+          <div class="col-sm-4">
+            {{form.formgroup(label=form.label(caption='Expiry date', for='expiry'), input=form.date(id='expiry'))}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8">
+            {{form.formgroup(label=form.label(caption='Card holders name', for='cardname'), input=form.text(id='cardname'))}}
+          </div>
+          <div class="col-sm-4">
+            {{form.formgroup(label=form.label(caption='Secret code', for='secret'), input=form.number(id='secret'))}}
+          </div>
+        </div>
+        {{form.checkbox(id='terms', label='I have read and agreed to the terms and conditions')}}
+        {{form.button(text='Buy now', class='btn-success btn-xl')}}
+      {% endcall %}
+    </div>
+  {% endcall %}
+{% endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

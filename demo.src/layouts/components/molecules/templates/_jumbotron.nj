@@ -1,0 +1,68 @@
+{% macro header(title='Powered by Sitecore', subTitle, linkText, linkbtntype='hollow', class, backgroundImageUrl) -%}
+{% if backgroundImageUrl %}
+  {% set style = "background-image: " + backgroundImageUrl %}
+  {% set class = class + " jumbotron-xl bg-media" %}
+{% endif %}
+
+<div class="jumbotron {{class}}" style="{{style}}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>{{title}}</h1>
+        {% if subTitle %}
+          <p class="lead">
+            {{subTitle}}
+          </p>
+        {% endif %}
+        {% if linkText %}
+          <a class="btn btn-{{linkbtntype}} btn-lg">{{linkText}}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{%- endmacro -%}
+
+{% macro template(title='Powered by Sitecore', titletag='h1', subTitle, lead, label, caller = false, linkText, linkbtntype='primary', container, class, backgroundImageUrl) -%}
+{% if backgroundImageUrl %}
+  {% set style = "background-image: " + backgroundImageUrl %}
+  {% set class = class + " bg-media" %}
+{% endif %}
+
+<div class="jumbotron {{class}}" style="{{style}}">
+  {% if container %}
+  <div class="container">
+  {% endif %}
+    {% if label %}
+      <span class="label">{{label}}</span>
+    {% endif %}
+    <{{titletag}}>{{title}}</{{titletag}}>
+    {% if subTitle %}
+      <p>{{subTitle}}</p>
+    {% endif %}
+    {% if lead %}
+      <p class='lead'>{{lead}}</p>
+    {% endif %}
+    {% if caller %}
+      {{caller()}}
+    {% endif %}
+    {% if linkText %}
+      <a class="btn btn-{{linkbtntype}} btn-lg" href="#" role="button">{{linkText}}</a>
+    {% endif %}
+  {% if container %}
+  </div>
+  {% endif %}
+</div>
+{%- endmacro -%}
+
+{% macro testimonial(class, blockquote) %}
+{% if backgroundImageUrl %}
+  {% set style = "background-image: " + backgroundImageUrl %}
+  {% set class = class + " bg-media" %}
+{% endif %}
+<div class="jumbotron {{class}}" style="{{style}}">
+  <div class="container">
+    {{blockquote}}
+  </div>
+</div>
+{% endmacro %}

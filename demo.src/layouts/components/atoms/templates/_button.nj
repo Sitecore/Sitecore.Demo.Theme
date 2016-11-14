@@ -1,0 +1,18 @@
+{% macro template(maintag = 'button', link, type='default', class, data, text, state) %}
+  <{{maintag}} {% if maintag == 'button' %}type="button"{% endif %} class="btn btn-{{type}} {{class}} {% if state == 'active'%}active{% endif %}" {% if link %}href="{{link}}"{% endif %} {% if state == 'disabled' %}disabled="disabled"{% endif %} {% if data %}{{data}}{% endif %}>
+    {% if text %}
+      {{text}}
+    {% else %}
+      {{caller()}}
+    {% endif %}
+  </{{maintag}}>
+{% endmacro %}
+
+{% macro social(link = '#', type, text) %}
+  <a href="{{link}}" class="btn btn-social-icon btn-{{type}}">
+    <i class="fa fa-{{type}}"></i>
+    {% if text %}
+      <span>{{text}}</span>
+    {% endif %}
+  </a>
+{% endmacro %}

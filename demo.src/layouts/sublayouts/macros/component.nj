@@ -1,0 +1,54 @@
+{% macro loadTemplate(component) %}
+  <div id="{{component.name}}" class="component-example">
+    <h3>
+      {{component.name | replace("-", " ") }}
+    </h3>
+    <div>
+      <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#visual{{component.name}}" role="tab" data-toggle="tab">Visual look</a>
+        </li>
+        <li role="presentation">
+          <a href="#markup{{component.name}}" role="tab" data-toggle="tab">Markup</a>
+        </li>
+        <li role="presentation" class="{% if not component.parts %}disabled{% endif %}">
+          <a href="#subcomponents{{component.name}}" role="tab" data-toggle="tab">Subcomponents</a>
+        </li>
+      </ul>
+      <div class="tab-content well">
+        <div role="tabpanel" class="tab-pane active" id="visual{{component.name}}">
+          {% include component.path + "/" + component.name + ".html" %}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="markup{{component.name}}">
+          <div class="code" id="markupEditor{{component.name}}">
+            {% include component.path + "/" + component.name + ".html" %}
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="subcomponents{{component.name}}">
+          <div class="row">
+            {% for sectionName, sectionParts in component.parts %}
+              <div class="col-md-6 {% if not component.parts.atoms %}col-md-offset-6{% endif %}">
+                <div class="panel panel-default">
+                  <div class="panel-heading text-center">
+                    {{sectionName | capitalize | replace("-", " ") }}
+                  </div>
+                  <div class="panel-body">
+                    <ul>
+                      {% for part in sectionParts %}
+                      <li>
+                        <a href="\{{sectionName + '.html#' + part}}">{{part | replace("-", " ") }}</a>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+  </div>
+{% endmacro %}

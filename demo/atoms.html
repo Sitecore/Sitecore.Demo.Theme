@@ -1,0 +1,4383 @@
+<!DOCTYPE html>
+<html dir="ltr" class="no-js" lang="">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SitecoreHabitatTheme</title>
+<link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="styles/vendor.css">
+<link rel="stylesheet" href="styles/default.css">
+<link rel="stylesheet" href="styles/niteflight.css">
+<link rel="stylesheet" href="styles/dayfrost.css" disabled="disabled">
+<link rel="stylesheet" href="styles/white-wonder.css" disabled="disabled">
+<script src="scripts/vendor/modernizr.js"></script>
+</head>
+<body class="atoms" style="">
+<div id="main-container">
+<header class="header-fixed">
+<nav class="navbar navbar-default navbar-mega navbar-fixed-top" id="mainNavbar">
+<div class="container">
+<div class="navbar-left">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#siteNavbar" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand has-tagline" href="/index.html">
+<!--[if lt IE 9]>
+<span class="logo">
+  <img class="logo-image" src="images/logo_white.png" width="200"/>
+</span>
+<![endif]-->
+<!--[if gt IE 8]> <!-- -->
+<span class="logo">
+<svg id="habitat_logo" data-name="habitat_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 91.86"><defs><style>.cls-1{fill:#231f20;}</style></defs><title>habitat_logo</title><path class="cls-1" d="M32.26,190a14.06,14.06,0,0,0-.62-4.37H25v-5.24H47.23v80.26a10.49,10.49,0,0,0,.75,4.37h6.49v5.24H25v-5.24h6.62a14.06,14.06,0,0,0,.62-4.37V190Zm53.3,70.65a14.06,14.06,0,0,0,.62,4.37h6.62v5.24H63.33v-5.24h6.49a10.51,10.51,0,0,0,.75-4.37V228.86c0-8.24-3.87-10.73-8.36-10.73a19.32,19.32,0,0,0-6.49,1.25v-4.49a19.84,19.84,0,0,1,13.73-5c11,0,16.1,7.11,16.1,17.47v33.33Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M128.48,242.59h-4.24c-6,0-7.86,3.12-7.86,8.49v6.24c0,4.74,2.12,6.87,6.62,6.87a21.44,21.44,0,0,0,5.49-.75v4.24c-2.87,2.25-7.86,3.37-12,3.37-10.36,0-15.1-7-15.1-15.23v-3c0-10,5.62-15.23,18.72-15.23h8.36v5Zm-16.72-16.73h-5.37V210.63h22.09v5.24h-15a18.92,18.92,0,0,0-1.12,4.37Zm40.19,32.45c0,3.37.62,6.24,4.12,6.24,3.74,0,4.62-3.12,4.62-7.36v-5.12h4.74v5.49c0,8.49-4.49,13.48-14.1,13.48-11.48,0-14.35-7.36-14.35-14.1V210.63c11.11,0,15,6,15,11.23v36.45Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M174,190a10.49,10.49,0,0,0-.75-4.37h-5.37v-5.24H189v82.75L178.9,271H174V190ZM208,271a24.08,24.08,0,0,1-10.48-2.25v-4.87a14.58,14.58,0,0,0,5,1c12.86,0,13.36-12.73,13.36-24.71S215.35,216,203,216a16.84,16.84,0,0,0-5.49,1v-4.87a25,25,0,0,1,10.86-2.25c15.85,0,23.59,13,23.59,29.58C231.95,256.57,223.71,271,208,271Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M250.41,220.24a10.49,10.49,0,0,0-.75-4.37h-6.49v-5.24h22.22v50.05a10.5,10.5,0,0,0,.75,4.37h6.49v5.24H243.17v-5.24h6.49a10.49,10.49,0,0,0,.75-4.37V220.24Zm7.24-41.06a10.07,10.07,0,0,1,10.11,10.11A10.11,10.11,0,1,1,257.65,179.18Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M285,194.16L299.84,188v22.59h13.86v5.24H299.84v42.06c0,3.49,1,6.24,4.87,6.24s5.49-2.62,5.49-7.11v-2.87h4.74v3c0,8.49-4.87,13.48-14.48,13.48-11.48,0-15.48-7.36-15.48-14.1V215.88h-8v-5.24h8V194.16Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M348.88,242.59h-4.24c-6,0-7.86,3.12-7.86,8.49v6.24c0,4.74,2.12,6.87,6.62,6.87a21.44,21.44,0,0,0,5.49-.75v4.24C346,269.92,341,271,336.9,271c-10.36,0-15.1-7-15.1-15.23v-3c0-10,5.62-15.23,18.72-15.23h8.36v5Zm-16.73-16.73h-5.37V210.63h22.09v5.24h-15a18.82,18.82,0,0,0-1.12,4.37Zm40.19,32.45c0,3.37.62,6.24,4.12,6.24,3.74,0,4.62-3.12,4.62-7.36v-5.12h4.74v5.49c0,8.49-4.49,13.48-14.1,13.48-11.48,0-14.35-7.36-14.35-14.1V210.63c11.11,0,15,6,15,11.23v36.45Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M395.06,194.16L409.91,188v22.59h13.86v5.24H409.91v42.06c0,3.49,1,6.24,4.87,6.24s5.49-2.62,5.49-7.11v-2.87H425v3c0,8.49-4.87,13.48-14.48,13.48-11.48,0-15.48-7.36-15.48-14.1V215.88h-8v-5.24h8V194.16Z" transform="translate(-25.02 -179.18)"/></svg>
+<small class="tagline">Sitecore Experience Example</small>
+</span>
+<!-- <![endif]-->
+</a>
+</div>
+<div class="navbar-center">
+<div class="collapse navbar-collapse" id="siteNavbar">
+<ul class="nav navbar-nav">
+<li class="dropdown mega-dropdown">
+<a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Components<span class="caret"></span></a>
+<div class="dropdown-menu mega-dropdown-menu">
+<div class="row">
+<div class="col-md-4 col-sm-6 col-xs-12">
+<ul class="list-unstyled">
+<li class="dropdown-header">
+Atoms
+</li>
+<li>
+<a href="atoms.html#Address">Address</a>
+</li>
+<li>
+<a href="atoms.html#Blockgrid">Blockgrid</a>
+</li>
+<li>
+<a href="atoms.html#Breadcrumb">Breadcrumb</a>
+</li>
+<li>
+<a href="atoms.html#Button">Button</a>
+</li>
+<li>
+<a href="atoms.html#Social-button">Social button</a>
+</li>
+<li>
+<a href="atoms.html#Button-group">Button group</a>
+</li>
+<li>
+<a href="atoms.html#Dropdown">Dropdown</a>
+</li>
+<li>
+<a href="atoms.html#Navigation">Navigation</a>
+</li>
+<li>
+<a href="atoms.html#Pagination">Pagination</a>
+</li>
+<li>
+<a href="atoms.html#Panel">Panel</a>
+</li>
+<li>
+<a href="atoms.html#Well">Well</a>
+</li>
+<li>
+<a href="atoms.html#Blockquote">Blockquote</a>
+</li>
+<li>
+<a href="atoms.html#Table">Table</a>
+</li>
+<li>
+<a href="atoms.html#Form-elements">Form elements</a>
+</li>
+<li>
+<a href="atoms.html#Progress-bar">Progress bar</a>
+</li>
+<li>
+<a href="atoms.html#Typography">Typography</a>
+</li>
+<li>
+<a href="atoms.html#Headline">Headline</a>
+</li>
+<li>
+<a href="atoms.html#Address">Address</a>
+</li>
+<li>
+<a href="atoms.html#Labels-and-badges">Labels and badges</a>
+</li>
+<li>
+<a href="atoms.html#Tooltip">Tooltip</a>
+</li>
+<li>
+<a href="atoms.html#Popover">Popover</a>
+</li>
+<li>
+<a href="atoms.html#Counter">Counter</a>
+</li>
+<li>
+<a href="atoms.html#Alert">Alert</a>
+</li>
+<li>
+<a href="atoms.html#List">List</a>
+</li>
+<li>
+<a href="atoms.html#List-group">List group</a>
+</li>
+<li>
+<a href="atoms.html#Image">Image</a>
+</li>
+<li>
+<a href="atoms.html#Simple-thumbnail">Simple thumbnail</a>
+</li>
+<li>
+<a href="atoms.html#Video">Video</a>
+</li>
+<li>
+<a href="atoms.html#Divider">Divider</a>
+</li>
+<li>
+<a href="atoms.html#Well">Well</a>
+</li>
+<li class="divider"></li>
+</ul>
+</div>
+<div class="col-md-4 col-sm-6 col-xs-12">
+<ul class="list-unstyled">
+<li class="dropdown-header">
+Molecules
+</li>
+<li>
+<a href="molecules.html#Media">Media</a>
+</li>
+<li>
+<a href="molecules.html#Collapse">Collapse</a>
+</li>
+<li>
+<a href="molecules.html#Section-Header">Section Header</a>
+</li>
+<li>
+<a href="molecules.html#Sidebar-navigation-static">Sidebar navigation static</a>
+</li>
+<li>
+<a href="molecules.html#Sidebar-navigation-dynamic">Sidebar navigation dynamic</a>
+</li>
+<li>
+<a href="molecules.html#Pricing-table">Pricing table</a>
+</li>
+<li>
+<a href="molecules.html#Jumbotron">Jumbotron</a>
+</li>
+<li>
+<a href="molecules.html#Advanced-thumbnail">Advanced thumbnail</a>
+</li>
+<li>
+<a href="molecules.html#Modal">Modal</a>
+</li>
+<li>
+<a href="molecules.html#Carousel">Carousel</a>
+</li>
+<li>
+<a href="molecules.html#Well-Teaser">Well Teaser</a>
+</li>
+<li>
+<a href="molecules.html#Mosaic">Mosaic</a>
+</li>
+<li class="divider"></li>
+</ul>
+</div>
+<div class="col-md-4 col-sm-6 col-xs-12">
+<ul class="list-unstyled">
+<li class="dropdown-header">
+Organisms
+</li>
+<li>
+<a href="organisms.html#Article">Article</a>
+</li>
+<li>
+<a href="organisms.html#Navbar">Navbar</a>
+</li>
+<li>
+<a href="organisms.html#Medialist">Medialist</a>
+</li>
+<li>
+<a href="organisms.html#Grid-filter">Grid filter</a>
+</li>
+<li>
+<a href="organisms.html#Thumbnail-carousel">Thumbnail carousel</a>
+</li>
+<li>
+<a href="organisms.html#Mega-dropdown">Mega dropdown</a>
+</li>
+<li>
+<a href="organisms.html#Form-dropdown">Form dropdown</a>
+</li>
+<li>
+<a href="organisms.html#Accordion">Accordion</a>
+</li>
+<li>
+<a href="organisms.html#Lightbox">Lightbox</a>
+</li>
+<li>
+<a href="organisms.html#Tabs">Tabs</a>
+</li>
+<li>
+<a href="organisms.html#Contact-Info">Contact Info</a>
+</li>
+<li class="divider"></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="dropdown mega-dropdown">
+<a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Templates<span class="caret"></span></a>
+<div class="dropdown-menu mega-dropdown-menu">
+<div class="row">
+<div class="col-md-4 col-sm-6">
+<ul class="list-unstyled">
+<li class="dropdown-header">
+Page-layout
+</li>
+<li class="">
+Layout
+</li>
+<ul>
+<li>
+<a href="/page-layout-layout-fluid.html">fluid</a>
+</li>
+<li>
+<a href="/page-layout-layout-fixed.html">fixed</a>
+</li>
+<li>
+<a href="/page-layout-layout-fixed-with-background.html">fixed with background</a>
+</li>
+</ul>
+<li class="">
+Off-canvas-sidebar
+</li>
+<ul>
+<li>
+<a href="/page-layout-off-canvas-sidebar-left.html">left</a>
+</li>
+<li>
+<a href="/page-layout-off-canvas-sidebar-both.html">both</a>
+</li>
+</ul>
+<li class="">
+Header
+</li>
+<ul>
+<li>
+<a href="/page-layout-header-fixed.html">fixed</a>
+</li>
+<li>
+<a href="/page-layout-header-static.html">static</a>
+</li>
+<li>
+<a href="/page-layout-header-header-top.html">header top</a>
+</li>
+</ul>
+<li class="">
+Footer
+</li>
+<ul>
+<li>
+<a href="/page-layout-footer-footer.html">footer</a>
+</li>
+<li>
+<a href="/page-layout-footer-simple-footer.html">simple footer</a>
+</li>
+</ul>
+</ul>
+</div>
+<div class="col-md-4 col-sm-6">
+<ul class="list-unstyled">
+<li class="dropdown-header">
+Content
+</li>
+<li class="">
+Content-area
+</li>
+<ul>
+<li>
+<a href="/content-content-area-sections.html">sections</a>
+</li>
+<li>
+<a href="/content-content-area-sidebar-left.html">sidebar left</a>
+</li>
+<li>
+<a href="/content-content-area-sidebar-right.html">sidebar right</a>
+</li>
+<li>
+<a href="/content-content-area-sidebar-both.html">sidebar both</a>
+</li>
+<li>
+<a href="/content-content-area-placeholders.html">placeholders</a>
+</li>
+</ul>
+<li class="">
+Components
+</li>
+<ul>
+<li>
+<a href="/content-components-atoms.html">atoms</a>
+</li>
+<li>
+<a href="/content-components-molecules.html">molecules</a>
+</li>
+<li>
+<a href="/content-components-organisms.html">organisms</a>
+</li>
+</ul>
+</ul>
+</div>
+<div class="col-md-4 col-sm-6">
+<ul class="list-unstyled">
+<li class="dropdown-header">
+Variations
+</li>
+<li class="">
+Header
+</li>
+<ul>
+<li>
+<a href="/variations-header-menu-left.html">menu left</a>
+</li>
+<li>
+<a href="/variations-header-menu-center.html">menu center</a>
+</li>
+<li>
+<a href="/variations-header-menu-right.html">menu right</a>
+</li>
+<li>
+<a href="/variations-header-no-menu.html">no menu</a>
+</li>
+</ul>
+<li class="">
+Header-colour
+</li>
+<ul>
+<li>
+<a href="/variations-header-colour-default.html">default</a>
+</li>
+<li>
+<a href="/variations-header-colour-white.html">white</a>
+</li>
+<li>
+<a href="/variations-header-colour-primary.html">primary</a>
+</li>
+<li>
+<a href="/variations-header-colour-secondary.html">secondary</a>
+</li>
+<li>
+<a href="/variations-header-colour-transparent.html">transparent</a>
+</li>
+<li>
+<a href="/variations-header-colour-transparent-with-fixed-header.html">transparent with fixed header</a>
+</li>
+</ul>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="dropdown mega-dropdown">
+<a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
+<div class="dropdown-menu mega-dropdown-menu">
+<div class="row">
+<div class="col-md-4">
+<ul class="list list-unstyled">
+<li class="dropdown-header">
+Structured pages
+</li>
+<li>
+<a href="/">Front page</a>
+</li>
+<li>
+<a href="/page-campaign.html">Campaign page</a>
+</li>
+<li>
+<a href="/page-404.html">404 page</a>
+</li>
+<li class="divider"></li>
+<li class="dropdown-header">
+Commerce pages
+</li>
+<li>
+<a href="/page-shopping-cart.html">Shopping cart page</a>
+</li>
+<li>
+<a href="/page-order-confirmation.html">Order confirmation page</a>
+</li>
+<li>
+<a href="/page-checkout.html">Checkout page</a>
+</li>
+<li class="divider"></li>
+</ul>
+</div>
+<div class="col-md-4">
+<ul class="list list-unstyled">
+<li class="dropdown-header">
+Content pages
+</li>
+<li>
+<a href="/page-article.html">General article page</a>
+</li>
+<li>
+<a href="/page-news.html">News page</a>
+</li>
+<li>
+<a href="/page-blog.html">Blog page</a>
+</li>
+<li>
+<a href="/page-person.html">Person page</a>
+</li>
+<li>
+<a href="/page-team.html">Team page</a>
+</li>
+<li>
+<a href="/page-product.html">Product page</a>
+</li>
+<li>
+<a href="/page-faq.html">FAQ page</a>
+</li>
+<li>
+<a href="/page-email-template.html">E-mail template</a>
+</li>
+<li class="divider"></li>
+</ul>
+</div>
+<div class="col-md-4">
+<ul class="list list-unstyled">
+<li class="dropdown-header">
+List pages
+</li>
+<li>
+<a href="/page-news-list.html">News list page</a>
+</li>
+<li>
+<a href="/page-events-list.html">Events list page</a>
+</li>
+<li>
+<a href="/page-search-results.html">Search results page</a>
+</li>
+<li>
+<a href="/page-gallery.html">Gallery page</a>
+</li>
+<li class="divider"></li>
+<li class="dropdown-header">
+Service pages
+</li>
+<li>
+<a href="/page-login.html">Login page</a>
+</li>
+<li>
+<a href="/page-register.html">Register page</a>
+</li>
+<li>
+<a href="/page-contact.html">Contact page</a>
+</li>
+<li class="divider"></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Themes<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li class="dropdown-header">
+Main themes
+</li>
+<li>
+<a href="#" data-toggle="theme" data-themetype="main" data-theme="niteflight">Niteflight (default)</a>
+</li>
+<li>
+<a href="#" data-toggle="theme" data-themetype="main" data-theme="dayfrost">Dayfrost</a>
+</li>
+<li>
+<a href="#" data-toggle="theme" data-themetype="main" data-theme="white-wonder">White wonder</a>
+</li>
+<li>
+<a href="#" data-toggle="theme" data-themetype="main" data-theme="default">Default</a>
+</li>
+</ul>
+</li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div>
+<div class="navbar-right">
+<div class="navbar-activity">
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a href="#" class="btn dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+<span class="glyphicon glyphicon-home"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</li>
+<li class="dropdown hidden-xs">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span> <span class="badge bg-primary">4</span></a>
+<div class="dropdown-menu">
+<h4>Shopping cart</h4>
+<ul class="media-list">
+<li class="media">
+<div class="media-left">
+<img class="media-object" src="http://placehold.it/64x64">
+</div>
+<div class="media-body">
+<strong class="media-heading">Some awesome product you want to buy</strong>
+<p>
+Price: $20,099
+</p>
+</div>
+<div class="media-right">
+<button type="button" class="btn btn-danger">X</button>
+</div>
+</li>
+<li class="media media-align-middle">
+<div class="media-left">
+<img class="media-object" src="http://placehold.it/64x64">
+</div>
+<div class="media-body">
+<strong class="media-heading">Some awesome product you want to buy</strong>
+<p>
+Price: $20,099
+</p>
+</div>
+<div class="media-right">
+<button type="button" class="btn btn-danger">X</button>
+</div>
+</li>
+<li class="media media-align-middle">
+<div class="media-left">
+<img class="media-object" src="http://placehold.it/64x64">
+</div>
+<div class="media-body">
+<strong class="media-heading">Some awesome product you want to buy</strong>
+<p>
+Price: $20,099
+</p>
+</div>
+<div class="media-right">
+<button type="button" class="btn btn-danger">X</button>
+</div>
+</li>
+</ul>
+<a href="/page-shopping-cart.html" class="btn btn-block btn-default">View cart</a>
+</div>
+</li>
+<li class="dropdown hidden-xs">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span></a>
+<div class="dropdown-menu">
+<h4>Login</h4>
+<form>
+<div class="form-group">
+<label for="exampleInputEmail1">Email address</label>
+<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+</div>
+<div class="form-group">
+<label for="exampleInputPassword1">Password</label>
+<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" readonly="">
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox"> Remember me
+</label>
+</div>
+<a href="#">Forgot password?</a> <a href="/pages-register.html">Register</a>
+<button type="submit" class="btn btn-block btn-default">Submit</button>
+</form>
+</div>
+</li>
+<li class="navbar-activity-search">
+<form class="navbar-form" role="search">
+<div class="form-group">
+<input type="text" placeholder="Search">
+</div>
+</form>
+<a href="#" class="btn navbar-toggle-search" data-toggle-class="is-searching" data-target="#mainNavbar"><span class="glyphicon glyphicon-search"></span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<header class="page-header documentation" style="">
+<div class="jumbotron" style="">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h1>Atoms</h1>
+<p class="lead">
+Below is a list of all atoms
+</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main role="main">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<p class="page-lead">Table of contents</p>
+<ul>
+<li>
+<a href="#Address">Address</a>
+</li>
+<li>
+<a href="#Blockgrid">Blockgrid</a>
+</li>
+<li>
+<a href="#Breadcrumb">Breadcrumb</a>
+</li>
+<li>
+<a href="#Button">Button</a>
+</li>
+<li>
+<a href="#Social-button">Social button</a>
+</li>
+<li>
+<a href="#Button-group">Button group</a>
+</li>
+<li>
+<a href="#Dropdown">Dropdown</a>
+</li>
+<li>
+<a href="#Navigation">Navigation</a>
+</li>
+<li>
+<a href="#Pagination">Pagination</a>
+</li>
+<li>
+<a href="#Panel">Panel</a>
+</li>
+<li>
+<a href="#Well">Well</a>
+</li>
+<li>
+<a href="#Blockquote">Blockquote</a>
+</li>
+<li>
+<a href="#Table">Table</a>
+</li>
+<li>
+<a href="#Form-elements">Form elements</a>
+</li>
+<li>
+<a href="#Progress-bar">Progress bar</a>
+</li>
+<li>
+<a href="#Typography">Typography</a>
+</li>
+<li>
+<a href="#Headline">Headline</a>
+</li>
+<li>
+<a href="#Address">Address</a>
+</li>
+<li>
+<a href="#Labels-and-badges">Labels and badges</a>
+</li>
+<li>
+<a href="#Tooltip">Tooltip</a>
+</li>
+<li>
+<a href="#Popover">Popover</a>
+</li>
+<li>
+<a href="#Counter">Counter</a>
+</li>
+<li>
+<a href="#Alert">Alert</a>
+</li>
+<li>
+<a href="#List">List</a>
+</li>
+<li>
+<a href="#List-group">List group</a>
+</li>
+<li>
+<a href="#Image">Image</a>
+</li>
+<li>
+<a href="#Simple-thumbnail">Simple thumbnail</a>
+</li>
+<li>
+<a href="#Video">Video</a>
+</li>
+<li>
+<a href="#Divider">Divider</a>
+</li>
+<li>
+<a href="#Well">Well</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div id="Address" class="component-example">
+<h3>
+Address
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualAddress" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupAddress" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsAddress" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualAddress">
+<div class="row">
+<div class="col-md-3">
+<address>
+<strong>Sitecore Corporation</strong><br>
+Vester Farimagsgade 3,5<br>
+1606 Copenhagen V<br>
+Denmark<br>
+<abbr title="Phone">P:</abbr> +45 7022 4606
+</address>
+<address>
+<strong>Email</strong><br>
+<a href="mailto:#">sales@sitecore.net</a>
+</address>
+</div>
+<div class="col-md-3">
+<address>
+<strong>Sitecore Corporation</strong><br>
+Vester Farimagsgade 3,5<br>
+1606 Copenhagen V<br>
+Denmark
+</address>
+<address>
+<span class="glyphicon glyphicon-envelope"></span> <a href="mailto:#">sales@sitecore.net</a><br>
+<span class="glyphicon glyphicon-phone"></span> <a href="tel:#">+45 7022 4606</a>
+</address>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupAddress">
+<div class="code" id="markupEditorAddress">
+<div class="row">
+<div class="col-md-3">
+<address>
+<strong>Sitecore Corporation</strong><br>
+Vester Farimagsgade 3,5<br>
+1606 Copenhagen V<br>
+Denmark<br>
+<abbr title="Phone">P:</abbr> +45 7022 4606
+</address>
+<address>
+<strong>Email</strong><br>
+<a href="mailto:#">sales@sitecore.net</a>
+</address>
+</div>
+<div class="col-md-3">
+<address>
+<strong>Sitecore Corporation</strong><br>
+Vester Farimagsgade 3,5<br>
+1606 Copenhagen V<br>
+Denmark
+</address>
+<address>
+<span class="glyphicon glyphicon-envelope"></span> <a href="mailto:#">sales@sitecore.net</a><br>
+<span class="glyphicon glyphicon-phone"></span> <a href="tel:#">+45 7022 4606</a>
+</address>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsAddress">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Blockgrid" class="component-example">
+<h3>
+Blockgrid
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualBlockgrid" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupBlockgrid" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsBlockgrid" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualBlockgrid">
+<div class="row">
+<div class="col-md-12">
+<div class="block-grid-lg-4 block-grid-md-3 block-grid-sm-2 block-grid-xs-1 block-grid-no-padding" id="grid">
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="block-grid-lg-4 block-grid-md-3 block-grid-sm-2 block-grid-xs-1" id="grid">
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupBlockgrid">
+<div class="code" id="markupEditorBlockgrid">
+<div class="row">
+<div class="col-md-12">
+<div class="block-grid-lg-4 block-grid-md-3 block-grid-sm-2 block-grid-xs-1 block-grid-no-padding" id="grid">
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="block-grid-lg-4 block-grid-md-3 block-grid-sm-2 block-grid-xs-1" id="grid">
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+<div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+<img class="img-responsive" src="http://placehold.it/500x500">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsBlockgrid">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Breadcrumb" class="component-example">
+<h3>
+Breadcrumb
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualBreadcrumb" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupBreadcrumb" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsBreadcrumb" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualBreadcrumb">
+<div class="row">
+<div class="col-md-12">
+<ol class="breadcrumb">
+<li>
+<a href="#">Home</a>
+</li>
+<li>
+<a href="#">Page 01</a>
+</li>
+<li class="active">
+Subpage 02
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupBreadcrumb">
+<div class="code" id="markupEditorBreadcrumb">
+<div class="row">
+<div class="col-md-12">
+<ol class="breadcrumb">
+<li>
+<a href="#">Home</a>
+</li>
+<li>
+<a href="#">Page 01</a>
+</li>
+<li class="active">
+Subpage 02
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsBreadcrumb">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Button" class="component-example">
+<h3>
+Button
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualButton" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupButton" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsButton" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualButton">
+<div class="row">
+<div class="col-md-6">
+<button type="button" class="btn btn-default">
+Default
+</button>
+<button type="button" class="btn btn-primary">
+Primary
+</button>
+<button type="button" class="btn btn-hollow">
+Hollow
+</button>
+<button type="button" class="btn btn-info">
+Info
+</button>
+<button type="button" class="btn btn-success">
+Success
+</button>
+<button type="button" class="btn btn-warning">
+Warning
+</button>
+<button type="button" class="btn btn-danger">
+Danger
+</button>
+</div>
+<div class="col-md-3">
+<button type="button" class="btn btn-default active">
+Active
+</button>
+<button type="button" class="btn btn-default" disabled="disabled">
+Disabled
+</button>
+</div>
+<div class="col-md-3">
+<button type="button" class="btn btn-default btn-block">
+Default
+</button>
+<button type="button" class="btn btn-info btn-block">
+Info
+</button>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupButton">
+<div class="code" id="markupEditorButton">
+<div class="row">
+<div class="col-md-6">
+<button type="button" class="btn btn-default">
+Default
+</button>
+<button type="button" class="btn btn-primary">
+Primary
+</button>
+<button type="button" class="btn btn-hollow">
+Hollow
+</button>
+<button type="button" class="btn btn-info">
+Info
+</button>
+<button type="button" class="btn btn-success">
+Success
+</button>
+<button type="button" class="btn btn-warning">
+Warning
+</button>
+<button type="button" class="btn btn-danger">
+Danger
+</button>
+</div>
+<div class="col-md-3">
+<button type="button" class="btn btn-default active">
+Active
+</button>
+<button type="button" class="btn btn-default" disabled="disabled">
+Disabled
+</button>
+</div>
+<div class="col-md-3">
+<button type="button" class="btn btn-default btn-block">
+Default
+</button>
+<button type="button" class="btn btn-info btn-block">
+Info
+</button>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsButton">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Social-button" class="component-example">
+<h3>
+Social button
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualSocial-button" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupSocial-button" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsSocial-button" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualSocial-button">
+<div class="row">
+<div class="col-md-12">
+<a href="#" class="btn btn-social-icon btn-facebook">
+<i class="fa fa-facebook"></i>
+</a>
+<a href="#" class="btn btn-social-icon btn-twitter">
+<i class="fa fa-twitter"></i>
+</a>
+<a href="#" class="btn btn-social-icon btn-youtube">
+<i class="fa fa-youtube"></i>
+</a>
+<a href="#" class="btn btn-social-icon btn-instagram">
+<i class="fa fa-instagram"></i>
+</a>
+<a href="#" class="btn btn-social-icon btn-linkedin">
+<i class="fa fa-linkedin"></i>
+</a>
+<a href="#" class="btn btn-social-icon btn-google-plus">
+<i class="fa fa-google-plus"></i>
+</a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<a href="#" class="btn btn-social-icon btn-facebook">
+<i class="fa fa-facebook"></i>
+<span>Sign in with Facebook</span>
+</a>
+<a href="#" class="btn btn-social-icon btn-twitter">
+<i class="fa fa-twitter"></i>
+<span>Sign in with Twitter</span>
+</a>
+<a href="#" class="btn btn-social-icon btn-youtube">
+<i class="fa fa-youtube"></i>
+<span>Sign in with Youtube</span>
+</a>
+<a href="#" class="btn btn-social-icon btn-instagram">
+<i class="fa fa-instagram"></i>
+<span>Sign in with Instagram</span>
+</a>
+<a href="#" class="btn btn-social-icon btn-linkedin">
+<i class="fa fa-linkedin"></i>
+<span>Sign in with Linkedin</span>
+</a>
+<a href="#" class="btn btn-social-icon btn-google-plus">
+<i class="fa fa-google-plus"></i>
+<span>Sign in with Google+</span>
+</a>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupSocial-button">
+<div class="code" id="markupEditorSocial-button">
+<div class="row">
+<div class="col-md-12">
+<a href="#" class="btn btn-social-icon btn-facebook">
+<i class="fa fa-facebook"></i>
+</a>
+<a href="#" class="btn btn-social-icon btn-twitter">
+<i class="fa fa-twitter"></i>
+</a>
+<a href="#" class="btn btn-social-icon btn-youtube">
+<i class="fa fa-youtube"></i>
+</a>
+<a href="#" class="btn btn-social-icon btn-instagram">
+<i class="fa fa-instagram"></i>
+</a>
+<a href="#" class="btn btn-social-icon btn-linkedin">
+<i class="fa fa-linkedin"></i>
+</a>
+<a href="#" class="btn btn-social-icon btn-google-plus">
+<i class="fa fa-google-plus"></i>
+</a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<a href="#" class="btn btn-social-icon btn-facebook">
+<i class="fa fa-facebook"></i>
+<span>Sign in with Facebook</span>
+</a>
+<a href="#" class="btn btn-social-icon btn-twitter">
+<i class="fa fa-twitter"></i>
+<span>Sign in with Twitter</span>
+</a>
+<a href="#" class="btn btn-social-icon btn-youtube">
+<i class="fa fa-youtube"></i>
+<span>Sign in with Youtube</span>
+</a>
+<a href="#" class="btn btn-social-icon btn-instagram">
+<i class="fa fa-instagram"></i>
+<span>Sign in with Instagram</span>
+</a>
+<a href="#" class="btn btn-social-icon btn-linkedin">
+<i class="fa fa-linkedin"></i>
+<span>Sign in with Linkedin</span>
+</a>
+<a href="#" class="btn btn-social-icon btn-google-plus">
+<i class="fa fa-google-plus"></i>
+<span>Sign in with Google+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsSocial-button">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Button-group" class="component-example">
+<h3>
+Button group
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualButton-group" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupButton-group" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsButton-group" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualButton-group">
+<div class="row">
+<div class="col-md-4">
+<div class="btn-group" role="group">
+<button type="button" class="btn btn-default">
+Left
+</button>
+<button type="button" class="btn btn-default">
+Middle
+</button>
+<button type="button" class="btn btn-default">
+Right
+</button>
+</div>
+</div>
+<div class="col-md-4">
+<div class="btn-group btn-group-md" role="group">
+<button type="button" class="btn btn-info">
+Button with dropdown
+</button>
+<button type="button" class="btn btn-info dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<span class="caret"></span>
+<span class="sr-only">Toggle Dropdown</span>
+</button>
+</div>
+</div>
+<div class="col-md-4">
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupButton-group">
+<div class="code" id="markupEditorButton-group">
+<div class="row">
+<div class="col-md-4">
+<div class="btn-group" role="group">
+<button type="button" class="btn btn-default">
+Left
+</button>
+<button type="button" class="btn btn-default">
+Middle
+</button>
+<button type="button" class="btn btn-default">
+Right
+</button>
+</div>
+</div>
+<div class="col-md-4">
+<div class="btn-group btn-group-md" role="group">
+<button type="button" class="btn btn-info">
+Button with dropdown
+</button>
+<button type="button" class="btn btn-info dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<span class="caret"></span>
+<span class="sr-only">Toggle Dropdown</span>
+</button>
+</div>
+</div>
+<div class="col-md-4">
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsButton-group">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Dropdown" class="component-example">
+<h3>
+Dropdown
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualDropdown" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupDropdown" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsDropdown" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualDropdown">
+<div class="row">
+<div class="col-md-2">
+<div class="dropdown">
+<button class="btn btn-default dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-2">
+<div class="dropup">
+<button class="btn btn-default dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropup
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupDropdown">
+<div class="code" id="markupEditorDropdown">
+<div class="row">
+<div class="col-md-2">
+<div class="dropdown">
+<button class="btn btn-default dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-2">
+<div class="dropup">
+<button class="btn btn-default dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropup
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsDropdown">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Navigation" class="component-example">
+<h3>
+Navigation
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualNavigation" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupNavigation" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsNavigation" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualNavigation">
+<div class="row">
+<div class="col-md-12">
+<ul class="nav nav-tabs undefined">
+<li role="presentation" class="active"><a href="#">Active item</a></li>
+<li role="presentation"><a href="#">Second item</a></li>
+<li role="presentation"><a href="#">Third item</a></li>
+<li role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<ul class="nav nav-tabs nav-justified">
+<li role="presentation" class="active"><a href="#">Active item</a></li>
+<li role="presentation"><a href="#">Second item</a></li>
+<li role="presentation"><a href="#">Third item</a></li>
+<li role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8">
+<ul class="nav nav-pills undefined">
+<li role="presentation" class="active"><a href="#">Active item</a></li>
+<li role="presentation"><a href="#">Second item</a></li>
+<li role="presentation"><a href="#">Third item</a></li>
+<li role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-md-4">
+<ul class="nav nav-pills nav-stacked">
+<li role="presentation" class="active"><a href="#">Active item</a></li>
+<li role="presentation"><a href="#">Second item</a></li>
+<li role="presentation"><a href="#">Third item</a></li>
+<li role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupNavigation">
+<div class="code" id="markupEditorNavigation">
+<div class="row">
+<div class="col-md-12">
+<ul class="nav nav-tabs undefined">
+<li role="presentation" class="active"><a href="#">Active item</a></li>
+<li role="presentation"><a href="#">Second item</a></li>
+<li role="presentation"><a href="#">Third item</a></li>
+<li role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<ul class="nav nav-tabs nav-justified">
+<li role="presentation" class="active"><a href="#">Active item</a></li>
+<li role="presentation"><a href="#">Second item</a></li>
+<li role="presentation"><a href="#">Third item</a></li>
+<li role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8">
+<ul class="nav nav-pills undefined">
+<li role="presentation" class="active"><a href="#">Active item</a></li>
+<li role="presentation"><a href="#">Second item</a></li>
+<li role="presentation"><a href="#">Third item</a></li>
+<li role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-md-4">
+<ul class="nav nav-pills nav-stacked">
+<li role="presentation" class="active"><a href="#">Active item</a></li>
+<li role="presentation"><a href="#">Second item</a></li>
+<li role="presentation"><a href="#">Third item</a></li>
+<li role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsNavigation">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Pagination" class="component-example">
+<h3>
+Pagination
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualPagination" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupPagination" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsPagination" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualPagination">
+<div class="row">
+<div class="col-md-12">
+<nav class="">
+<ul class="pagination">
+<li>
+<a href="#" aria-label="Previous">
+<span aria-hidden="true">&laquo;</span>
+</a>
+</li>
+<li class="active">
+<a href="#">1</a>
+</li>
+<li class="">
+<a href="#">2</a>
+</li>
+<li class="">
+<a href="#">3</a>
+</li>
+<li class="">
+<a href="#">4</a>
+</li>
+<li>
+<a href="#" aria-label="Next">
+<span aria-hidden="true">&raquo;</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<nav>
+<ul class="pager">
+<li>
+<a href="#"><span aria-hidden="true">&larr;</span> Previous</a>
+</li>
+<li>
+<a href="#"><span aria-hidden="true">&rarr;</span> Next</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupPagination">
+<div class="code" id="markupEditorPagination">
+<div class="row">
+<div class="col-md-12">
+<nav class="">
+<ul class="pagination">
+<li>
+<a href="#" aria-label="Previous">
+<span aria-hidden="true">&laquo;</span>
+</a>
+</li>
+<li class="active">
+<a href="#">1</a>
+</li>
+<li class="">
+<a href="#">2</a>
+</li>
+<li class="">
+<a href="#">3</a>
+</li>
+<li class="">
+<a href="#">4</a>
+</li>
+<li>
+<a href="#" aria-label="Next">
+<span aria-hidden="true">&raquo;</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<nav>
+<ul class="pager">
+<li>
+<a href="#"><span aria-hidden="true">&larr;</span> Previous</a>
+</li>
+<li>
+<a href="#"><span aria-hidden="true">&rarr;</span> Next</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsPagination">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Panel" class="component-example">
+<h3>
+Panel
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualPanel" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupPanel" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsPanel" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualPanel">
+<div class="row">
+<div class="col-md-4">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-primary">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-hollow">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3">
+<div class="panel panel-success">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="panel panel-info">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="panel panel-warning">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="panel panel-danger">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupPanel">
+<div class="code" id="markupEditorPanel">
+<div class="row">
+<div class="col-md-4">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-primary">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-hollow">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3">
+<div class="panel panel-success">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="panel panel-info">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="panel panel-warning">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="panel panel-danger">
+<div class="panel-heading">
+<h3 class="panel-title">Panel title</h3>
+</div>
+<div class="panel-body">
+Panel content
+</div>
+<div class="panel-footer">
+Panel footer
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsPanel">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Well" class="component-example">
+<h3>
+Well
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualWell" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupWell" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsWell" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualWell">
+<div class="row">
+<div class="col-md-3">
+<div class="well">
+Default
+</div>
+</div>
+<div class="col-md-3">
+<div class="well bg-primary">
+Primary
+</div>
+</div>
+<div class="col-md-2">
+<div class="well bg-secondary">
+Secondary
+</div>
+</div>
+<div class="col-md-2">
+<div class="well bg-dark">
+Dark
+</div>
+</div>
+<div class="col-md-2">
+<div class="well bg-white">
+White
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupWell">
+<div class="code" id="markupEditorWell">
+<div class="row">
+<div class="col-md-3">
+<div class="well">
+Default
+</div>
+</div>
+<div class="col-md-3">
+<div class="well bg-primary">
+Primary
+</div>
+</div>
+<div class="col-md-2">
+<div class="well bg-secondary">
+Secondary
+</div>
+</div>
+<div class="col-md-2">
+<div class="well bg-dark">
+Dark
+</div>
+</div>
+<div class="col-md-2">
+<div class="well bg-white">
+White
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsWell">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Blockquote" class="component-example">
+<h3>
+Blockquote
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualBlockquote" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupBlockquote" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsBlockquote" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualBlockquote">
+<div class="row">
+<div class="col-md-4">
+<figure>
+<blockquote class="blockquote-center">
+<header>
+<span class="label">
+Default header text
+</span>
+</header>
+<p class="">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+</p>
+<footer>
+Someone famous in <cite title="Source title">Source title</cite>
+</footer>
+</blockquote>
+<figcaption>
+This is something tangentially related to the quote, but not the actual author of the quote. Per example, this part of the figure states that the quote is centered.
+</figcaption>
+</figure>
+</div>
+<div class="col-md-4">
+<blockquote class="">
+<header>
+<span class="label">
+Default header text
+</span>
+</header>
+<p class="">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+</p>
+<footer>
+Someone famous in <cite title="Source title">Source title</cite>
+</footer>
+</blockquote>
+</div>
+<div class="col-md-4">
+<blockquote class="blockquote-reverse">
+<header>
+<span class="label">
+Default header text
+</span>
+</header>
+<p class="">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+</p>
+<footer>
+Someone famous in <cite title="Source title">Source title</cite>
+</footer>
+</blockquote>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupBlockquote">
+<div class="code" id="markupEditorBlockquote">
+<div class="row">
+<div class="col-md-4">
+<figure>
+<blockquote class="blockquote-center">
+<header>
+<span class="label">
+Default header text
+</span>
+</header>
+<p class="">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+</p>
+<footer>
+Someone famous in <cite title="Source title">Source title</cite>
+</footer>
+</blockquote>
+<figcaption>
+This is something tangentially related to the quote, but not the actual author of the quote. Per example, this part of the figure states that the quote is centered.
+</figcaption>
+</figure>
+</div>
+<div class="col-md-4">
+<blockquote class="">
+<header>
+<span class="label">
+Default header text
+</span>
+</header>
+<p class="">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+</p>
+<footer>
+Someone famous in <cite title="Source title">Source title</cite>
+</footer>
+</blockquote>
+</div>
+<div class="col-md-4">
+<blockquote class="blockquote-reverse">
+<header>
+<span class="label">
+Default header text
+</span>
+</header>
+<p class="">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+</p>
+<footer>
+Someone famous in <cite title="Source title">Source title</cite>
+</footer>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsBlockquote">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Table" class="component-example">
+<h3>
+Table
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualTable" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupTable" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsTable" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualTable">
+<div class="row">
+<div class="col-md-6">
+<table class="table table-bordered table-responsive">
+<thead>
+<tr>
+<th>#</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-md-6">
+<table class="table table-striped table-responsive">
+<thead>
+<tr>
+<th>#</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<table class="table table-striped-vertical table-responsive">
+<thead>
+<tr>
+<th>#</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-md-6">
+<table class="table table-hover">
+<thead>
+<tr>
+<th>#</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+</tr>
+</thead>
+<tbody>
+<tr class="active">
+<td>1</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr class="success">
+<td>2</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr class="warning">
+<td>3</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr class="danger">
+<td>4</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr class="info">
+<td>5</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupTable">
+<div class="code" id="markupEditorTable">
+<div class="row">
+<div class="col-md-6">
+<table class="table table-bordered table-responsive">
+<thead>
+<tr>
+<th>#</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-md-6">
+<table class="table table-striped table-responsive">
+<thead>
+<tr>
+<th>#</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<table class="table table-striped-vertical table-responsive">
+<thead>
+<tr>
+<th>#</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-md-6">
+<table class="table table-hover">
+<thead>
+<tr>
+<th>#</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+</tr>
+</thead>
+<tbody>
+<tr class="active">
+<td>1</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr class="success">
+<td>2</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr class="warning">
+<td>3</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr class="danger">
+<td>4</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+<tr class="info">
+<td>5</td>
+<td>Value</td>
+<td>Value</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsTable">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Form-elements" class="component-example">
+<h3>
+Form elements
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualForm-elements" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupForm-elements" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsForm-elements" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualForm-elements">
+<form class="" action="">
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label for="email1">E-mail</label>
+<input type="email" class="form-control" id="email1" placeholder="Email">
+</div>
+<div class="form-group">
+<label for="checkbox1">Checkbox</label>
+<div class="checkbox">
+<label>
+<input type="checkbox" id="checkbox1"> Check me out
+</label>
+</div>
+</div>
+<div class="form-group">
+<label for="password1">Password</label>
+<input type="password" class="form-control" id="password1" placeholder="Password" readonly="readonly">
+</div>
+<div class="form-group">
+<label for="filenone">File</label>
+<div class="form-group">
+<input type="file" id="file1">
+<label for="file1" data-filename="No file chosen">Choose file</label>
+</div>
+<p class="help-block">This is a help text!</p>
+</div>
+<textarea class="form-control" id="" rows="3"></textarea>
+</div>
+<div class="col-md-6">
+<select class="form-control" id="">
+<option>Afghanistan</option>
+<option>Bahamas</option>
+<option>Cambodia</option>
+<option>Denmark</option>
+<option>Ecuador</option>
+<option>Fiji</option>
+<option>Gabon</option>
+<option>Haiti</option>
+</select>
+<div class="form-group has-success has-feedback">
+<label for="inputGroupSuccess1">Input group with success</label>
+<div class="input-group">
+<span class="input-group-addon">@</span>
+<input type="text" class="form-control" id="inputGroupSuccess1" placeholder="Enter text here">
+</div>
+<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+</div>
+<div class="form-group has-warning">
+<label for="inputWarning1">Input with warning</label>
+<input type="text" class="form-control" id="inputWarning1" placeholder="Enter text here">
+</div>
+<div class="form-group has-error">
+<label for="inputError1">Input with warning</label>
+<input type="text" class="form-control" id="inputError1" placeholder="Enter text here">
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+</div>
+</div>
+</form>
+<form class="form-inline" action="">
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<label for="email1">E-mail</label>
+<input type="email" class="form-control" id="email1" placeholder="Email">
+</div>
+<div class="form-group">
+<label for="checkbox1">Checkbox</label>
+<div class="checkbox">
+<label>
+<input type="checkbox" id="checkbox1"> Check me out
+</label>
+</div>
+</div>
+<div class="form-group">
+<label for="password1">Password</label>
+<input type="password" class="form-control" id="password1" placeholder="Password" readonly="readonly">
+</div>
+<div class="form-group">
+<label for="filenone">File</label>
+<div class="form-group">
+<input type="file" id="file1">
+<label for="file1" data-filename="No file chosen">Choose file</label>
+</div>
+<p class="help-block">This is a help text!</p>
+</div>
+<div class="form-group">
+<label for="select1">Select</label>
+<select class="form-control" id="select1">
+<option>Afghanistan</option>
+<option>Bahamas</option>
+<option>Cambodia</option>
+<option>Denmark</option>
+<option>Ecuador</option>
+<option>Fiji</option>
+<option>Gabon</option>
+<option>Haiti</option>
+</select>
+</div>
+<div class="form-group has-success has-feedback">
+<label for="inputGroupSuccess1">Input group with success</label>
+<div class="input-group">
+<span class="input-group-addon">@</span>
+<input type="text" class="form-control" id="inputGroupSuccess1" placeholder="Enter text here">
+</div>
+<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+</div>
+<div class="form-group has-warning">
+<label for="inputWarning1">Input with warning</label>
+<input type="text" class="form-control" id="inputWarning1" placeholder="Enter text here">
+</div>
+<div class="form-group has-error">
+<label for="inputError1">Input with warning</label>
+<input type="text" class="form-control" id="inputError1" placeholder="Enter text here">
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+</div>
+</div>
+</form>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupForm-elements">
+<div class="code" id="markupEditorForm-elements">
+<form class="" action="">
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label for="email1">E-mail</label>
+<input type="email" class="form-control" id="email1" placeholder="Email">
+</div>
+<div class="form-group">
+<label for="checkbox1">Checkbox</label>
+<div class="checkbox">
+<label>
+<input type="checkbox" id="checkbox1"> Check me out
+</label>
+</div>
+</div>
+<div class="form-group">
+<label for="password1">Password</label>
+<input type="password" class="form-control" id="password1" placeholder="Password" readonly="readonly">
+</div>
+<div class="form-group">
+<label for="filenone">File</label>
+<div class="form-group">
+<input type="file" id="file1">
+<label for="file1" data-filename="No file chosen">Choose file</label>
+</div>
+<p class="help-block">This is a help text!</p>
+</div>
+<textarea class="form-control" id="" rows="3"></textarea>
+</div>
+<div class="col-md-6">
+<select class="form-control" id="">
+<option>Afghanistan</option>
+<option>Bahamas</option>
+<option>Cambodia</option>
+<option>Denmark</option>
+<option>Ecuador</option>
+<option>Fiji</option>
+<option>Gabon</option>
+<option>Haiti</option>
+</select>
+<div class="form-group has-success has-feedback">
+<label for="inputGroupSuccess1">Input group with success</label>
+<div class="input-group">
+<span class="input-group-addon">@</span>
+<input type="text" class="form-control" id="inputGroupSuccess1" placeholder="Enter text here">
+</div>
+<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+</div>
+<div class="form-group has-warning">
+<label for="inputWarning1">Input with warning</label>
+<input type="text" class="form-control" id="inputWarning1" placeholder="Enter text here">
+</div>
+<div class="form-group has-error">
+<label for="inputError1">Input with warning</label>
+<input type="text" class="form-control" id="inputError1" placeholder="Enter text here">
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+</div>
+</div>
+</form>
+<form class="form-inline" action="">
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<label for="email1">E-mail</label>
+<input type="email" class="form-control" id="email1" placeholder="Email">
+</div>
+<div class="form-group">
+<label for="checkbox1">Checkbox</label>
+<div class="checkbox">
+<label>
+<input type="checkbox" id="checkbox1"> Check me out
+</label>
+</div>
+</div>
+<div class="form-group">
+<label for="password1">Password</label>
+<input type="password" class="form-control" id="password1" placeholder="Password" readonly="readonly">
+</div>
+<div class="form-group">
+<label for="filenone">File</label>
+<div class="form-group">
+<input type="file" id="file1">
+<label for="file1" data-filename="No file chosen">Choose file</label>
+</div>
+<p class="help-block">This is a help text!</p>
+</div>
+<div class="form-group">
+<label for="select1">Select</label>
+<select class="form-control" id="select1">
+<option>Afghanistan</option>
+<option>Bahamas</option>
+<option>Cambodia</option>
+<option>Denmark</option>
+<option>Ecuador</option>
+<option>Fiji</option>
+<option>Gabon</option>
+<option>Haiti</option>
+</select>
+</div>
+<div class="form-group has-success has-feedback">
+<label for="inputGroupSuccess1">Input group with success</label>
+<div class="input-group">
+<span class="input-group-addon">@</span>
+<input type="text" class="form-control" id="inputGroupSuccess1" placeholder="Enter text here">
+</div>
+<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+</div>
+<div class="form-group has-warning">
+<label for="inputWarning1">Input with warning</label>
+<input type="text" class="form-control" id="inputWarning1" placeholder="Enter text here">
+</div>
+<div class="form-group has-error">
+<label for="inputError1">Input with warning</label>
+<input type="text" class="form-control" id="inputError1" placeholder="Enter text here">
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsForm-elements">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Progress-bar" class="component-example">
+<h3>
+Progress bar
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualProgress-bar" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupProgress-bar" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsProgress-bar" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualProgress-bar">
+<div class="row">
+<div class="col-md-12">
+<div class="progress">
+<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+60%
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="progress">
+<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+<span class="sr-only">20% complete</span>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="progress">
+<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+40%
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="progress">
+<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+<span class="sr-only">60% complete</span>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="progress">
+<div class="progress-bar active progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+<span class="sr-only">80% complete</span>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="progress">
+<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+<span class="sr-only">40% complete</span>
+</div>
+<div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+<span class="sr-only">20% complete</span>
+</div>
+<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+<span class="sr-only">10% complete</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupProgress-bar">
+<div class="code" id="markupEditorProgress-bar">
+<div class="row">
+<div class="col-md-12">
+<div class="progress">
+<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+60%
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="progress">
+<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+<span class="sr-only">20% complete</span>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="progress">
+<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+40%
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="progress">
+<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+<span class="sr-only">60% complete</span>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="progress">
+<div class="progress-bar active progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+<span class="sr-only">80% complete</span>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="progress">
+<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+<span class="sr-only">40% complete</span>
+</div>
+<div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+<span class="sr-only">20% complete</span>
+</div>
+<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+<span class="sr-only">10% complete</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsProgress-bar">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Typography" class="component-example">
+<h3>
+Typography
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualTypography" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupTypography" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsTypography" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualTypography">
+<div class="row">
+<div class="col-md-6">
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+<p class="lead">Leading paragraf</p>
+<p>Paragraf</p>
+<em>Italics</em><br>
+<strong>Bold</strong><br>
+<small>Small</small><br>
+<code>Code</code><br>
+<sample>Sample</sample><br>
+<mark>Highlighted text</mark><br>
+<del>Deleted text</del><br>
+<s>Strikethrough</s><br>
+<ins>Inserted text</ins><br>
+<u>Underlined text</u><br>
+</div>
+<div class="col-md-6">
+<h1>Heading 1</h1>
+<p class="lead">Cum ex dicat clita contentiones, verterem sadipscing qui no! Nam et movet vitae adipiscing, et eam delectus hendrerit adversarium. Paulo ullamcorper usu te, vim an nobis civibus gubergren! Modo soleat vocibus an vim.</p>
+<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+<h2>Header Level 2</h2>
+<ol>
+<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+<li>Aliquam tincidunt mauris eu risus.</li>
+</ol>
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+<h3>Header Level 3</h3>
+<ul>
+<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+<li>Aliquam tincidunt mauris eu risus.</li>
+</ul>
+<pre><code>
+#header h1 a { 
+	display: block; 
+	width: 300px; 
+	height: 80px; 
+}
+</code></pre>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupTypography">
+<div class="code" id="markupEditorTypography">
+<div class="row">
+<div class="col-md-6">
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+<p class="lead">Leading paragraf</p>
+<p>Paragraf</p>
+<em>Italics</em><br>
+<strong>Bold</strong><br>
+<small>Small</small><br>
+<code>Code</code><br>
+<sample>Sample</sample><br>
+<mark>Highlighted text</mark><br>
+<del>Deleted text</del><br>
+<s>Strikethrough</s><br>
+<ins>Inserted text</ins><br>
+<u>Underlined text</u><br>
+</div>
+<div class="col-md-6">
+<h1>Heading 1</h1>
+<p class="lead">Cum ex dicat clita contentiones, verterem sadipscing qui no! Nam et movet vitae adipiscing, et eam delectus hendrerit adversarium. Paulo ullamcorper usu te, vim an nobis civibus gubergren! Modo soleat vocibus an vim.</p>
+<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+<h2>Header Level 2</h2>
+<ol>
+<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+<li>Aliquam tincidunt mauris eu risus.</li>
+</ol>
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+<h3>Header Level 3</h3>
+<ul>
+<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+<li>Aliquam tincidunt mauris eu risus.</li>
+</ul>
+<pre><code>
+#header h1 a { 
+	display: block; 
+	width: 300px; 
+	height: 80px; 
+}
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsTypography">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Headline" class="component-example">
+<h3>
+Headline
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualHeadline" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupHeadline" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsHeadline" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualHeadline">
+<div class="row">
+<div class="col-md-12">
+<div class="headline">
+<h1 class="">
+Default title
+</h1>
+</div>
+</div>
+<div class="col-md-12">
+<div class="headline">
+<h2 class="">
+Default title
+</h2>
+</div>
+</div>
+<div class="col-md-12">
+<div class="headline text-center">
+<h3 class="">
+Default title
+</h3>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupHeadline">
+<div class="code" id="markupEditorHeadline">
+<div class="row">
+<div class="col-md-12">
+<div class="headline">
+<h1 class="">
+Default title
+</h1>
+</div>
+</div>
+<div class="col-md-12">
+<div class="headline">
+<h2 class="">
+Default title
+</h2>
+</div>
+</div>
+<div class="col-md-12">
+<div class="headline text-center">
+<h3 class="">
+Default title
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsHeadline">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Address" class="component-example">
+<h3>
+Address
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualAddress" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupAddress" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsAddress" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualAddress">
+<div class="row">
+<div class="col-md-3">
+<address>
+<strong>Sitecore Corporation</strong><br>
+Vester Farimagsgade 3,5<br>
+1606 Copenhagen V<br>
+Denmark<br>
+<abbr title="Phone">P:</abbr> +45 7022 4606
+</address>
+<address>
+<strong>Email</strong><br>
+<a href="mailto:#">sales@sitecore.net</a>
+</address>
+</div>
+<div class="col-md-3">
+<address>
+<strong>Sitecore Corporation</strong><br>
+Vester Farimagsgade 3,5<br>
+1606 Copenhagen V<br>
+Denmark
+</address>
+<address>
+<span class="glyphicon glyphicon-envelope"></span> <a href="mailto:#">sales@sitecore.net</a><br>
+<span class="glyphicon glyphicon-phone"></span> <a href="tel:#">+45 7022 4606</a>
+</address>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupAddress">
+<div class="code" id="markupEditorAddress">
+<div class="row">
+<div class="col-md-3">
+<address>
+<strong>Sitecore Corporation</strong><br>
+Vester Farimagsgade 3,5<br>
+1606 Copenhagen V<br>
+Denmark<br>
+<abbr title="Phone">P:</abbr> +45 7022 4606
+</address>
+<address>
+<strong>Email</strong><br>
+<a href="mailto:#">sales@sitecore.net</a>
+</address>
+</div>
+<div class="col-md-3">
+<address>
+<strong>Sitecore Corporation</strong><br>
+Vester Farimagsgade 3,5<br>
+1606 Copenhagen V<br>
+Denmark
+</address>
+<address>
+<span class="glyphicon glyphicon-envelope"></span> <a href="mailto:#">sales@sitecore.net</a><br>
+<span class="glyphicon glyphicon-phone"></span> <a href="tel:#">+45 7022 4606</a>
+</address>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsAddress">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Labels-and-badges" class="component-example">
+<h3>
+Labels and badges
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualLabels-and-badges" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupLabels-and-badges" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsLabels-and-badges" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualLabels-and-badges">
+<div class="row">
+<div class="col-md-6">
+<h3>Labels
+<span class="label label-default">Label</span>
+</h3>
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-success">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+</div>
+<div class="col-md-6">
+<h3>Badges
+<span class="badge">4</span>
+</h3>
+<a href="#">Inbox
+<span class="badge">42</span>
+</a>
+<button type="button" class="btn btn-default">
+Messages
+<span class="badge">8</span>
+</button>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupLabels-and-badges">
+<div class="code" id="markupEditorLabels-and-badges">
+<div class="row">
+<div class="col-md-6">
+<h3>Labels
+<span class="label label-default">Label</span>
+</h3>
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-success">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+</div>
+<div class="col-md-6">
+<h3>Badges
+<span class="badge">4</span>
+</h3>
+<a href="#">Inbox
+<span class="badge">42</span>
+</a>
+<button type="button" class="btn btn-default">
+Messages
+<span class="badge">8</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsLabels-and-badges">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Tooltip" class="component-example">
+<h3>
+Tooltip
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualTooltip" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupTooltip" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsTooltip" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualTooltip">
+<div class="row">
+<div class="col-md-3">
+<button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Default tooltip">Default tooltip</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Default tooltip">Default tooltip</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Default tooltip">Default tooltip</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Default tooltip">Default tooltip</button>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupTooltip">
+<div class="code" id="markupEditorTooltip">
+<div class="row">
+<div class="col-md-3">
+<button class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Default tooltip">Default tooltip</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Default tooltip">Default tooltip</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Default tooltip">Default tooltip</button>
+</div>
+<div class="col-md-3">
+<button class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Default tooltip">Default tooltip</button>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsTooltip">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Popover" class="component-example">
+<h3>
+Popover
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualPopover" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupPopover" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsPopover" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualPopover">
+<div class="row">
+<div class="col-md-3">
+<button type="button" class="btn btn-default" data-toggle="popover" data-placement="left" , data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+Popover left
+</button>
+</div>
+<div class="col-md-3">
+<button type="button" class="btn btn-default" data-toggle="popover" data-placement="top" , data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+Popover top
+</button>
+</div>
+<div class="col-md-3">
+<button type="button" class="btn btn-default" data-toggle="popover" data-placement="bottom" , data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+Popover bottom
+</button>
+</div>
+<div class="col-md-3">
+<button type="button" class="btn btn-default" data-toggle="popover" data-placement="right" , data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+Popover right
+</button>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupPopover">
+<div class="code" id="markupEditorPopover">
+<div class="row">
+<div class="col-md-3">
+<button type="button" class="btn btn-default" data-toggle="popover" data-placement="left" , data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+Popover left
+</button>
+</div>
+<div class="col-md-3">
+<button type="button" class="btn btn-default" data-toggle="popover" data-placement="top" , data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+Popover top
+</button>
+</div>
+<div class="col-md-3">
+<button type="button" class="btn btn-default" data-toggle="popover" data-placement="bottom" , data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+Popover bottom
+</button>
+</div>
+<div class="col-md-3">
+<button type="button" class="btn btn-default" data-toggle="popover" data-placement="right" , data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+Popover right
+</button>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsPopover">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Counter" class="component-example">
+<h3>
+Counter
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualCounter" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupCounter" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsCounter" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualCounter">
+<div class="row">
+<div class="col-md-4">
+<span class="counter" data-to="1525" data-speed="5000">0</span>
+</div>
+<div class="col-md-4">
+<span class="counter counter-success" data-to="3323" data-speed="2000">0</span>
+</div>
+<div class="col-md-4">
+<span class="counter counter-danger" data-to="4325" data-speed="9000">0</span>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupCounter">
+<div class="code" id="markupEditorCounter">
+<div class="row">
+<div class="col-md-4">
+<span class="counter" data-to="1525" data-speed="5000">0</span>
+</div>
+<div class="col-md-4">
+<span class="counter counter-success" data-to="3323" data-speed="2000">0</span>
+</div>
+<div class="col-md-4">
+<span class="counter counter-danger" data-to="4325" data-speed="9000">0</span>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsCounter">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Alert" class="component-example">
+<h3>
+Alert
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualAlert" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupAlert" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsAlert" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualAlert">
+<div class="row">
+<div class="col-md-12">
+<div class="alert alert-success" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+There is something you should know.
+</div>
+<div class="alert alert-info" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+There is something you should know.
+</div>
+<div class="alert alert-warning" role="alert">
+There is something you should know.
+<a href="#" class="alert-link">Read more about alert</a>
+</div>
+<div class="alert alert-danger" role="alert">
+There is something you should know.
+<a href="#" class="alert-link">Read all about it</a>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupAlert">
+<div class="code" id="markupEditorAlert">
+<div class="row">
+<div class="col-md-12">
+<div class="alert alert-success" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+There is something you should know.
+</div>
+<div class="alert alert-info" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+There is something you should know.
+</div>
+<div class="alert alert-warning" role="alert">
+There is something you should know.
+<a href="#" class="alert-link">Read more about alert</a>
+</div>
+<div class="alert alert-danger" role="alert">
+There is something you should know.
+<a href="#" class="alert-link">Read all about it</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsAlert">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="List" class="component-example">
+<h3>
+List
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualList" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupList" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsList" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualList">
+<div class="row">
+<div class="col-md-6">
+<ul class="">
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+</ul>
+<ol class="">
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+</ol>
+<ul class="list-unstyled">
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+</ul>
+<ul class="list-inline">
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+</ul>
+</div>
+<div class="col-md-6">
+<dl class="">
+<dt>Default item name</dt>
+<dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+</dd></dl>
+<dl class="dl-horizontal">
+<dt>Default item name</dt>
+<dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+</dd></dl>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupList">
+<div class="code" id="markupEditorList">
+<div class="row">
+<div class="col-md-6">
+<ul class="">
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+</ul>
+<ol class="">
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+</ol>
+<ul class="list-unstyled">
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+</ul>
+<ul class="list-inline">
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+<li class="">
+Default list item
+</li>
+</ul>
+</div>
+<div class="col-md-6">
+<dl class="">
+<dt>Default item name</dt>
+<dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+</dd></dl>
+<dl class="dl-horizontal">
+<dt>Default item name</dt>
+<dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+<dt>Default item name</dt>
+</dd><dd>Default item description
+</dd></dl>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsList">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="List-group" class="component-example">
+<h3>
+List group
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualList-group" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupList-group" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsList-group" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualList-group">
+<div class="row">
+<div class="col-md-6">
+<ul class="list-group">
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+</ul>
+</div>
+<div class="col-md-6">
+<div class="list-group">
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupList-group">
+<div class="code" id="markupEditorList-group">
+<div class="row">
+<div class="col-md-6">
+<ul class="list-group">
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+</ul>
+</div>
+<div class="col-md-6">
+<div class="list-group">
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+<li class="list-group-item">
+Default list item
+</li>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsList-group">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Image" class="component-example">
+<h3>
+Image
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualImage" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupImage" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsImage" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualImage">
+<div class="row">
+<div class="col-md-3">
+<img src="http://placehold.it/250x250" class="img-responsive" alt="Placeholdere image">
+</div>
+<div class="col-md-3">
+<img src="http://placehold.it/250x250" class="img-responsive img-rounded" alt="Placeholdere image">
+</div>
+<div class="col-md-3">
+<img src="http://placehold.it/250x250" class="img-responsive img-circle" alt="Placeholdere image">
+</div>
+<div class="col-md-3">
+<img src="http://placehold.it/250x250" class="img-responsive img-thumbnail" alt="Placeholdere image">
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupImage">
+<div class="code" id="markupEditorImage">
+<div class="row">
+<div class="col-md-3">
+<img src="http://placehold.it/250x250" class="img-responsive" alt="Placeholdere image">
+</div>
+<div class="col-md-3">
+<img src="http://placehold.it/250x250" class="img-responsive img-rounded" alt="Placeholdere image">
+</div>
+<div class="col-md-3">
+<img src="http://placehold.it/250x250" class="img-responsive img-circle" alt="Placeholdere image">
+</div>
+<div class="col-md-3">
+<img src="http://placehold.it/250x250" class="img-responsive img-thumbnail" alt="Placeholdere image">
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsImage">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Simple-thumbnail" class="component-example">
+<h3>
+Simple thumbnail
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualSimple-thumbnail" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupSimple-thumbnail" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsSimple-thumbnail" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualSimple-thumbnail">
+<div class="row">
+<div class="col-md-3">
+<a href="#" class="thumbnail">
+<img src="http://placehold.it/250x250">
+</a>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupSimple-thumbnail">
+<div class="code" id="markupEditorSimple-thumbnail">
+<div class="row">
+<div class="col-md-3">
+<a href="#" class="thumbnail">
+<img src="http://placehold.it/250x250">
+</a>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsSimple-thumbnail">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Video" class="component-example">
+<h3>
+Video
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualVideo" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupVideo" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsVideo" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualVideo">
+<div class="row">
+<div class="col-md-6">
+<div class="embed-responsive embed-responsive-16by9">
+<video autoplay="" muted="" loop="">
+<source src="images/Sitecore Experience.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+<div class="col-md-3">
+<div class="embed-responsive embed-responsive-16by9">
+<video autoplay="" muted="" loop="">
+<source src="images/Sitecore Experience.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupVideo">
+<div class="code" id="markupEditorVideo">
+<div class="row">
+<div class="col-md-6">
+<div class="embed-responsive embed-responsive-16by9">
+<video autoplay="" muted="" loop="">
+<source src="images/Sitecore Experience.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+<div class="col-md-3">
+<div class="embed-responsive embed-responsive-16by9">
+<video autoplay="" muted="" loop="">
+<source src="images/Sitecore Experience.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsVideo">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Divider" class="component-example">
+<h3>
+Divider
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualDivider" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupDivider" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsDivider" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualDivider">
+<div class="row">
+<div class="col-md-12">
+<p>Normal hr</p>
+<hr>
+<p>Left-oriented hr</p>
+<hr class="divider divider-left">
+<p>Right-oriented hr</p>
+<hr class="divider divider-right">
+<p>Centered hr</p>
+<hr class="divider divider-middle">
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupDivider">
+<div class="code" id="markupEditorDivider">
+<div class="row">
+<div class="col-md-12">
+<p>Normal hr</p>
+<hr>
+<p>Left-oriented hr</p>
+<hr class="divider divider-left">
+<p>Right-oriented hr</p>
+<hr class="divider divider-right">
+<p>Centered hr</p>
+<hr class="divider divider-middle">
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsDivider">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="Well" class="component-example">
+<h3>
+Well
+</h3>
+<div>
+<ul class="nav nav-tabs nav-justified" role="tablist">
+<li role="presentation" class="active">
+<a href="#visualWell" role="tab" data-toggle="tab">Visual look</a>
+</li>
+<li role="presentation">
+<a href="#markupWell" role="tab" data-toggle="tab">Markup</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#subcomponentsWell" role="tab" data-toggle="tab">Subcomponents</a>
+</li>
+</ul>
+<div class="tab-content well">
+<div role="tabpanel" class="tab-pane active" id="visualWell">
+<div class="row">
+<div class="col-md-3">
+<div class="well">
+Default
+</div>
+</div>
+<div class="col-md-3">
+<div class="well bg-primary">
+Primary
+</div>
+</div>
+<div class="col-md-2">
+<div class="well bg-secondary">
+Secondary
+</div>
+</div>
+<div class="col-md-2">
+<div class="well bg-dark">
+Dark
+</div>
+</div>
+<div class="col-md-2">
+<div class="well bg-white">
+White
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="markupWell">
+<div class="code" id="markupEditorWell">
+<div class="row">
+<div class="col-md-3">
+<div class="well">
+Default
+</div>
+</div>
+<div class="col-md-3">
+<div class="well bg-primary">
+Primary
+</div>
+</div>
+<div class="col-md-2">
+<div class="well bg-secondary">
+Secondary
+</div>
+</div>
+<div class="col-md-2">
+<div class="well bg-dark">
+Dark
+</div>
+</div>
+<div class="col-md-2">
+<div class="well bg-white">
+White
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="subcomponentsWell">
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script src="scripts/vendor.js"></script>
+<script src="scripts/jquery.modern.js"></script>
+<script src="scripts/plugins.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>

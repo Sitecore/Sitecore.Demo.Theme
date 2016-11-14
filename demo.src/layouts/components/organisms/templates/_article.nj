@@ -1,0 +1,108 @@
+{% import "layouts/components/atoms/templates/_video.nj" as video %}
+{% import "layouts/components/molecules/templates/_media.nj" as media %}
+{% import "layouts/components/atoms/templates/_image.nj" as image %}
+{% import "layouts/components/atoms/templates/_table.nj" as table %}
+{% import "layouts/components/atoms/templates/_well.nj" as well %}
+
+{% macro header(title='About Habitat', lead) %}
+  <header>
+    <h1>{{title}}</h1>
+    {% if lead %}<p class="lead">{{lead}}</p>{% endif %}
+  </header>
+{% endmacro %}
+
+{% macro subheader(title='About Habitat', class) %}
+  <header class="{{class}}">
+    <h2>{{title}}</h2>
+  </header>
+{% endmacro %}
+
+{% macro footer() %}
+  <footer>
+    {% call media.template(class='well', media=image.template(responsive=false, type='circle', height=48, width=48, class='media-object')) %}
+      <h4 class="media-heading">About the author</h4>
+      <span role="author">John Doe. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie nisi velit, quis molestie tellus eleifend quis. Praesent sed sodales sapien. Pellentesque viverra tellus massa, ut porttitor augue luctus in.</span>
+    {% endcall %}
+  </footer>
+{% endmacro %}
+
+{% macro inline(title, lead, showFooter) %}
+<article>
+  {% if title %}
+    {{header(title=title, lead=lead)}}
+  {% endif %}
+
+  {{caller()}}
+  {% if showFooter %}
+    {{footer()}}
+  {% endif %}
+</article>
+{% endmacro %}
+
+
+{% macro complete(title, lead, showFooter) %}
+<article>
+  {% if title %}
+    {{header(title=title, lead=lead)}}
+  {% endif %}
+
+  {{caller()}}
+  {% if showFooter %}
+    {{footer()}}
+  {% endif %}
+</article>
+{% endmacro %}
+
+{% macro default(title='About Habitat', lead='Sitecore Habitat is a methodology for developing Sitecore Solutions. It is based on a layered and modular architecture focusing on high efficiency and simplicity.', showFooter=true) %}
+  {% call complete(title=title, lead=lead, showFooter=showFooter) %}
+    <p>
+      Sitecore Habitat is a set of principles and conventions focused on:
+    </p>
+    <h4>Simplicity</h4>
+    <p>
+      Making the Sitecore solution manageable and simple - even as it grows and matures.
+    </p>
+    <br/>
+    <h4>Flexibility</h4>
+    <p>
+      Assuring the business that changes and additions can be made with smaller investments and without disruptions.
+    </p>
+    <br/>
+    <h4>Extensibility</h4>
+    <p>
+      Providing a quick and manageable way of extending solutions and reusing features across sites and even across solutions. The conventions are based on a number of well-founded and industry-standard principles such as:
+    </p>
+    <ul>
+      <li>
+        Low coupling/high cohesion
+      </li>
+      <li>
+        Domain Driven Design
+      </li>
+      <li>
+        Package Principles
+      </li>
+    </ul>
+    {{table.template(type='bordered')}}
+    <h4>
+      Habitat also supports a structured page layout with a great level of flexibility.
+    </h4>
+    {{video.template()}}
+    {% call well.template('bg-primary') %}
+      <h2>Recommended reading</h2>
+      <p>
+        Many of the principles and thoughts behind the Habitat methodology are described in the Books by Robert C. Martin. Recommended reading includes: "Clean Code: A Handbook of Agile Software Craftsmanship" and "Agile Principles, Patterns, and Practices in C#"
+      </p>
+      <a href="#" class="btn btn-hollow">Agile principles, patterns and practices</a>
+    {% endcall %}
+    <div class="row">
+      <div class="col-md-6">
+        {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+      </div>
+      <div class="col-md-6">
+        {% include "layouts/components/organisms/templates/_medialist-2.html" %}
+      </div>
+    </div>
+    {{table.template(type='striped')}}
+  {% endcall %}
+{% endmacro %}

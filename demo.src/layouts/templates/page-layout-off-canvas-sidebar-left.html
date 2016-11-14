@@ -1,0 +1,32 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% import "layouts/components/atoms/templates/_button.nj" as button %}
+{% import "layouts/components/atoms/templates/_icon.nj" as icon %}
+{% import "layouts/components/organisms/templates/_accordion.nj" as accordion %}
+
+{% extends "layouts/default.html" %}
+
+{% set pageLayout = 'pagelayout-fluid' %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header.html" %}
+
+{% call layout.main() -%}
+  {{ doc.pageheader('Off-canvas sidebar', 'This page shows the off-canvas sidebar capability.') }}
+
+  {% include "layouts/sublayouts/default-content.html" %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+<div class="off-canvas-sidebar off-canvas-sidebar-left">
+  {{button.template(text = icon.template(icon='cog'), type='info', data='data-toggle=sidebar data-side=left')}}
+  <div class="sidebar sidebar-fixed-left">
+    {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+    {{accordion.variant2()}}
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,94 @@
+{% macro dynamic() %}
+<div class="sidebar sidebar-dynamic">
+  <button type="button" class="sidebar-toggle visible-xs collapsed" data-toggle="collapse" data-target="#dynamicSidebar1" aria-expanded="false">
+    <span class="text">Toggle sidebar</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <div id="dynamicSidebar1" class="sidebar-collapse collapse">
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#">Home</a></li>
+      <li class="open">
+        <a href="#">Page 01
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Menu/span>
+        </a>
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Page 01-01</a></li>
+          <li class="active"><a href="#">Page 01-02</a></li>
+          <li><a href="#">Page 01-03</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Page 02</a></li>
+      <li>
+        <a href="#">Page 03
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Menu/span>
+        </a>
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Page 03-01</a></li>
+          <li><a href="#">Page 03-02</a></li>
+          <li><a href="#">Page 03-03</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Page 04
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Menu/span>
+        </a>
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Page 04-01</a></li>
+          <li><a href="#">Page 04-02</a></li>
+          <li>
+            <a href="#">Page 04-03
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Menu/span>
+            </a>
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href="#">Page 04-03-01</a></li>
+              <li><a href="#">Page 04-03-02</a></li>
+              <li><a href="#">Page 04-03-03</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro static() %}
+<div class="sidebar sidebar-static">
+  <button type="button" class="sidebar-toggle visible-xs collapsed" data-toggle="collapse" data-target="#staticSidebar1" aria-expanded="false">
+    <span class="text">Toggle sidebar</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <div class="sidebar-collapse collapse" id="staticSidebar1">
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Page 01</a></li>
+      <li><a href="#">Page 02</a></li>
+      <li><a href="#">Page 03</a></li>
+      <li class="open"><a href="#">Page 04 - with sub-items</a>
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Page 04-01</a></li>
+          <li><a href="#">Page 04-02</a></li>
+          <li class="open"><a href="#">Page 04-03 - with sub-items</a>
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href="#">Page 04-03-01</a></li>
+              <li class="active"><a href="#">Page 04-03-02</a></li>
+              <li><a href="#">Page 04-03-03</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</div>
+{% endmacro %}

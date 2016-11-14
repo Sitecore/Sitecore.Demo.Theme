@@ -1,0 +1,19 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% extends "layouts/default.html" %}
+
+{% set curPage = "molecules" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header.html" %}
+
+{{ doc.pageheader('Molecules', 'Below is a list of all molecules') }}
+
+{% call layout.main() -%}
+  {% include "layouts/sublayouts/components.html" %}
+{%- endcall %}
+
+
+{% endblock %}

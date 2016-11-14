@@ -1,0 +1,51 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/molecules/templates/_advanced-thumbnail.nj" as thumbnail %}
+{% import "layouts/components/organisms/templates/_page-header.nj" as pageheader %}
+{% import "layouts/components/organisms/templates/_article.nj" as article %}
+{% import "layouts/components/atoms/templates/_video.nj" as video %}
+
+{% set pageHeaderTop = true %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader(class='bg-media bg-parallax', backgroundImageUrl='url(\'http://lorempixel.com/1920/1080\')') -%}
+    {{pageheader.breadcrumb()}}
+  {%- endcall %}
+  {% call layout.section(type='sidebar') -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <aside>
+            <h4>About Habitat</h4>
+            {% include "layouts/components/molecules/Sidebar-navigation-dynamic.html" %}
+          </aside>
+        </div>
+        <div class="col-md-8">
+          {{ article.default() }}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section('bg-dark') -%}
+    <div class="container">
+      <div class="row">
+        {% for i in range(0,3) %}
+          <div class="col-md-4">
+            {{thumbnail.template()}}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {%- endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

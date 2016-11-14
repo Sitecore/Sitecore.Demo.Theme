@@ -1,0 +1,26 @@
+{% import "layouts/components/atoms/templates/_panel.nj" as panel %}
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      {% for i in range(0,3) %}
+        {% set in = false %}
+        {% if loop.first %}
+          {% set in = true %}
+        {% endif %}
+        {% call panel.accordion(in=in) %}collapse{{i}}{% endcall %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      {% for i in range(0,3) %}
+        {% set in = false %}
+        {% if loop.first %}
+          {% set in = true %}
+        {% endif %}
+        {% call panel.accordion(in=in) %}collapse{{i}}{% endcall %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

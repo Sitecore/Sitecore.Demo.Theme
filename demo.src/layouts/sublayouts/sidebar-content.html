@@ -1,0 +1,14 @@
+{% import "layouts/components/atoms/templates/_address.nj" as address %}
+
+{% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+<div class="panel panel-default">
+  <div class="panel-heading"><h3 class="panel-title">Address</h3></div>
+  <div class="panel-body">
+    {{address.variant2()}}
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    {% include "layouts/components/atoms/templates/_social-button.html" %}
+  </div>
+</div>

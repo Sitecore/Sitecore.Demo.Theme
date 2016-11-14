@@ -1,0 +1,28 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/component.nj" as component %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p class="page-lead">Table of contents</p>
+      <ul>
+        {% for componentToLoad in componentsToLoad[curPage] %}
+          <li>
+            <a href="#{{componentToLoad.name}}">{{componentToLoad.name | replace("-", " ") }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      {% for componentToLoad in componentsToLoad[curPage] %}
+        {{ component.loadTemplate(componentToLoad) }}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

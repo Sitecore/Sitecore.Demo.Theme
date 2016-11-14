@@ -1,0 +1,34 @@
+{% macro template(itemCount = 5, size, class) %}
+  <nav class="{{class}}">
+    <ul class="pagination {% if size %}pagination-{{size}}{% endif %}">
+      <li>
+        <a href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      {% for i in range(1, itemCount) %}
+      <li class="{% if loop.first %}active{% endif %}">
+        <a href="#">{{i}}</a>
+      </li>
+      {% endfor %}
+      <li>
+        <a href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+{% endmacro %}
+
+{% macro pager(alignToSides) %}
+  <nav>
+    <ul class="pager">
+      <li {% if alignToSides %}class="previous"{% endif %}>
+        <a href="#"><span aria-hidden="true">&larr;</span> Previous</a>
+      </li>
+      <li {% if alignToSides %}class="next"{% endif %}>
+        <a href="#"><span aria-hidden="true">&rarr;</span> Next</a>
+      </li>
+    </ul>
+  </nav>
+{% endmacro %}

@@ -1,0 +1,350 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% import "layouts/components/atoms/templates/_button.nj" as button %}
+{% import "layouts/components/atoms/templates/_blockquote.nj" as blockquote %}
+{% import "layouts/components/atoms/templates/_panel.nj" as panel %}
+{% import "layouts/components/atoms/templates/_icon.nj" as icon %}
+{% import "layouts/components/atoms/templates/_image.nj" as image %}
+{% from "layouts/components/atoms/templates/_labels-badges.nj" import label as label %}
+{% import "layouts/components/molecules/templates/_media.nj" as media %}
+{% import "layouts/components/molecules/templates/_advanced-thumbnail.nj" as thumbnail %}
+{% import "layouts/components/molecules/templates/_carousel.nj" as carousel %}
+{% import "layouts/components/molecules/templates/_jumbotron.nj" as jumbotron %}
+{% import "layouts/components/molecules/templates/_section-header.nj" as sectionHeader %}
+{% import "layouts/components/organisms/templates/_aside.nj" as aside %}
+{% import "layouts/components/organisms/templates/_accordion.nj" as accordion %}
+{% import "layouts/components/organisms/templates/_tabs.nj" as tabs %}
+{% import "layouts/components/atoms/templates/_headline.nj" as headline %}
+{% import "layouts/components/atoms/templates/_well.nj" as well %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-logo-only.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader() -%}
+    {% call carousel.template(id='frontpage-carousel', itemcount=3) %}
+      {% for i in range(0, 3) -%}
+        <div class="item {% if loop.first %}active{% endif %}">
+          {{jumbotron.header(linkText='Explore our habitat', backgroundImageUrl='url(\'images/lion.jpg\')')}}
+        </div>
+      {%- endfor %}
+    {% endcall %}
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4" >
+          {{thumbnail.icon(title='Fully Responsive', icon='off', link=false)}}
+        </div>
+        <div class="col-sm-4">
+          {{thumbnail.icon(title='Visual & Pragmatic', icon='play-circle', link=false)}}
+        </div>
+        <div class="col-sm-4" >
+          {{thumbnail.icon(title='Dedicated support', icon='remove-circle', link=false)}}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{headline.template(text='Our principles of designing', tag='h2', headingClass='text-center')}}
+          {{thumbnail.horizontalLeft(title='Atoms', link=false)}}
+          {{thumbnail.horizontalRight(title='Molecules', link=false)}}
+          {{thumbnail.horizontalLeft(title='Organisms', link=false)}}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section(class='bg-dark') -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          {{aside.template(title='Why Habitat', lead='Habitat is the ultimate tool to power any of your projects. Corporate, ecommerce, SaaS, CRM and much more.', showContent=true, showLink=true)}}
+        </div>
+        <div class="col-md-6">
+          {{ accordion.template() }}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-md-6">
+          {% call sectionHeader.template(class='bg-primary') %}
+            What we do
+          {% endcall %}
+        </div>
+        <div class="col-md-6">
+          {{image.template(width=1000, height=700)}}
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-sm-3">
+          {% call panel.small(class='bg-dark text-center') %}
+            <h3>Exceptional frontend framework</h3>
+            {{button.template(text='Explorer habitat')}}
+          {% endcall %}
+        </div>
+        <div class="col-sm-3">
+          {% call panel.small(class='bg-dark text-center') %}
+            <h3>Exceptional frontend framework</h3>
+            {{button.template(text='Explorer habitat')}}
+          {% endcall %}
+        </div>
+        <div class="col-sm-3">
+          {% call panel.small(class='bg-dark text-center') %}
+            <h3>Exceptional frontend framework</h3>
+            {{button.template(text='Explorer habitat')}}
+          {% endcall %}
+        </div>
+        <div class="col-sm-3">
+          {% call panel.small(class='bg-dark text-center') %}
+            <h3>Exceptional frontend framework</h3>
+            {{button.template(text='Explorer habitat')}}
+          {% endcall %}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section('bg-media bg-parallax', 'url(\'http://lorempixel.com/g/1000/800/\')') -%}
+    <div class="container">
+      {{jumbotron.template(title='The fragmented part', class='jumbotron-xl text-center', titletag='h3', linkText='Explore the habitat')}}
+    </div>
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          {{ thumbnail.card(headline=label(text='Blog', type=''), titlesize='h1', title='Exceptional frontend framework', text='Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.') }}
+        </div>
+        <div class="col-md-4">
+          {{ thumbnail.card(headline=label(text='Blog', type=''), titlesize='h1', title='Exceptional frontend framework', text='Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.') }}
+        </div>
+        <div class="col-md-4">
+          {{ thumbnail.card(headline=label(text='Blog', type=''), titlesize='h1', title='Exceptional frontend framework', text='Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.', class='thumbnail-focus bg-primary') }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          {{jumbotron.template(title='Exceptionel frontend framework', titletag='h1', linkText='Read more', label='Long read', class='text-center', backgroundImageUrl='url(\'http://lorempixel.com/g/1000/800/\')')}}
+        </div>
+        <div class="col-sm-4">
+          {{blockquote.template(headerText='Testimonial', class="text-center", headerSize='2', headerTitle=false, content='Quick and exceptionally easy to use with excellent support', contentClass='lead', footer='Marie Begovich', footerCite='UX expert')}}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{headline.template(text='The features of Habitat', tag='h2', headingClass='text-center headline-borderless')}}
+        </div>
+      </div>
+    </div>
+    {% call tabs.navigation('nav-tabs-block') %}
+      {% call tabs.navitem(class='active', 'responsiveTab') %}
+        {{icon.template(icon='resize-small', size='xl', class='center-block')}}
+        <p>Responsive</p>
+      {% endcall %}
+      {% call tabs.navitem('designTab') %}
+        {{icon.template(icon='text-width', size='xl', class='center-block')}}
+        <p>Design</p>
+      {% endcall %}
+      {% call tabs.navitem('supportTab') %}
+        {{icon.template(icon='comment', size='xl', class='center-block')}}
+        <p>Support</p>
+      {% endcall %}
+      {% call tabs.navitem('flexibleTab') %}
+        {{icon.template(icon='resize-full', size='xl', class='center-block')}}
+        <p>Flexible</p>
+      {% endcall %}
+      {% call tabs.navitem('structuredTab') %}
+        {{icon.template(icon='tasks', size='xl', class='center-block')}}
+        <p>Structured</p>
+      {% endcall %}
+    {% endcall %}
+    {% call tabs.content() %}
+      {% call tabs.item(id='responsiveTab', class='active') %}
+          {% call jumbotron.template(title='Responsive', caller=true, class='bg-dark', container=true) %}
+            <div class="row">
+              <div class="col-md-6">
+                <p>
+                  Translated to interfaces, atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.
+                  <br/>
+                  <br/>
+                  Atoms are abstract and aren't often terribly useful on their own, but they provide a useful reference and allow you to see all your global styles laid out at a glance.
+                </p>
+              </div>
+            </div>
+          {% endcall %}
+      {% endcall %}
+      {% call tabs.item(id='designTab') %}
+          {% call jumbotron.template(title='Design', caller=true, class='bg-dark', container=true) %}
+            <div class="row">
+              <div class="col-md-6">
+                <p>
+                  Translated to interfaces, atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.
+                  <br/>
+                  <br/>
+                  Atoms are abstract and aren't often terribly useful on their own, but they provide a useful reference and allow you to see all your global styles laid out at a glance.
+                </p>
+              </div>
+            </div>
+          {% endcall %}
+      {% endcall %}
+      {% call tabs.item(id='supportTab') %}
+          {% call jumbotron.template(title='Support', caller=true, class='bg-dark', container=true) %}
+            <div class="row">
+              <div class="col-md-6">
+                <p>
+                  Translated to interfaces, atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.
+                  <br/>
+                  <br/>
+                  Atoms are abstract and aren't often terribly useful on their own, but they provide a useful reference and allow you to see all your global styles laid out at a glance.
+                </p>
+              </div>
+            </div>
+          {% endcall %}
+      {% endcall %}
+      {% call tabs.item(id='flexibleTab') %}
+          {% call jumbotron.template(title='Flexible', caller=true, class='bg-dark', container=true) %}
+            <div class="row">
+              <div class="col-md-6">
+                <p>
+                  Translated to interfaces, atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.
+                  <br/>
+                  <br/>
+                  Atoms are abstract and aren't often terribly useful on their own, but they provide a useful reference and allow you to see all your global styles laid out at a glance.
+                </p>
+              </div>
+            </div>
+          {% endcall %}
+      {% endcall %}
+      {% call tabs.item(id='structuredTab') %}
+          {% call jumbotron.template(title='Structured', caller=true, class='bg-dark', container=true) %}
+            <div class="row">
+              <div class="col-md-6">
+                <p>
+                  Translated to interfaces, atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.
+                  <br/>
+                  <br/>
+                  Atoms are abstract and aren't often terribly useful on their own, but they provide a useful reference and allow you to see all your global styles laid out at a glance.
+                </p>
+              </div>
+            </div>
+          {% endcall %}
+      {% endcall %}
+    {% endcall %}
+  {% endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          {{ thumbnail.card(headline=label(text='Blog', type=false), titlesize='h1', title='Exceptional frontend framework', text='Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.') }}
+        </div>
+        <div class="col-md-4">
+          {{ thumbnail.card(headline=label(text='Blog', type=false), titlesize='h1', title='Exceptional frontend framework', text='Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.') }}
+        </div>
+        <div class="col-md-4">
+          {{ thumbnail.card(headline=label(text='Blog', type=false), titlesize='h1', title='Exceptional frontend framework', text='Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.') }}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section(class='bg-primary') -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="jumbotron">
+            {{blockquote.template(headerText='Testimonial', headerTitle=false, content='Quick and exceptionally easy to use with excellent support.', contentClass='lead', footer='Marie Begovich', footerCite='UX expert')}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section('bg-media bg-parallax', 'url(\'http://lorempixel.com/g/1000/800/\')') -%}
+    <div class="container">
+      {{jumbotron.template(title='Smooth and calm implementation', titletag='h3', class='jumbotron-xl text-center', linkText='Explore the habitat')}}
+    </div>
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{headline.template(text='Smooth and calm implementation', tag='h2', headingClass='text-center')}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          {{blockquote.image(class='blockquote-center')}}
+        </div>
+        <div class="col-md-4">
+          {{blockquote.image(class='blockquote-center')}}
+        </div>
+        <div class="col-md-4">
+          {{blockquote.image(class='blockquote-center')}}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{headline.template(text='Learn more about Habitat', tag='h2', headingClass='text-center')}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          {% call panel.small(class='bg-dark') %}
+            <h3>Clean code</h3>
+            <p>
+              Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+            </p>
+          {% endcall %}
+        </div>
+        <div class="col-md-3">
+          {% call panel.small(class='bg-dark') %}
+            <h3>Clean code</h3>
+            <p>
+              Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+            </p>
+          {% endcall %}
+        </div>
+        <div class="col-md-6">
+          {{ thumbnail.icon(title='24/7 support for you', icon='cog', content=false, link=false, class='bg-primary') }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          {% call panel.small(class='bg-dark') %}
+            <h3>Clean code</h3>
+            <p>
+              Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+            </p>
+          {% endcall %}
+        </div>
+        <div class="col-md-3">
+          {% call panel.small(class='bg-dark') %}
+            <h3>Clean code</h3>
+            <p>
+              Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+            </p>
+          {% endcall %}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/organisms/templates/_page-header.nj" as pageheader %}
+
+{% import "layouts/components/organisms/templates/_media-list.nj" as mediaList %}
+{% import "layouts/components/molecules/templates/_media.nj" as media %}
+
+{% import "layouts/components/atoms/templates/_pagination.nj" as pagination %}
+
+{% set pageHeaderTop = true %} 
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader() -%}
+    {{pageheader.pagetitle(title='Latest News', lead=false)}}
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{mediaList.template(maintag='ul', item=media.template(maintag='li', caller = false, class='media-align-middle'), itemcount=10, class='media-list-divided')}}
+          {{pagination.pager()}}
+
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

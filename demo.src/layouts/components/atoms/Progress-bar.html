@@ -1,0 +1,24 @@
+{% import "layouts/components/atoms/templates/_progress-bar.nj" as progress %}
+
+<div class="row">
+  <div class="col-md-12">
+    {{ progress.template(showProgress=true) }}
+  </div>
+  <div class="col-md-6">
+    {{ progress.template(type='info', progress='20', striped=true) }}
+  </div>
+  <div class="col-md-6">
+    {{ progress.template(type='success', showProgress=true, progress='40') }}
+  </div>
+  <div class="col-md-6">
+    {{ progress.template(type='warning') }}
+  </div>
+  <div class="col-md-6">
+    {{ progress.template(type='danger', progress='80', active=true, striped=true) }}
+  </div>
+  <div class="col-md-12">
+    {% call progress.container() %}
+      {{progress.bar(type='success', progress='40')}}{{progress.bar(type='warning', progress='20', striped=true)}}{{progress.bar(type='danger', progress='10')}}
+    {% endcall %}
+  </div>
+</div>

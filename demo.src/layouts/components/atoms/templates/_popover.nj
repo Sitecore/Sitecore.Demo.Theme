@@ -1,0 +1,5 @@
+{% macro template(maintag='button', placement='left', content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', text='Default popover') %}
+<{{maintag}} {% if maintag == 'button' %}type="button"{% endif %} class="btn btn-default" data-toggle="popover" data-placement="{{placement}}", data-content="{{content}}">
+{{text}}
+</{{maintag}}>
+{% endmacro %}

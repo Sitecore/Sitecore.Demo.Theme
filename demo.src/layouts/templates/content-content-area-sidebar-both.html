@@ -1,0 +1,41 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header.html" %}
+
+{% call layout.main() -%}
+  {{ doc.pageheader('Sidebar, both', 'This page has a content area with a sidebars on both sides. <br/>The main content can contain inner rows with habitat placeholder columns.<br/>Sections can be added below or above the sidebar section') }}
+  {% call layout.section(type='sidebar') -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <aside>
+            {{ doc.infopanel('This is a "sidebar" (actually an aside, the semantic version of it) on the left. You can use the sidebar class for this, but it is not needed. Both of the sides semantic placements means that both of them have something to do with the page, but not nessesarily with the content in the middle.', 'Sidebar') }}
+
+            {% include "layouts/components/molecules/sidebar-navigation-static.html" %}
+          </aside>
+        </div>
+        <div class="col-md-6">
+          <article>
+            {{ doc.infopanel('This is the main content (actually an article, the semantic version of it)', 'Main content') }}
+            {% include "layouts/sublayouts/default-inner-content.html" %}
+          </article>
+        </div>
+        <div class="col-md-3">
+          <aside>
+            {% include "layouts/sublayouts/sidebar-content.html" %}
+          </aside>
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% include "layouts/sublayouts/default-content.html" %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

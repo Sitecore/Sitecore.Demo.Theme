@@ -1,0 +1,18 @@
+{% import "layouts/components/atoms/templates/_table.nj" as table %}
+
+<div class="row">
+  <div class="col-md-6">
+    {{table.template(type='bordered')}}
+  </div>
+  <div class="col-md-6">
+    {{table.template(type='striped')}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    {{table.template(type='striped-vertical')}}
+  </div>
+  <div class="col-md-6">
+    {{table.colored(type='hover')}}
+  </div>
+</div>

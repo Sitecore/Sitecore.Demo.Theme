@@ -1,0 +1,21 @@
+{% import "layouts/components/atoms/templates/_button.nj" as button %}
+
+{% macro template(title, lead, label, showContent, showLink, class, btnclass) %}
+<aside class="{{class}}">
+  {% if title %}
+    <header>
+      {% if label %}<p class="label label-default">{{label}}</p>{% endif %}
+      <h1>{{title}}</h1>
+      {% if lead %}<p class="lead">{{lead}}</p>{% endif %}
+    </header>
+  {% endif %}
+  {% if showContent %}
+    <p>
+      Providing a quick and manageable way of extending solutions and reusing features across sites and even across solutions. The conventions are based on a number of well-founded and industry-standard principles such as:
+    </p>
+  {% endif %}
+  {% if showLink %}
+    {{ button.template(text='Explore more', class=btnclass) }}
+  {% endif %}
+</aside>
+{% endmacro %}

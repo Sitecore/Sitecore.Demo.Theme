@@ -1,0 +1,21 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/molecules/templates/_jumbotron.nj" as jumbotron %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader() %}
+    {{jumbotron.header(title='Hello, Habitat!', subTitle='This is a simple jumbotron-style component for a page header.', linkText='Learn more', backgroundImageUrl='url(\'images/lion.jpg\')')}}
+  {% endcall %}
+  
+  {% include "layouts/sublayouts/default-content.html" %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

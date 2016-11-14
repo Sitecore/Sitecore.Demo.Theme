@@ -1,0 +1,70 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/organisms/templates/_page-header.nj" as pageheader %}
+
+{% import "layouts/components/organisms/templates/_grid-filter.nj" as gridFilter %}
+
+{% set pageHeaderTop = true %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+  {% call layout.pageHeader() -%}
+    {{pageheader.pagetitle(title='Gallery', lead=false)}}
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      {{gridFilter.template('#galleryGrid', ["one", "two", "three"])}}
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block-grid-lg-4 block-grid-md-3 block-grid-sm-2 block-grid-xs-1 block-grid-no-padding" id="galleryGrid">
+            <div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+              <img class="img-responsive" src="http://loremflickr.com/500/500" >
+            </div>
+            <div class="block-grid-item" data-groups='["two"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+              <img class="img-responsive" src="http://loremflickr.com/500/500" >
+            </div>
+            <div class="block-grid-item" data-groups='["three"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+              <img class="img-responsive" src="http://loremflickr.com/500/500" >
+            </div>
+            <div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+              <img class="img-responsive" src="http://loremflickr.com/500/500" >
+            </div>
+            <div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+              <img class="img-responsive" src="http://loremflickr.com/500/500" >
+            </div>
+            <div class="block-grid-item" data-groups='["two"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+              <img class="img-responsive" src="http://loremflickr.com/500/500" >
+            </div>
+            <div class="block-grid-item" data-groups='["three"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+              <img class="img-responsive" src="http://loremflickr.com/500/500" >
+            </div>
+            <div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+              <img class="img-responsive" src="http://loremflickr.com/500/500" >
+            </div>
+            <div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+              <img class="img-responsive" src="http://loremflickr.com/500/500" >
+            </div>
+            <div class="block-grid-item" data-groups='["two"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+              <img class="img-responsive" src="http://loremflickr.com/500/500" >
+            </div>
+            <div class="block-grid-item" data-groups='["three"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+              <img class="img-responsive" src="http://loremflickr.com/500/500" >
+            </div>
+            <div class="block-grid-item" data-groups='["one"]' data-title="hello" data-created="2001-01-02" data-search-term="A nice duck">
+              <img class="img-responsive" src="http://loremflickr.com/500/500" >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

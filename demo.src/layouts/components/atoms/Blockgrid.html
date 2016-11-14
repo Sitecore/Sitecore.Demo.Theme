@@ -1,0 +1,9 @@
+{% import "layouts/components/atoms/templates/_blockgrid.nj" as blockgrid %}
+<div class="row">
+  <div class="col-md-12">
+    {{blockgrid.template()}}
+  </div>
+  <div class="col-md-12">
+    {{blockgrid.template(padding=false)}}
+  </div>
+</div>

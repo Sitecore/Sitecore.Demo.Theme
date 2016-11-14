@@ -1,0 +1,16 @@
+{% macro pageheader(title = 'Default page heading right here', titlesize='h1', titleclass, small = 'Default details right here. It could be really long or really short.', time, timepre = 'Created at ') %}
+  <{{titlesize}} class="{{titleclass}}">
+    {{title}}
+    <br/>
+    {% if small %}
+    <small>
+      {{small}}
+    </small>
+    {% endif %}
+  </{{titlesize}}>
+  {% if time %}
+  <p>
+    {{timepre}}<time>{{time}}</time>
+  </p>
+  {% endif %}
+{% endmacro %}

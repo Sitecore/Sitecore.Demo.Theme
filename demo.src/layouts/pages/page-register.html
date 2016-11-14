@@ -1,0 +1,53 @@
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/molecules/templates/_advanced-thumbnail.nj" as thumbnail %}
+{% import "layouts/components/atoms/templates/_form.nj" as form %}
+{% import "layouts/components/atoms/templates/_button.nj" as button %}
+{% import "layouts/components/atoms/templates/_button-group.nj" as buttongroup %}
+{% import "layouts/components/organisms/templates/_page-header.nj" as pageheader %}
+
+{% set pageHeaderTop = true %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+{% call layout.pageHeader() -%}
+  {{pageheader.pagetitle(title='Register', lead=false)}}
+{%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      {% call form.form(class='form-signin') %}
+        {{form.formgroup(label=form.label(for="inputEmail", caption="Email address"), input=form.text(id='inputEmail'), helptext=form.helptext(text='Email, i.e. john.doe@help.me'))}}
+        {{form.formgroup(label=form.label(for="inputPassword", caption="Password"), input=form.text(id='inputPassword'))}}
+        {{form.formgroup(label=form.label(for="inputRePassword", caption="Reenter password"), input=form.text(id='inputRePassword'))}}
+        {{form.formgroup(label=form.label(for="inputBirth", caption="Date of birth"), input=form.date(id="inputBirth"))}}
+        {{form.formgroup(label=form.label(for="inputCountry", caption="Country"), input=form.select(id="inputCountry"))}}
+        {% call form.formgroup(label=form.label(for="inputGender", caption="Gender")) %}
+          {{form.radio(id='inputGender', inline=true, caption='Female')}}
+          {{form.radio(id='inputGender', inline=true, caption='Male')}}
+        {% endcall%}
+        {{form.button(text='Register', class='btn-default')}}
+      {% endcall %}
+    </div> <!-- ./container -->
+  {%- endcall %}
+
+  {% call layout.section('bg-primary') -%}
+    <div class="container">
+      <div class="row">
+        {% for i in range(0,3) %}
+          <div class="col-md-4">
+            {{thumbnail.template()}}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {%- endcall %}
+
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

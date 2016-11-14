@@ -1,0 +1,9 @@
+{% import "layouts/components/atoms/templates/_alert.nj" as alert %}
+<div class="row">
+  <div class="col-md-12">
+    {{alert.template('success', linktext=false)}}
+    {{alert.template(linktext=false)}}
+    {{alert.template('warning', false)}}
+    {{alert.template(type='danger', closeable=false, linktext='Read all about it')}}
+  </div>
+</div>

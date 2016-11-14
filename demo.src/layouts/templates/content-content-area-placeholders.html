@@ -1,0 +1,193 @@
+{% import "layouts/sublayouts/macros/documentation.nj" as doc %}
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header.html" %}
+
+{% call layout.main() -%}
+  {{ doc.pageheader('Placeholders', 'The Habitat theme and semantic HTML uses the default bootstrap columns, but placeholders are defined as either  narrow, wide and huge.
+  </br>When building the pages, some components might only fit in narrow or huge placeholders, while others might be able to adjust to all widths.
+  </br>When the page contains sidebars, the column definition varies slightly.') }}
+
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          {{ doc.infopanel('Wide placeholders are spanning from 4 to 8 bootstrap columns.', 'Wide') }}
+        </div>
+        <div class="col-md-4">
+          {{ doc.infopanel('Wide placeholders are spanning from 4 to 8 bootstrap columns.', 'Wide') }}
+        </div>
+        <div class="col-md-4">
+          {{ doc.infopanel('Wide placeholders are spanning from 4 to 8 bootstrap columns.', 'Wide') }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          {{ doc.infopanel('Narrow placeholders are spanning less than 4 bootstrap columns.', 'Narrow') }}
+        </div>
+        <div class="col-md-3">
+          {{ doc.infopanel('Narrow placeholders are spanning less than 4 bootstrap columns.', 'Narrow') }}
+        </div>
+        <div class="col-md-3">
+          {{ doc.infopanel('Narrow placeholders are spanning less than 4 bootstrap columns.', 'Narrow') }}
+        </div>
+        <div class="col-md-3">
+          {{ doc.infopanel('Narrow placeholders are spanning less than 4 bootstrap columns.', 'Narrow') }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          {{ doc.infopanel('Huge placeholders are spanning more than 8 bootstrap columns.', 'Huge') }}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section('bg-primary', type='sidebar') -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <aside>
+            {{ doc.infopanel('The Sidebar placeholder is specific and might only be able to contain specific sidebar related components', 'Sidebar') }}
+          </aside>
+        </div>
+        <div class="col-md-9">
+          <article>
+            {{ doc.infopanel('Placeholders are defined slightly different for the main content in sidebars.', 'Main content') }}
+
+            <div class="row">
+              <div class="col-md-4">
+                {{ doc.infopanel('Narrow placeholders are spanning less than 6 bootstrap columns.', 'Narrow') }}
+              </div>
+              <div class="col-md-4">
+                {{ doc.infopanel('Narrow placeholders are spanning less than 6 bootstrap columns.', 'Narrow') }}
+              </div>
+              <div class="col-md-4">
+                {{ doc.infopanel('Narrow placeholders are spanning less than 6 bootstrap columns.', 'Narrow') }}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                {{ doc.infopanel('Narrow placeholders are spanning more than 6 bootstrap columns.', 'Wide') }}
+              </div>
+              <div class="col-md-6">
+                {{ doc.infopanel('Narrow placeholders are spanning more than 6 bootstrap columns.', 'Wide') }}
+              </div>
+            </div>
+
+          </article>
+        </div>
+
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+        </div>
+        <div class="col-md-3">
+          {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+        </div>
+        <div class="col-md-3">
+          {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+        </div>
+        <div class="col-md-2">
+          {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+        </div>
+        <div class="col-md-3">
+          {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+        </div>
+        <div class="col-md-8">
+          {% include "layouts/components/molecules/templates/_advanced-thumbnail-1.html" %}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section('bg-dark') -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          {% include "layouts/components/molecules/templates/_media-2.html" %}
+        </div>
+        <div class="col-md-3">
+          {% include "layouts/components/molecules/templates/_media-2.html" %}
+        </div>
+        <div class="col-md-3">
+          {% include "layouts/components/molecules/templates/_media-2.html" %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          {% include "layouts/components/molecules/templates/_media-2.html" %}
+        </div>
+        <div class="col-md-2">
+          {% include "layouts/components/molecules/templates/_media-2.html" %}
+        </div>
+        <div class="col-md-3">
+          {% include "layouts/components/molecules/templates/_media-2.html" %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          {% include "layouts/components/molecules/templates/_media-2.html" %}
+        </div>
+        <div class="col-md-8">
+          {% include "layouts/components/molecules/templates/_media-2.html" %}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+  {% call layout.section() -%}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          {% include "layouts/components/organisms/templates/_medialist-2.html" %}
+        </div>
+        <div class="col-md-3">
+          {% include "layouts/components/organisms/templates/_medialist-2.html" %}
+        </div>
+        <div class="col-md-3">
+          {% include "layouts/components/organisms/templates/_medialist-2.html" %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          {% include "layouts/components/organisms/templates/_medialist-2.html" %}
+        </div>
+        <div class="col-md-2">
+          {% include "layouts/components/organisms/templates/_medialist-2.html" %}
+        </div>
+        <div class="col-md-3">
+          {% include "layouts/components/organisms/templates/_medialist-2.html" %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          {% include "layouts/components/organisms/templates/_medialist-2.html" %}
+        </div>
+        <div class="col-md-8">
+          {% include "layouts/components/organisms/templates/_medialist-2.html" %}
+        </div>
+      </div>
+    </div>
+  {%- endcall %}
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}

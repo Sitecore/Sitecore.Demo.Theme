@@ -1,0 +1,14 @@
+{% import "layouts/components/molecules/templates/_well-teaser.nj" as wellTeaser %}
+
+<div class="row">
+  <div class="col-md-4">
+    {{ wellTeaser.teaser() }}
+  </div>
+  <div class="col-md-4">
+    {{ wellTeaser.teaser('bg-white') }}
+  </div>
+  <div class="col-md-4">
+    {{ wellTeaser.teaser('bg-primary') }}
+  </div>
+</div>
+

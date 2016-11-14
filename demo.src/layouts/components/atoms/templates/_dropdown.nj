@@ -1,0 +1,27 @@
+{% macro template(maintag = 'div', toggletag='button', toggleclass='btn btn-default', direction='down', side='left', icon=false) %}
+
+<{{maintag}} class="drop{{direction}}">
+  {% if toggletag %}
+  <{{toggletag}} {% if toggletag == 'a' %}href="#"{% endif %} class="{{toggleclass}} dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    {% if icon %}
+      <span class="glyphicon glyphicon-{{icon}}"></span>
+    {% else %}
+      Drop{{direction}}
+      <span class="caret"></span>
+    {% endif %}
+  </{{toggletag}}>
+  {% endif %}
+  <ul class="dropdown-menu {% if side %}dropdown-menu-{{side}}{% endif %}" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li class="active"><a href="#">Active action</a></li>
+    <li class="dropdown-header">Section 1</li>
+    <li><a href="#">Action</a></li>
+    <li class="disabled"><a href="#">Disabled action</a></li>
+    <li><a href="#">Normal action</a></li>
+    <li role="separator" class="divider"></li>
+    <li class="dropdown-header">Section 2</li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</{{maintag}}>
+
+{% endmacro %}

@@ -1,0 +1,20 @@
+{% import "layouts/components/atoms/templates/_image.nj" as image %}
+{% import "layouts/components/molecules/templates/_media.nj" as media %}
+{% import "layouts/components/atoms/templates/_button.nj" as button %}
+
+<div class="row">
+  <div class="col-md-6">
+    {{ media.template(media=image.template(responsive=false)) }}
+  </div>
+  <div class="col-md-6">
+    {{ media.template(media=image.template(responsive=false)) }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    {{ media.template(media=image.template(responsive=false), right=true) }}
+  </div>
+  <div class="col-md-6">
+    {{ media.template(media=image.template(responsive=false), right=true) }}
+  </div>
+</div>
