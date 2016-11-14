@@ -1,5 +1,5 @@
 {
-  "name": "Sitecore.Demo.Theme",
+  "name": "sitecore.demo.theme",
   "authors": [
     "Thomas Eldblom <the@sitecore.net>"
   ],
@@ -10,8 +10,12 @@
     "Sitecore"
   ],
   "license": "MIT",
-  "homepage": "http://github.com/sitecore/sitecore.demo.theme",
+  "homepage": "http://github.com/sitecore/sitecore.demo.theme/readme.md",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sitecore/sitecore.demo.theme.git"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
