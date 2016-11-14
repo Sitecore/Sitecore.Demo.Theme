@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html dir="ltr" class="no-js" lang="">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SitecoreHabitatTheme</title>
+<link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="styles/vendor.css">
+<link rel="stylesheet" href="styles/default.css">
+<link rel="stylesheet" href="styles/niteflight.css">
+<link rel="stylesheet" href="styles/dayfrost.css" disabled="disabled">
+<link rel="stylesheet" href="styles/white-wonder.css" disabled="disabled">
+<script src="scripts/vendor/modernizr.js"></script>
+</head>
+<body class="" style="">
+<div id="main-container">
+<header class="header-fixed">
+<nav class="navbar navbar-default navbar-mega navbar-fixed-top" id="mainNavbar">
+<div class="container">
+<div class="navbar-left">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#siteNavbar" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand has-tagline" href="/index.html">
+<!--[if lt IE 9]>
+<span class="logo">
+  <img class="logo-image" src="images/logo_white.png" width="200"/>
+</span>
+<![endif]-->
+<!--[if gt IE 8]> <!-- -->
+<span class="logo">
+<svg id="habitat_logo" data-name="habitat_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 91.86"><defs><style>.cls-1{fill:#231f20;}</style></defs><title>habitat_logo</title><path class="cls-1" d="M32.26,190a14.06,14.06,0,0,0-.62-4.37H25v-5.24H47.23v80.26a10.49,10.49,0,0,0,.75,4.37h6.49v5.24H25v-5.24h6.62a14.06,14.06,0,0,0,.62-4.37V190Zm53.3,70.65a14.06,14.06,0,0,0,.62,4.37h6.62v5.24H63.33v-5.24h6.49a10.51,10.51,0,0,0,.75-4.37V228.86c0-8.24-3.87-10.73-8.36-10.73a19.32,19.32,0,0,0-6.49,1.25v-4.49a19.84,19.84,0,0,1,13.73-5c11,0,16.1,7.11,16.1,17.47v33.33Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M128.48,242.59h-4.24c-6,0-7.86,3.12-7.86,8.49v6.24c0,4.74,2.12,6.87,6.62,6.87a21.44,21.44,0,0,0,5.49-.75v4.24c-2.87,2.25-7.86,3.37-12,3.37-10.36,0-15.1-7-15.1-15.23v-3c0-10,5.62-15.23,18.72-15.23h8.36v5Zm-16.72-16.73h-5.37V210.63h22.09v5.24h-15a18.92,18.92,0,0,0-1.12,4.37Zm40.19,32.45c0,3.37.62,6.24,4.12,6.24,3.74,0,4.62-3.12,4.62-7.36v-5.12h4.74v5.49c0,8.49-4.49,13.48-14.1,13.48-11.48,0-14.35-7.36-14.35-14.1V210.63c11.11,0,15,6,15,11.23v36.45Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M174,190a10.49,10.49,0,0,0-.75-4.37h-5.37v-5.24H189v82.75L178.9,271H174V190ZM208,271a24.08,24.08,0,0,1-10.48-2.25v-4.87a14.58,14.58,0,0,0,5,1c12.86,0,13.36-12.73,13.36-24.71S215.35,216,203,216a16.84,16.84,0,0,0-5.49,1v-4.87a25,25,0,0,1,10.86-2.25c15.85,0,23.59,13,23.59,29.58C231.95,256.57,223.71,271,208,271Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M250.41,220.24a10.49,10.49,0,0,0-.75-4.37h-6.49v-5.24h22.22v50.05a10.5,10.5,0,0,0,.75,4.37h6.49v5.24H243.17v-5.24h6.49a10.49,10.49,0,0,0,.75-4.37V220.24Zm7.24-41.06a10.07,10.07,0,0,1,10.11,10.11A10.11,10.11,0,1,1,257.65,179.18Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M285,194.16L299.84,188v22.59h13.86v5.24H299.84v42.06c0,3.49,1,6.24,4.87,6.24s5.49-2.62,5.49-7.11v-2.87h4.74v3c0,8.49-4.87,13.48-14.48,13.48-11.48,0-15.48-7.36-15.48-14.1V215.88h-8v-5.24h8V194.16Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M348.88,242.59h-4.24c-6,0-7.86,3.12-7.86,8.49v6.24c0,4.74,2.12,6.87,6.62,6.87a21.44,21.44,0,0,0,5.49-.75v4.24C346,269.92,341,271,336.9,271c-10.36,0-15.1-7-15.1-15.23v-3c0-10,5.62-15.23,18.72-15.23h8.36v5Zm-16.73-16.73h-5.37V210.63h22.09v5.24h-15a18.82,18.82,0,0,0-1.12,4.37Zm40.19,32.45c0,3.37.62,6.24,4.12,6.24,3.74,0,4.62-3.12,4.62-7.36v-5.12h4.74v5.49c0,8.49-4.49,13.48-14.1,13.48-11.48,0-14.35-7.36-14.35-14.1V210.63c11.11,0,15,6,15,11.23v36.45Z" transform="translate(-25.02 -179.18)"/><path class="cls-1" d="M395.06,194.16L409.91,188v22.59h13.86v5.24H409.91v42.06c0,3.49,1,6.24,4.87,6.24s5.49-2.62,5.49-7.11v-2.87H425v3c0,8.49-4.87,13.48-14.48,13.48-11.48,0-15.48-7.36-15.48-14.1V215.88h-8v-5.24h8V194.16Z" transform="translate(-25.02 -179.18)"/></svg>
+<small class="tagline">Sitecore Experience Example</small>
+</span>
+<!-- <![endif]-->
+</a>
+</div>
+</div>
+</nav>
+</header>
+<main role="main">
+<header class="page-header" style="">
+<div id="frontpage-carousel" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#frontpage-carousel" data-slide-to="0" class="active"></li>
+<li data-target="#frontpage-carousel" data-slide-to="1"></li>
+<li data-target="#frontpage-carousel" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+<div class="item active">
+<div class="jumbotron undefined jumbotron-xl bg-media" style="background-image: url(&#39;images/lion.jpg&#39;)">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h1>Powered by Sitecore</h1>
+<a class="btn btn-hollow btn-lg">Explore our habitat</a>
+</div>
+</div>
+</div>
+</div>
+</div><div class="item">
+<div class="jumbotron undefined jumbotron-xl bg-media" style="background-image: url(&#39;images/lion.jpg&#39;)">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h1>Powered by Sitecore</h1>
+<a class="btn btn-hollow btn-lg">Explore our habitat</a>
+</div>
+</div>
+</div>
+</div>
+</div><div class="item">
+<div class="jumbotron undefined jumbotron-xl bg-media" style="background-image: url(&#39;images/lion.jpg&#39;)">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h1>Powered by Sitecore</h1>
+<a class="btn btn-hollow btn-lg">Explore our habitat</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="left carousel-control" href="#frontpage-carousel" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#frontpage-carousel" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</header>
+<section class="section section-full" style="">
+<div class="container">
+<div class="row">
+<div class="col-sm-4">
+<div class="thumbnail">
+<span class="icon-xl icon-spacing icon-centered glyphicon glyphicon-off"></span>
+<div class="caption text-center">
+<h3>Fully Responsive</h3>
+<p>
+It doesn&#39;t really look of much, since it&#39;s only a thumbnail
+</p>
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="thumbnail">
+<span class="icon-xl icon-spacing icon-centered glyphicon glyphicon-play-circle"></span>
+<div class="caption text-center">
+<h3>Visual &amp; Pragmatic</h3>
+<p>
+It doesn&#39;t really look of much, since it&#39;s only a thumbnail
+</p>
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="thumbnail">
+<span class="icon-xl icon-spacing icon-centered glyphicon glyphicon-remove-circle"></span>
+<div class="caption text-center">
+<h3>Dedicated support</h3>
+<p>
+It doesn&#39;t really look of much, since it&#39;s only a thumbnail
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-full" style="">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="headline">
+<h2 class="text-center">
+Our principles of designing
+</h2>
+</div>
+<div class="row thumbnail thumbnail-horizontal-left">
+<div class="col-sm-6">
+<img src="http://placehold.it/500x300" class="img-responsive" alt="Placeholdere image">
+</div>
+<div class="col-sm-6 caption">
+<h3>This is a placeholder thumbnail</h3>
+<p>
+It doesn't really look of much, since it's only a thumbnail
+</p>
+</div>
+</div>
+<div class="row thumbnail thumbnail-horizontal-right">
+<div class="col-sm-6 caption">
+<h3>This is a placeholder thumbnail</h3>
+<p>
+It doesn't really look of much, since it's only a thumbnail
+</p>
+</div>
+<div class="col-sm-6">
+<img src="http://placehold.it/500x300" class="img-responsive" alt="Placeholdere image">
+</div>
+</div>
+<div class="row thumbnail thumbnail-horizontal-left">
+<div class="col-sm-6">
+<img src="http://placehold.it/500x300" class="img-responsive" alt="Placeholdere image">
+</div>
+<div class="col-sm-6 caption">
+<h3>This is a placeholder thumbnail</h3>
+<p>
+It doesn't really look of much, since it's only a thumbnail
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-full bg-dark" style="">
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<aside class="">
+<header>
+<h1>Why Habitat</h1>
+<p class="lead">Habitat is the ultimate tool to power any of your projects. Corporate, ecommerce, SaaS, CRM and much more.</p>
+</header>
+<p>
+Providing a quick and manageable way of extending solutions and reusing features across sites and even across solutions. The conventions are based on a number of well-founded and industry-standard principles such as:
+</p>
+<button type="button" class="btn btn-default">
+Explore more
+</button>
+</aside>
+</div>
+<div class="col-md-6">
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+<div class="panel panel-default">
+<div class="panel-heading" role="tab" id="headingcollapse0">
+<div class="panel-title">
+<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+Collapsible Group Item collapse0
+</a>
+</div>
+</div>
+<div id="collapse0" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingcollapse0" aria-expanded="true">
+<div class="panel-body">
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab" id="headingcollapse1">
+<div class="panel-title">
+<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+Collapsible Group Item collapse1
+</a>
+</div>
+</div>
+<div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingcollapse1" aria-expanded="false">
+<div class="panel-body">
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab" id="headingcollapse2">
+<div class="panel-title">
+<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+Collapsible Group Item collapse2
+</a>
+</div>
+</div>
+<div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingcollapse2" aria-expanded="false">
+<div class="panel-body">
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab" id="headingcollapse3">
+<div class="panel-title">
+<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+Collapsible Group Item collapse3
+</a>
+</div>
+</div>
+<div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingcollapse3" aria-expanded="false">
+<div class="panel-body">
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab" id="headingcollapse4">
+<div class="panel-title">
+<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+Collapsible Group Item collapse4
+</a>
+</div>
+</div>
+<div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingcollapse4" aria-expanded="false">
+<div class="panel-body">
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab" id="headingcollapse5">
+<div class="panel-title">
+<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapse5">
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+Collapsible Group Item collapse5
+</a>
+</div>
+</div>
+<div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingcollapse5" aria-expanded="false">
+<div class="panel-body">
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-full" style="">
+<div class="container">
+<div class="row no-gutters">
+<div class="col-md-6">
+<div class="well bg-primary">
+<header>
+<h2>
+What we do
+</h2>
+</header>
+</div>
+</div>
+<div class="col-md-6">
+<img src="http://placehold.it/1000x700" class="img-responsive" alt="Placeholdere image">
+</div>
+</div>
+<div class="row no-gutters">
+<div class="col-sm-3">
+<div class="panel bg-dark text-center">
+<div class="panel-body">
+<h3>Exceptional frontend framework</h3>
+<button type="button" class="btn btn-default">
+Explorer habitat
+</button>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="panel bg-dark text-center">
+<div class="panel-body">
+<h3>Exceptional frontend framework</h3>
+<button type="button" class="btn btn-default">
+Explorer habitat
+</button>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="panel bg-dark text-center">
+<div class="panel-body">
+<h3>Exceptional frontend framework</h3>
+<button type="button" class="btn btn-default">
+Explorer habitat
+</button>
+</div>
+</div>
+</div>
+<div class="col-sm-3">
+<div class="panel bg-dark text-center">
+<div class="panel-body">
+<h3>Exceptional frontend framework</h3>
+<button type="button" class="btn btn-default">
+Explorer habitat
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-full bg-media bg-parallax" style="background-image: url(&#39;http://lorempixel.com/g/1000/800/&#39;)">
+<div class="container">
+<div class="jumbotron jumbotron-xl text-center" style="">
+<h3>The fragmented part</h3>
+<a class="btn btn-primary btn-lg" href="#" role="button">Explore the habitat</a>
+</div>
+</div>
+</section>
+<section class="section section-full" style="">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<div class="thumbnail">
+<header class="thumbnail-header">
+<span class="label">Blog</span>
+</header>
+<div class="caption">
+<h1>Exceptional frontend framework</h1>
+<p>
+Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+</p>
+<a href="#" class="btn btn-default">Read more</a>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="thumbnail">
+<header class="thumbnail-header">
+<span class="label">Blog</span>
+</header>
+<div class="caption">
+<h1>Exceptional frontend framework</h1>
+<p>
+Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+</p>
+<a href="#" class="btn btn-default">Read more</a>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="thumbnail thumbnail-focus bg-primary">
+<header class="thumbnail-header">
+<span class="label">Blog</span>
+</header>
+<div class="caption">
+<h1>Exceptional frontend framework</h1>
+<p>
+Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+</p>
+<a href="#" class="btn btn-default">Read more</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-8">
+<div class="jumbotron text-center bg-media" style="background-image: url(&#39;http://lorempixel.com/g/1000/800/&#39;)">
+<span class="label">Long read</span>
+<h1>Exceptionel frontend framework</h1>
+<a class="btn btn-primary btn-lg" href="#" role="button">Read more</a>
+</div>
+</div>
+<div class="col-sm-4">
+<blockquote class="text-center">
+<header>
+<span class="label">
+Testimonial
+</span>
+</header>
+<p class="lead">
+Quick and exceptionally easy to use with excellent support
+</p>
+<footer>
+Marie Begovich <cite title="UX expert">UX expert</cite>
+</footer>
+</blockquote>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-full" style="">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="headline">
+<h2 class="text-center headline-borderless">
+The features of Habitat
+</h2>
+</div>
+</div>
+</div>
+</div>
+<ul class="nav nav-tabs nav-tabs-block" role="tablist">
+<li role="presentation" class="active">
+<a href="#responsiveTab" aria-controls="home" role="tab" data-toggle="tab">
+<span class="glyphicon glyphicon-resize-small icon-xl center-block"></span>
+<p>Responsive</p>
+</a>
+</li>
+<li role="presentation" class="">
+<a href="#designTab" aria-controls="home" role="tab" data-toggle="tab">
+<span class="glyphicon glyphicon-text-width icon-xl center-block"></span>
+<p>Design</p>
+</a>
+</li>
+<li role="presentation" class="">
+<a href="#supportTab" aria-controls="home" role="tab" data-toggle="tab">
+<span class="glyphicon glyphicon-comment icon-xl center-block"></span>
+<p>Support</p>
+</a>
+</li>
+<li role="presentation" class="">
+<a href="#flexibleTab" aria-controls="home" role="tab" data-toggle="tab">
+<span class="glyphicon glyphicon-resize-full icon-xl center-block"></span>
+<p>Flexible</p>
+</a>
+</li>
+<li role="presentation" class="">
+<a href="#structuredTab" aria-controls="home" role="tab" data-toggle="tab">
+<span class="glyphicon glyphicon-tasks icon-xl center-block"></span>
+<p>Structured</p>
+</a>
+</li>
+</ul>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="responsiveTab">
+<div class="jumbotron bg-dark" style="">
+<div class="container">
+<h1>Responsive</h1>
+<div class="row">
+<div class="col-md-6">
+<p>
+Translated to interfaces, atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.
+<br>
+<br>
+Atoms are abstract and aren't often terribly useful on their own, but they provide a useful reference and allow you to see all your global styles laid out at a glance.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="designTab">
+<div class="jumbotron bg-dark" style="">
+<div class="container">
+<h1>Design</h1>
+<div class="row">
+<div class="col-md-6">
+<p>
+Translated to interfaces, atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.
+<br>
+<br>
+Atoms are abstract and aren't often terribly useful on their own, but they provide a useful reference and allow you to see all your global styles laid out at a glance.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="supportTab">
+<div class="jumbotron bg-dark" style="">
+<div class="container">
+<h1>Support</h1>
+<div class="row">
+<div class="col-md-6">
+<p>
+Translated to interfaces, atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.
+<br>
+<br>
+Atoms are abstract and aren't often terribly useful on their own, but they provide a useful reference and allow you to see all your global styles laid out at a glance.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="flexibleTab">
+<div class="jumbotron bg-dark" style="">
+<div class="container">
+<h1>Flexible</h1>
+<div class="row">
+<div class="col-md-6">
+<p>
+Translated to interfaces, atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.
+<br>
+<br>
+Atoms are abstract and aren't often terribly useful on their own, but they provide a useful reference and allow you to see all your global styles laid out at a glance.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="structuredTab">
+<div class="jumbotron bg-dark" style="">
+<div class="container">
+<h1>Structured</h1>
+<div class="row">
+<div class="col-md-6">
+<p>
+Translated to interfaces, atoms are basic tags, such as form labels, inputs or buttons. They also include more abstract elements like color palettes, fonts, and animations.
+<br>
+<br>
+Atoms are abstract and aren't often terribly useful on their own, but they provide a useful reference and allow you to see all your global styles laid out at a glance.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-full" style="">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<div class="thumbnail">
+<header class="thumbnail-header">
+<span class="label">Blog</span>
+</header>
+<div class="caption">
+<h1>Exceptional frontend framework</h1>
+<p>
+Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+</p>
+<a href="#" class="btn btn-default">Read more</a>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="thumbnail">
+<header class="thumbnail-header">
+<span class="label">Blog</span>
+</header>
+<div class="caption">
+<h1>Exceptional frontend framework</h1>
+<p>
+Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+</p>
+<a href="#" class="btn btn-default">Read more</a>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="thumbnail">
+<header class="thumbnail-header">
+<span class="label">Blog</span>
+</header>
+<div class="caption">
+<h1>Exceptional frontend framework</h1>
+<p>
+Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+</p>
+<a href="#" class="btn btn-default">Read more</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-full bg-primary" style="">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="jumbotron">
+<blockquote class="">
+<header>
+<span class="label">
+Testimonial
+</span>
+</header>
+<p class="lead">
+Quick and exceptionally easy to use with excellent support.
+</p>
+<footer>
+Marie Begovich <cite title="UX expert">UX expert</cite>
+</footer>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-full bg-media bg-parallax" style="background-image: url(&#39;http://lorempixel.com/g/1000/800/&#39;)">
+<div class="container">
+<div class="jumbotron jumbotron-xl text-center" style="">
+<h3>Smooth and calm implementation</h3>
+<a class="btn btn-primary btn-lg" href="#" role="button">Explore the habitat</a>
+</div>
+</div>
+</section>
+<section class="section section-full" style="">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="headline">
+<h2 class="text-center">
+Smooth and calm implementation
+</h2>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<blockquote class="blockquote-center">
+<header>
+<img src="images/thrane.png" alt="Testimonial img" class="img-responsive">
+<p>
+Kristian Thrane
+</p>
+<p>
+CTO
+</p>
+</header>
+<p>
+This is the default blockquote text for the testimonials. They can be changed whenever you want.
+</p>
+</blockquote>
+</div>
+<div class="col-md-4">
+<blockquote class="blockquote-center">
+<header>
+<img src="images/thrane.png" alt="Testimonial img" class="img-responsive">
+<p>
+Kristian Thrane
+</p>
+<p>
+CTO
+</p>
+</header>
+<p>
+This is the default blockquote text for the testimonials. They can be changed whenever you want.
+</p>
+</blockquote>
+</div>
+<div class="col-md-4">
+<blockquote class="blockquote-center">
+<header>
+<img src="images/thrane.png" alt="Testimonial img" class="img-responsive">
+<p>
+Kristian Thrane
+</p>
+<p>
+CTO
+</p>
+</header>
+<p>
+This is the default blockquote text for the testimonials. They can be changed whenever you want.
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-full" style="">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="headline">
+<h2 class="text-center">
+Learn more about Habitat
+</h2>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3">
+<div class="panel bg-dark">
+<div class="panel-body">
+<h3>Clean code</h3>
+<p>
+Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+</p>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="panel bg-dark">
+<div class="panel-body">
+<h3>Clean code</h3>
+<p>
+Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+</p>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="thumbnail bg-primary">
+<span class="icon-xl icon-spacing icon-centered glyphicon glyphicon-cog"></span>
+<div class="caption text-center">
+<h3>24/7 support for you</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3">
+<div class="panel bg-dark">
+<div class="panel-body">
+<h3>Clean code</h3>
+<p>
+Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+</p>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="panel bg-dark">
+<div class="panel-body">
+<h3>Clean code</h3>
+<p>
+Translated to interfaces, atoms are basic tags, such as forms labels, inputs or buttons. They also include more abstract.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-dark">
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-sm-4 col-xs-12">
+<ul class="nav nav-stacked">
+<li role="presentation" class="active"><a href="#">Active item</a></li>
+<li role="presentation"><a href="#">Second item</a></li>
+<li role="presentation"><a href="#">Third item</a></li>
+<li role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-12">
+<div class="well">
+<h5 class="text-uppercase">Latest posts
+<ul class="media-list">
+<li class="media">
+<div class="media-body">
+<date>14 September 2015</date>
+<h4 class="media-heading"><a href="#">Sitecore XP rated Best in Class - again</a></h4>
+</div>
+</li>
+<li class="media">
+<div class="media-body">
+<date>14 September 2015</date>
+<h4 class="media-heading"><a href="#">Sitecore XP rated Best in Class - again</a></h4>
+</div>
+</li>
+<li class="media">
+<div class="media-body">
+<date>14 September 2015</date>
+<h4 class="media-heading"><a href="#">Sitecore XP rated Best in Class - again</a></h4>
+</div>
+</li>
+<li class="media">
+<div class="media-body">
+<date>14 September 2015</date>
+<h4 class="media-heading"><a href="#">Sitecore XP rated Best in Class - again</a></h4>
+</div>
+</li>
+</ul>
+<a href="#" class="btn btn-default">Read more</a>
+</h5></div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-12">
+<div class="well">
+<h3>About</h3>
+<p>
+Sitecore Habitat is a methodology for developing Sitecore Solutions. It is based on a layered and modular architecture focusing on high efficiency and simplicity.
+</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-12">
+<div class="well">
+<h4>Contact information</h4>
+<address>
+<strong>Sitecore Corporation</strong><br>
+Vester Farimagsgade 3,5<br>
+1606 Copenhagen V<br>
+Denmark<br>
+<abbr title="Phone">P:</abbr> +45 7022 4606
+</address>
+<address>
+<strong>Email</strong><br>
+<a href="mailto:#">sales@sitecore.net</a>
+</address>
+<a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+<a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+<a class="btn btn-social-icon btn-youtube"><i class="fa fa-youtube"></i></a>
+<a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></a>
+<a class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
+<a class="btn btn-social-icon btn-google-plus"><i class="fa fa-google-plus"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom text-center">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<ul class="nav list-inline">
+<li>
+<a href="#">Copyright</a>
+</li>
+<li class="divider-left">
+<a href="#">Legal link</a>
+</li>
+<li class="divider-left">
+<a href="#">Sitecore.net</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<small>This is the legal footer</small>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="scripts/vendor.js"></script>
+<script src="scripts/jquery.modern.js"></script>
+<script src="scripts/plugins.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>
