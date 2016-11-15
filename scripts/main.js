@@ -3,8 +3,6 @@ if(!window.console){
   console.log = function(){};
 }
 
-jQuery.noConflict();
-
 (function($) {
   $(function() {
     $('.code').each(function(){

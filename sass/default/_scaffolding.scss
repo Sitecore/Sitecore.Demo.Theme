@@ -5,54 +5,42 @@ body {
     margin-top: 185px;
   }
 
-  header {
-    &.header-fixed {
-      & + main {
-        padding-top: 82px;
-
+  @mixin headerPadding($default, $sm, $xs) {
+    min-height: $default;
         @media all and (max-width: $screen-sm-max) {
-          padding-top: 78px;
+      min-height: $sm;
         }
 
         @media all and (max-width: $screen-xs-max) {
-          padding-top: 70px;
-        }
+      min-height: $xs;
       }
-      &.header-has-top {
+
         & + main {
-          padding-top: 118px;
+      padding-top: $default;
 
           @media all and (max-width: $screen-sm-max) {
-            padding-top: 78px;
+        padding-top: $sm;
           }
 
           @media all and (max-width: $screen-xs-max) {
-            padding-top: 70px;
-          }
-        }
-        &.header-logo-center {
-          & + main {
-            @media (min-width: $screen-md-min) {
-              padding-top: 165px;
+        padding-top: $xs;
             }
           }
         }
 
-      }
+  header {
+    &.header-fixed {
+      @include headerPadding(82px, 78px, 70px);
       &.header-logo-center {
-        & + main {
-          padding-top: 125px;
-
-          @media all and (max-width: $screen-sm-max) {
-            padding-top: 115px;
+        @include headerPadding(125px, 115px, 111px);
           }
-
-          @media all and (max-width: $screen-xs-max) {
-            padding-top: 111px;
+      &.header-has-top {
+        @include headerPadding(118px, 78px, 70px);
+        &.header-logo-center {
+          @include headerPadding(165px, 115px, 111px);
           }
 
         }
-      }
       &.bg-transparent {
         &.header-has-top {
           & + main .jumbotron > *:nth-child(1) {
