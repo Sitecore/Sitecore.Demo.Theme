@@ -5,7 +5,7 @@
 
   & > li {
     & > a {
-      font-weight: bold;
+      font-weight: $nav-link-font-weight;
     }
   }
   li {
@@ -62,8 +62,8 @@
 
       & > .active {
         & > a {
-          color: $brand-primary;
-          font-weight: bold;
+          color: $active-list-text-color;
+          font-weight: $active-list-font-weight;
         }
       }
       & > li {
@@ -71,7 +71,7 @@
           font-weight: normal;
           color: $text-color;
           &.btn {
-            font-weight: bold;
+            font-weight: $btn-font-weight;
           }
         }
       }
@@ -131,7 +131,7 @@
 
     & > li {
       & > a {
-        font-weight: lighter;
+        font-weight: $nav-service-link-font-weight;
         color: $nav-service-link-color;
         padding-top: 10px !important;
         padding-bottom: 10px !important;
