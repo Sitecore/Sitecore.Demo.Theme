@@ -68,7 +68,7 @@
       }
       & > li {
         & > a {
-          font-weight: normal;
+          font-weight: $list-font-weight;
           color: $text-color;
           &.btn {
             font-weight: $btn-font-weight;
@@ -158,7 +158,7 @@
         li {
           padding: 0;
           a {
-            font-weight: normal;
+            font-weight: $list-font-weight;
             padding-left: 0;
             padding-right: 0;
             color: $text-color;
