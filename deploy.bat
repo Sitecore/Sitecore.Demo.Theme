@@ -1,3 +1,4 @@
+gulp
 git add -A
 git commit -m "Deploy build"
 git push
