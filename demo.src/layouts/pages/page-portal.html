@@ -1,0 +1,246 @@
+{% import "layouts/sublayouts/macros/layout.nj" as layout %}
+{% import "layouts/components/molecules/templates/_advanced-thumbnail.nj" as thumbnail %}
+{% import "layouts/components/atoms/templates/_form.nj" as form %}
+{% import "layouts/components/atoms/templates/_button.nj" as button %}
+{% import "layouts/components/atoms/templates/_button-group.nj" as buttongroup %}
+{% import "layouts/components/organisms/templates/_page-header.nj" as pageheader %}
+
+{% set pageHeaderTop = true %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+{% include "layouts/sublayouts/header-with-top.html" %}
+
+{% call layout.main() -%}
+{% call layout.pageHeader() -%}
+  {{pageheader.pagetitle(title='Portal', lead=false)}}
+{%- endcall %}
+  {% call layout.section() -%}
+<div class="container">
+    <div class="row row-col-eq">
+        <div class="col-md-4">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <div class="label pull-right text-muted">Today</div>
+        <h4 class="text-uppercase">Net Worth</h4>
+    </div>
+    <table class="table panel-body">
+        <tbody>
+            <tr>
+                <td colspan="3" class="text-center">
+                    <h3 class="m-t-1 m-b-1 text-large">$7,323,600</h3>
+                </td>
+            </tr>
+            <tr>
+                <td width="80%">This month</td>
+                <td width="10%" class="text-right text-nowrap text-success"><strong>+$19,300</strong></td>
+                <td width="10%" class="text-right text-nowrap text-success"><strong>+$1.58%</strong></td>
+            </tr>
+            <tr>
+                <td width="80%">Last quarter</td>
+                <td width="10%" class="text-right text-nowrap text-success"><strong>+$267,492</strong></td>
+                <td width="10%" class="text-right text-nowrap text-success"><strong>+$9.05%</strong></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        </div>
+        <div class="col-md-4">
+<div class="panel panel-dark">
+    <div class="panel-heading">
+        <div class="label pull-right text-muted">Today</div>
+        <h4 class="text-uppercase">Investments</h4>
+    </div>
+    <table class="table panel-body">
+        <tbody>
+            <tr>
+                <td colspan="3" class="text-center">
+                    <h3 class="m-t-1 m-b-1 text-large">$1,899,543</h3>
+                </td>
+            </tr>
+            <tr>
+                <td width="80%">Todays change</td>
+                <td width="10%" class="text-right text-nowrap text-success"><strong>+$21,477</strong></td>
+                <td width="10%" class="text-right text-nowrap text-success"><strong>+$4.29%</strong></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        </div>
+        <div class="col-md-4">
+<div class="panel panel-dark">
+    <div class="panel-heading">
+        <div class="label pull-right text-success">Under: <strong>$265</strong></div>
+        <h4 class="text-uppercase">Budget</h4>
+    </div>
+    <div class="panel-body">
+        <p class="text-center">
+            <strong>11</strong> days remaining this month
+        </p>
+        <div class="pull-right">
+            <label>1,400$<label>
+        </div>
+        <div>
+            <label>0$<label>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">$768</div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+    <div class="row row-col-eq">
+        <div class="col-md-4">
+<div class="panel panel-secondary">
+    <div class="panel-heading">
+        <div class="label pull-right"><a href="#"><span class="fa fa-plus"></span> Add</a></div>
+        <h5 class="text-uppercase">Your Accounts</h5>
+    </div>
+    <table class="table panel-body">
+        <tr>
+            <td width="75%">Cash</td>
+            <td width="10%" class="text-right text-nowrap"><strong>$2,359,887</strong></td>
+            <td>
+                <a href="#"><span class="fa fa-chevron-right" /></a>
+            </td>
+        </tr>
+        <tr>
+            <td width="75%">Credit Cards</td>
+            <td width="10%" class="text-right text-nowrap"><strong>-$4,670</strong></td>
+            <td>
+                <a href="#"><span class="fa fa-chevron-right" /></a>
+            </td>
+        </tr>
+        <tr>
+            <td width="75%">Investments</td>
+            <td width="10%" class="text-right text-nowrap"><strong>$1,899,543</strong></td>
+            <td>
+                <a href="#"><span class="fa fa-chevron-right" /></a>
+            </td>
+        </tr>
+        <tr>
+            <td width="75%">Life Insurance</td>
+            <td width="10%" class="text-right text-nowrap"><strong>$1,250,000</strong></td>
+            <td>
+                <a href="#"><span class="fa fa-chevron-right" /></a>
+            </td>
+        </tr>
+        <tr>
+            <td width="75%">Loans</td>
+            <td width="10%" class="text-right text-nowrap"><strong>-$467,090</strong></td>
+            <td>
+                <a href="#"><span class="fa fa-chevron-right" /></a>
+            </td>
+        </tr>
+        <tr>
+            <td width="75%">Property</td>
+            <td width="10%" class="text-right text-nowrap"><strong>-$1,450,600</strong></td>
+            <td>
+                <a href="#"><span class="fa fa-chevron-right" /></a>
+            </td>
+        </tr>
+        <tr>
+            <td width="75%">Options Plans</td>
+            <td width="10%" class="text-right text-nowrap"><strong>$159,000</strong></td>
+            <td>
+                <a href="#"><span class="fa fa-chevron-right" /></a>
+            </td>
+        </tr>
+    </table>
+</div>
+        </div>
+        <div class="col-md-4">
+<div class="panel panel-secondary">
+    <div class="panel-heading">
+        <div class="label pull-right">Net: <strong>$1,5267</strong></div>
+        <h5 class="text-uppercase">Spending</h5>
+    </div>
+    <div class="panel-body" style="vertical-align: middle">
+        <p class="text-center">
+            You've spent <strong>$2,655</strong> this month
+        </p>
+        <div>
+            <canvas id="spendingChart" width="400" height="200" class="img-responsive" onload="showChart()"></canvas>
+            <script src="/bower_components/chart.js/dist/Chart.js"></script>
+            <script>
+                var ctx = document.getElementById("spendingChart");
+                var options = {
+                    legend: {
+                        position: "right"
+                    }
+                };
+                var data = {
+                    labels: [
+                        "Unclassified",
+                        "Cash / ATM",
+                        "Food",
+                        "House",
+                        "Cars"
+                    ],
+                    datasets: [
+                        {
+                            data: [300, 50, 100, 54, 32, 66],
+                            backgroundColor: [
+                                "#a6cee3",
+                                "#1f78b4",
+                                "#b2df8a",
+                                "#33a02c",
+                                "#fb9a99",
+                                "#e31a1c",
+                                "#fdbf6f",
+                                "#ff7f00",
+                                "#cab2d6",
+                                "#6a3d9a"
+                            ]
+                        }]
+                };
+                var myPieChart = new Chart(ctx,{
+                    type: 'doughnut',
+                    data: data,
+                    options: options
+                });
+            </script>
+        </div>
+    </div>
+</div>
+        </div>
+        <div class="col-md-4">
+<div class="mosaic mosaic-bar-bottom mosaic-overlay-show">
+    <div class="mosaic-overlay text-center">
+        <div class="label">CFP, CPA</div>
+        <h4>Shane Nevins</h4>
+        <div>
+            <label>
+                <a href="mailto:s.nevins@sitecorehabitat.com">s.nevins@sitecorehabitat.com</a>
+            </label>
+        </div>
+        <div class="m-t-1">
+            <label>
+                Telephone: <a href="tel:+1-912-555-5561">+1-912-555-5561</a>
+            </label>
+        </div>
+        <div>
+            <label>
+                Mobile: <a href="tel:+1-912-555-5578">+1-912-555-5578</a>
+            </label>
+        </div>
+    </div>
+    <div class="mosaic-backdrop">
+        <a href="/Our-Team/Shane-Nevins">
+            <img src="http://placehold.it/500x500" class="img-responsive" alt="Shane Nevins Headshot" width="500" height="500">
+        </a>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+{%- endcall %}
+
+{%- endcall %}
+
+{% include "layouts/sublayouts/footer.html" %}
+
+{% endblock %}
