@@ -29,10 +29,89 @@
 <link rel="stylesheet" href="styles/white-wonder.css" disabled="disabled">
 <script src="scripts/vendor/modernizr.js"></script>
 </head>
-<body class="" style="">
+<body class="undefined header-top" style="">
 <div id="main-container">
-<header class="header-fixed">
-<nav class="navbar navbar-default navbar-mega navbar-fixed-top" id="mainNavbar">
+<header class="header-fixed header-has-top">
+<!--[if lt IE 10]>
+    <div class="browserupgrade bg-danger">
+      <div class="container">
+      <p class="">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      </div>
+    </div>
+  <![endif]-->
+<div class="header-top">
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<ul class="nav nav-social navbar-nav hidden-sm hidden-xs">
+<li>
+<a href="#" class="btn btn-social-icon btn-facebook">
+<i class="fa fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="#" class="btn btn-social-icon btn-twitter">
+<i class="fa fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="#" class="btn btn-social-icon btn-youtube">
+<i class="fa fa-youtube"></i>
+</a>
+</li>
+<li>
+<a href="#" class="btn btn-social-icon btn-instagram">
+<i class="fa fa-instagram"></i>
+</a>
+</li>
+<li>
+<a href="#" class="btn btn-social-icon btn-linkedin">
+<i class="fa fa-linkedin"></i>
+</a>
+</li>
+<li>
+<a href="#" class="btn btn-social-icon btn-google-plus">
+<i class="fa fa-google-plus"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col-md-6">
+<span class="pull-right">
+<ul class="nav nav-service navbar-nav hidden-sm hidden-xs">
+<li>
+<a href="#">Github</a>
+</li>
+<li>
+<a href="#">Wiki</a>
+</li>
+<li class="divider-right">
+<a href="#">Sitecore.net</a>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" tabindex="0" role="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+<li><a href="#">Action</a></li>
+<li class="active"><a href="#">Active action</a></li>
+<li class="dropdown-header">Section 1</li>
+<li><a href="#">Action</a></li>
+<li class="disabled"><a href="#">Disabled action</a></li>
+<li><a href="#">Normal action</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Section 2</li>
+<li><a href="#">Separated link</a></li>
+</ul>
+</li>
+</ul>
+</span>
+</div>
+</div>
+</div>
+</div>
+<nav class="navbar navbar-default navbar-mega navbar-static" id="mainNavbar">
 <div class="container">
 <div class="navbar-left">
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#siteNavbar" aria-expanded="false">
@@ -636,26 +715,240 @@ Price: $20,099
 </nav>
 </header>
 <main role="main">
-<header class="page-header documentation" style="">
-<div class="jumbotron" style="">
+<header class="page-header" style="">
 <div class="container">
-<div class="row">
-<div class="col-md-12">
-<h1>Simple Footer</h1>
-<p class="lead">
-This page includes a simple footer with basic content.
-</p>
-</div>
-</div>
-</div>
+<h1>
+Portal
+</h1>
 </div>
 </header>
+<section class="section section-full" style="">
+<div class="container">
+<div class="row row-col-eq">
+<div class="col-md-4">
+<div class="panel panel-primary">
+<div class="panel-heading">
+<div class="label pull-right text-muted">Today</div>
+<h4 class="text-uppercase">Net Worth</h4>
+</div>
+<table class="table panel-body">
+<tbody>
+<tr>
+<td colspan="3" class="text-center">
+<h3 class="m-t-1 m-b-1 text-large">$7,323,600</h3>
+</td>
+</tr>
+<tr>
+<td width="80%">This month</td>
+<td width="10%" class="text-right text-nowrap text-success"><strong>+$19,300</strong></td>
+<td width="10%" class="text-right text-nowrap text-success"><strong>+$1.58%</strong></td>
+</tr>
+<tr>
+<td width="80%">Last quarter</td>
+<td width="10%" class="text-right text-nowrap text-success"><strong>+$267,492</strong></td>
+<td width="10%" class="text-right text-nowrap text-success"><strong>+$9.05%</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-dark">
+<div class="panel-heading">
+<div class="label pull-right text-muted">Today</div>
+<h4 class="text-uppercase">Investments</h4>
+</div>
+<table class="table panel-body">
+<tbody>
+<tr>
+<td colspan="3" class="text-center">
+<h3 class="m-t-1 m-b-1 text-large">$1,899,543</h3>
+</td>
+</tr>
+<tr>
+<td width="80%">Todays change</td>
+<td width="10%" class="text-right text-nowrap text-success"><strong>+$21,477</strong></td>
+<td width="10%" class="text-right text-nowrap text-success"><strong>+$4.29%</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-dark">
+<div class="panel-heading">
+<div class="label pull-right text-success">Under: <strong>$265</strong></div>
+<h4 class="text-uppercase">Budget</h4>
+</div>
+<div class="panel-body">
+<p class="text-center">
+<strong>11</strong> days remaining this month
+</p>
+<div class="pull-right">
+<label>1,400$<label>
+</label></label></div>
+<div>
+<label>0$<label>
+</label></label></div>
+<div class="progress">
+<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%">$768</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row row-col-eq">
+<div class="col-md-4">
+<div class="panel panel-secondary">
+<div class="panel-heading">
+<div class="label pull-right"><a href="#"><span class="fa fa-plus"></span> Add</a></div>
+<h5 class="text-uppercase">Your Accounts</h5>
+</div>
+<table class="table panel-body">
+<tr>
+<td width="75%">Cash</td>
+<td width="10%" class="text-right text-nowrap"><strong>$2,359,887</strong></td>
+<td>
+<a href="#"><span class="fa fa-chevron-right"></a>
+</td>
+</tr>
+<tr>
+<td width="75%">Credit Cards</td>
+<td width="10%" class="text-right text-nowrap"><strong>-$4,670</strong></td>
+<td>
+<a href="#"><span class="fa fa-chevron-right"></a>
+</td>
+</tr>
+<tr>
+<td width="75%">Investments</td>
+<td width="10%" class="text-right text-nowrap"><strong>$1,899,543</strong></td>
+<td>
+<a href="#"><span class="fa fa-chevron-right"></a>
+</td>
+</tr>
+<tr>
+<td width="75%">Life Insurance</td>
+<td width="10%" class="text-right text-nowrap"><strong>$1,250,000</strong></td>
+<td>
+<a href="#"><span class="fa fa-chevron-right"></a>
+</td>
+</tr>
+<tr>
+<td width="75%">Loans</td>
+<td width="10%" class="text-right text-nowrap"><strong>-$467,090</strong></td>
+<td>
+<a href="#"><span class="fa fa-chevron-right"></a>
+</td>
+</tr>
+<tr>
+<td width="75%">Property</td>
+<td width="10%" class="text-right text-nowrap"><strong>-$1,450,600</strong></td>
+<td>
+<a href="#"><span class="fa fa-chevron-right"></a>
+</td>
+</tr>
+<tr>
+<td width="75%">Options Plans</td>
+<td width="10%" class="text-right text-nowrap"><strong>$159,000</strong></td>
+<td>
+<a href="#"><span class="fa fa-chevron-right"></a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="col-md-4">
+<div class="panel panel-secondary">
+<div class="panel-heading">
+<div class="label pull-right">Net: <strong>$1,5267</strong></div>
+<h5 class="text-uppercase">Spending</h5>
+</div>
+<div class="panel-body" style="vertical-align: middle">
+<p class="text-center">
+You've spent <strong>$2,655</strong> this month
+</p>
+<div>
+<canvas id="spendingChart" width="400" height="200" class="img-responsive" onload="showChart()"></canvas>
+<script src="/bower_components/chart.js/dist/Chart.js"></script>
+<script>
+var ctx = document.getElementById("spendingChart");
+                var options = {
+                    legend: {
+                        position: "right"
+                    }
+                };
+                var data = {
+                    labels: [
+                        "Unclassified",
+                        "Cash / ATM",
+                        "Food",
+                        "House",
+                        "Cars"
+                    ],
+                    datasets: [
+                        {
+                            data: [300, 50, 100, 54, 32, 66],
+                            backgroundColor: [
+                                "#a6cee3",
+                                "#1f78b4",
+                                "#b2df8a",
+                                "#33a02c",
+                                "#fb9a99",
+                                "#e31a1c",
+                                "#fdbf6f",
+                                "#ff7f00",
+                                "#cab2d6",
+                                "#6a3d9a"
+                            ]
+                        }]
+                };
+                var myPieChart = new Chart(ctx,{
+                    type: 'doughnut',
+                    data: data,
+                    options: options
+                });
+</script>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="mosaic mosaic-bar-bottom mosaic-overlay-show">
+<div class="mosaic-overlay text-center">
+<div class="label">CFP, CPA</div>
+<h4>Shane Nevins</h4>
+<div>
+<label>
+<a href="mailto:s.nevins@sitecorehabitat.com">s.nevins@sitecorehabitat.com</a>
+</label>
+</div>
+<div class="m-t-1">
+<label>
+Telephone: <a href="tel:+1-912-555-5561">+1-912-555-5561</a>
+</label>
+</div>
+<div>
+<label>
+Mobile: <a href="tel:+1-912-555-5578">+1-912-555-5578</a>
+</label>
+</div>
+</div>
+<div class="mosaic-backdrop">
+<a href="/Our-Team/Shane-Nevins">
+<img src="http://placehold.it/500x500" class="img-responsive" alt="Shane Nevins Headshot" width="500" height="500">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 </main>
 <footer class="bg-dark">
 <div class="container">
 <div class="row">
-<div class="col-md-12 col-sm-4 col-xs-12">
-<ul class="nav nav-justified">
+<div class="col-md-3 col-sm-4 col-xs-12">
+<ul class="nav nav-stacked">
 <li role="presentation" class="active"><a href="#">Active item</a></li>
 <li role="presentation"><a href="#">Second item</a></li>
 <li role="presentation"><a href="#">Third item</a></li>
@@ -679,10 +972,93 @@ Dropdown
 </li>
 </ul>
 </div>
+<div class="col-md-3 col-sm-4 col-xs-12">
+<div class="well">
+<h5 class="text-uppercase">Latest posts
+<ul class="media-list">
+<li class="media">
+<div class="media-body">
+<date>14 September 2015</date>
+<h4 class="media-heading"><a href="#">Sitecore XP rated Best in Class - again</a></h4>
+</div>
+</li>
+<li class="media">
+<div class="media-body">
+<date>14 September 2015</date>
+<h4 class="media-heading"><a href="#">Sitecore XP rated Best in Class - again</a></h4>
+</div>
+</li>
+<li class="media">
+<div class="media-body">
+<date>14 September 2015</date>
+<h4 class="media-heading"><a href="#">Sitecore XP rated Best in Class - again</a></h4>
+</div>
+</li>
+<li class="media">
+<div class="media-body">
+<date>14 September 2015</date>
+<h4 class="media-heading"><a href="#">Sitecore XP rated Best in Class - again</a></h4>
+</div>
+</li>
+</ul>
+<a href="#" class="btn btn-default">Read more</a>
+</h5></div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-12">
+<div class="well">
+<h3>About</h3>
+<p>
+Sitecore Habitat is a methodology for developing Sitecore Solutions. It is based on a layered and modular architecture focusing on high efficiency and simplicity.
+</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-12">
+<div class="well">
+<h4>Contact information</h4>
+<address>
+<strong>Sitecore Corporation</strong><br>
+Vester Farimagsgade 3,5<br>
+1606 Copenhagen V<br>
+Denmark<br>
+<abbr title="Phone">P:</abbr> +45 7022 4606
+</address>
+<address>
+<strong>Email</strong><br>
+<a href="mailto:#">sales@sitecore.net</a>
+</address>
+<a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+<a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+<a class="btn btn-social-icon btn-youtube"><i class="fa fa-youtube"></i></a>
+<a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></a>
+<a class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
+<a class="btn btn-social-icon btn-google-plus"><i class="fa fa-google-plus"></i></a>
+</div>
+</div>
 </div>
 </div>
 <div class="footer-bottom text-center">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<ul class="nav list-inline">
+<li>
+<a href="#">Copyright</a>
+</li>
+<li class="divider-left">
+<a href="#">Legal link</a>
+</li>
+<li class="divider-left">
+<a href="#">Sitecore.net</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
 <small>This is the legal footer</small>
+</div>
+</div>
+</div>
 </div>
 </footer>
 </div>
