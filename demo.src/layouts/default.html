@@ -56,8 +56,12 @@
 
   </head>
   {% if pageBackgroundImage %}
-  {% set style = 'background-image: ' + pageBackgroundImage + ';' %}
-  {% set pageLayout = pageLayout + ' bg-media' %}
+    {% set style = 'background-image: ' + pageBackgroundImage + ';' %}
+    {% set pageLayout = pageLayout + ' body-media' %}
+  {% endif %}
+
+  {% if pageBackground %}
+    {% set pageLayout = pageLayout + ' ' + pageBackground %}
   {% endif %}
 
   {% if pageHeaderTop %}

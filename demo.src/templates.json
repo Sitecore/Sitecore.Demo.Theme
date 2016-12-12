@@ -3,7 +3,8 @@
     "layout": [
       { "name": "fluid" },
       { "name": "fixed" },
-      { "name": "fixed-with-background" }
+      { "name": "fixed-with-background" },
+      { "name": "fixed-with-static" }
     ],
     "off-canvas-sidebar": [
       { "name": "left" },

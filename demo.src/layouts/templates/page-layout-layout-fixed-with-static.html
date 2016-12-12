@@ -4,14 +4,15 @@
 {% extends "layouts/default.html" %}
 
 {% set pageLayout = 'pagelayout-fixed' %}
-{% set pageBackgroundImage = 'url(\'http://lorempixel.com/1690/1200/\')' %}
+{% set pageBackground = 'body-secondary' %}
 
 {% block content %}
 
+{% set headerstyle = 'header-static' %}
 {% include "layouts/sublayouts/header.html" %}
 
 {% call layout.main() -%}
-  {{ doc.pageheader('Fixed page layout', 'In this page layout, the width of the sections and footer is restricted in width, showing a background image. The header is fixed to top and will span the entire page width.') }}
+  {{ doc.pageheader('Fixed page layout', 'In this page layout, the width of the sections and footer is restricted in width. The header is static and restricted in width.') }}
 
   {% include "layouts/sublayouts/default-content.html" %}
 {%- endcall %}
